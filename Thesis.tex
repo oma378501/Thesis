@@ -1,0 +1,54 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% LaTeX Thesis Template defined by Torsten Schön, May 2013
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper,11pt]{report}
+
+\bibliographystyle{plain}
+
+%import packages
+
+% define margingdocument
+\usepackage[a4paper, left=3cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+
+% define font arial
+\usepackage{helvet}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+% define spanish language
+\usepackage[spanish]{babel}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[T1]{fontenc}
+
+% import graphics
+\usepackage{graphicx}
+
+\graphicspath{{fig/}}
+
+% custom month, year
+\usepackage{datetime}
+
+% caption into figure
+\usepackage{caption}
+
+\usepackage[font=small, skip=0pt]{caption}
+
+% custom table
+\usepackage{array} 
+
+
+\begin{document}
+
+\input{tex/Title}\newpage\thispagestyle{plain}
+
+\input{tex/Chapter01}\newpage\cleardoublepage
+
+\input{tex/Chapter02}\newpage\cleardoublepage
+
+\bibliography{bib/Literature}\newpage\cleardoublepage
+
+\end{document}
