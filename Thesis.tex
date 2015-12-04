@@ -46,14 +46,26 @@
 \usepackage{apacite}
 \bibliographystyle{apacite}
 
+% align text justify
+\usepackage{ragged2e}
+
+%degine source image
+\newcommand{\source}[1]{\ttfamily #1}
 
 \begin{document}
 
+
 \input{tex/Title}\newpage\thispagestyle{plain}
+
+\justifying
+\noindent
 
 \input{tex/Chapter01}\newpage\cleardoublepage
 
 \input{tex/Chapter02}\newpage\cleardoublepage
+
+\input{tex/Chapter03}\newpage\cleardoublepage
+
 
 \bibliography{bib/Literature}\newpage\cleardoublepage
 

@@ -1,130 +1,48 @@
 \chapter{NOTICIAS PODCAST}
 
-\section{Que son los feed de noticias?}
+\section{\textquestiondown Que son los feed de noticias?}
 
-Los feeds pueden ser mas que t\'{i}tulos y enlaces, esto permite a los usuarios obtengan las \'{u}ltimas actualizaciones
-del sitio a diferentes dipositivos enviados desde un sitio web.
+El feed \footnote{Suministrar informaci\'{o}n} pueden ser m\'{a}s que t\'{i}tulos y enlaces, esto permite a los usuarios 
+obtengan las \'{u}ltimas actualizaciones del sitio a diferentes dispositivos enviados desde un sitio web.
 
-\scriptsize
-
-\blockquote{
 Los feeds pueden ser cualquier cosa de pocos titulares y enlaces a historia a todo el contenido del sitio, despojados
 de su trazado y con metadatos aplicados generosamente. Sindicaci\'{o}n de contenidos permite a los usuarios experimentar
-un sitio en varios dispositivos y ser\'{a}n notificados de cambios a trav\'{e}s de una variable de servicios. Puede variar
-desde una simple lista de enlaces enviados desde un sitio a otro a los inicios de la Web Sem\'{a}ntica.\cite{hammersley2005developing}
-}
+un sitio en varios dispositivos y ser\'{a}n notificados de cambios a trav\'{e}s de una variable de servicios. Puede 
+variar desde una simple lista de enlaces enviados desde un sitio a otro a los inicios de la Web Sem\'{a}ntica.\cite{hammersley2005developing}
 
-\blockquote{
-RSS y Atom son XML formatos para mensajes y otra informacio\'{o}n que es actualizada frecuentemente.
-los documentos que son escritos en estos formatos son llamados newfeeds or feed.\cite{wittenbrink2005rss}
-}
+RSS y Atom son XML formatos para mensajes y otra informaci\'{o}n que es actualizada frecuentemente.
+Los documentos que son escritos en estos formatos son llamados newfeeds or feed.\cite{wittenbrink2005rss}
 
-\normalsize
+Se define RSS \footnote{Really Simple Syndication} como un formato basado en XML \footnote{Extensible Markup Language: designado para almacenar y transportar datos} para compartir contenido del sitio web.
 
-Se utiliza la technologia feed de noticias para tener al usuario a los \'{u}ltimos contenidos en la aplicacion web
-y este pueda notificarle via correo electronico del mismo con el titulo, descripcion y categoria al que pertenece.
+Si un sitio web quiere compartir y publicar parte de su contenido a otros sitios en el mismo tiempo, el editor puede crear un
+documento RSS. Este documento se puede publicar en el sitio web y cualquier usuario puede leer y utlizar diferentes sitios al mismo
+tiempo. \cite{zeki2004rss}
 
-
-\section{RSS Requerimientos}
-
-Se tiene como significado RSS como ser: "RDF Site Summary", "Rich Site Summary", o "Really Simple Syndication",
-"Atom", mas que todo sincronizaci\'{o}n de tecnologias web.
-
-\scriptsize
-
-\begin{flushleft}
-
-\blockquote{
-La abreviatura RSS se ha consolidado como el t\'{e}rmino colectivo para estos newfeed formatos. El nombre "RSS"
-abarca una serie de tecnolog\'{i}as estrechamente conectadas que identifican y encontrar actualizada o informaci\'{o}n
-actualizada en la Web, y mostrar e intercambio esa informaci\'{o}n. El termino RSS desarrollado a partir de una abreviatura que ese puede interpretar de diferentes formas: las tres cartas, dependiendo de su interpretaci\'{o}n,
-representan "RDF Site Resumen", "Rich Site Summary", o "Really Simple Syndication", "Atom" es el nombre de un intento
-de formular RSS de una forma nueva, m\'{a}s precisamente y en estrecha sincronizaci\'{o}n con otras tecnolog\'{i}as web-actualizados.\cite{wittenbrink2005rss}
-}
-
-\end{flushleft}
-
-\normalsize
-
-
-
-
-\section{Sem\'{a}ntica: El Modelo RSS}
-
-El functiones b\'{a}sicas comunes de los formatos de sindicaci\'{o}n se pueden dividir en cuatro categor\'{i}as.
-
-\begin{itemize}
-
-\item \textbf{Arquitectura:} estructura de informaci\'{o}n.
-
-\item \textbf{Contenido:} descripci\'{o}n y reproducci\'{o}n de informaci\'{o}n.
-
-\item \textbf{Identificaci\'{o}n y vinculaci\'{o}n:} trasladarse a otra informaci\'{o}n sobre la Web.
-
-\item \textbf{Metadatos:} descripci\'{o}n de importantes caracteristicas de la informaci\'{o}n.
-
-\end{itemize}
-
-Si las diferentes versiones RSS, ciertamente la semantica es lo mas importante de los lenguages en similar.
-
-\scriptsize
-
-\begin{flushleft}
-
-\blockquote{
-Incluso si las diferentes versiones RSS difieren claramente uno de otros, la sem\'{a}ntica de la mayor\'{i}a
-de las caracter'{i}sticas importantes de la lengua son similares. El modelo de una colecci\'{o}n de actualizado
-objetos de informaci\'{o}n que pertenecen a un recurso que es identificable en la Web forma la base de datos los
-vocabularios de sindicaci\'{o}n. La alimentaci\'{o}n de documentos es una instant\'{a}nea del recurso.\cite{wittenbrink2005rss}
-}
-
-\end{flushleft}
-
-\normalsize
+Se utiliza la tecnolog\'{i}a feed de noticias para tener al usuario a los \'{u}ltimos contenidos en la aplicaci\'{o}n web
+y este pueda notificarle via correo electronico del mismo con el t\'{i}tulo, descripci\'{o}n y categor\'{i}a al que pertenece.
 
 \section{Sintaxis: RSS como XML formato}
 
-Para muchos desarrolladores "XML" y "RSS"son sinominos. Se utiliza ambas tecnologias para el intercambios de informaci\'{o}n
+Para muchos desarrolladores \textquotedblleft XML\textquotedblright y \textquotedblleft RSS\textquotedblright son sinominos. Se utiliza ambas tecnolog\'{i}as para el intercambios de informaci\'{o}n
 en la Web.
 
-\scriptsize
-
-\blockquote{
-Muchos sitios web de identificar sus fuentes de noticias a trav\'{e}s de un bot\'{o}n de color naranja marcado "XML". Para muchos
-usuarios, y tambien para muchos desarrolladores "XML" y "RSS" son sin\'{o}nimos. De hecho, todas las versiones del formato RSS y
-Atom son XML aplicaciones. Desde XML en s\'{i} es un metalenguage para definir idiomas par el intercambio de informaci\'{o} en la
-Web, los formatos de fuentes son tambi\'{e}n a menudo se llama "dialectos XML" o "XML vocabularios". A la fecha, RSS es el vocabulario, 
+Muchos sitios web identifican sus fuentes de noticias a trav\'{e}s de un bot\'{o}n de color naranja marcado \textquotedblleft XML\textquotedblright. Para muchos usuarios, y tambi\'{e}n para muchos desarrolladores \textquotedblleft XML\textquotedblright  y \textquotedblleft RSS\textquotedblright son sin\'{o}nimos. De hecho, todas las versiones del formato RSS y Atom son XML aplicaciones. Desde XML en s\'{i} es un metalenguage para definir idiomas par el intercambio de informaci\'{o}n en la
+Web, los formatos de fuentes son tambi\'{e}n a menudo se llama \textquotedblleft dialectos XML\textquotedblright  o \textquotedblleft XML vocabularios \textquotedblright. A la fecha, RSS es el vocabulario, 
 excepto XML de mayor \'{e}xito para tal XHTML, la versi\'{o}n XML de HTML.\cite{wittenbrink2005rss}
-}
 
-\normalsize
-
-\section{Las versiones de RSS y Atom: su evoluci\'{o}n y el futuro}
-Si se utiliza una version de RSS esta se tiene que especificar con la version con la que se tiene
-que trabajar o simplemente utilizar Atom.
-
-\scriptsize
-
-\blockquote{
-Si se utilizo el t\'{e}rmino "RSS" en este libro sin el n\'{u}mero de versi'{o}n, act'{u}a como un colectivo
-t\'{e}rmino para "las diferentes versiones de RSS y Atom" como un grupo, es decir, como sin'{o}nimo de "Formato
-de alimentaci\'{o}n". si yo hablo de uno de estos formatos, yo uso "RSS" con una versi'{o}n n\'{u}mero o el nombre
-"Atom".\cite{wittenbrink2005rss}
-}
-
-\normalsize 
+Se identifica un icono de color naranja que contiene en su interior un circulo y dos lineas curvas de color blanco para conocer
+que la aplcaci\'{o}n web cuenta con subscripci\'{o}n.
 
 \section{RSS 0.90}
 
-Con RSS es posible integrar titulos desde otros sitios en la portada. Los usuarios deberian personalizar
-y suscribirse a un numero de canales que ofrece RSS.
+Con RSS es posible integrar t\'{i}tulos desde otros sitios en la portada. Los usuarios deberian personalizar y suscribirse 
+a un n\'{u}mero de canales que ofrece un canal de noticias RSS.
 
-\scriptsize
 
-\blockquote{
-RSS fue inicialmente una abreviatura de "RDS Site Summary" (Para obtener informaci\'{o}n acerca de RSS como)
-"RDF Site Summary" consulte el Cap\'{i}tulo 3, Para una explicaci\'{o}n detallada del t\'{e}rmino, ver secci\'{o}n
-3.1 RDF Fundamentos) Con RSS, es posible integrar los titulares de otros sitios con enlaces a estos sitios en el 
+RSS fue inicialmente una abreviatura de \textquotedblleft RDF Site Summary \textquotedblright (Para obtener informaci\'{o}n acerca de RSS como
+\textquotedblleft RDF Site Summary\textquotedblright consulte el Cap\'{i}tulo 3, Para una explicaci\'{o}n detallada del t\'{e}rmino, ver secci\'{o}n
+3.1 RDF Fundamentos). Con RSS, es posible integrar los titulares de otros sitios con enlaces a estos sitios en el 
 portal. El usuario puede personalizar el portal y suscribirse a un n\'{u}mero de sitios que ofrecen datos RSS.
 De esta manera, My Netscape ten\'{i}a a su disposici\'{o}n una gran cantidad de contenidos adicional, que mantiene
 a los usuarios en el sitio ya; los proveedores de datos RSS recibida tr\'{a}fico en el objetivo adicional m\'{a}s
@@ -132,85 +50,49 @@ importante de muchos sitios web en los tiempos de la boom de las punto-com. Pues
 RSS a HTML. otros sitios pronto empezaron a utilizar la misma tecnolog\'{i}a. Slashdot pronto utiliza RSS en lugar
 de su propio formato de t\'{i}tulo, y herramientas fueron desarrolladas para crear y el proceso de RSS en los 
 lenguages de programaci\'{o}n comunes.\cite{wittenbrink2005rss}
-}
 
-\normalsize
+
+Se tiene una tecnolog\'{i}a RSS, de tal forma que pueda obtener informaci\'{o}n de otros sitios en beneficio de
+tener un lector de acceder a las noticias y no necesariamente acceder al sitio web.
 
 \section{Los elementos de RSS 0.91}
 
-\scriptsize
+Un importante version de Netscape RSS 0.91 a comparaci\'{o}n de RSS 0.90 de validar documentos de este formato
+a comparacion de un DTD \footnote{Es un tipo de documento: define la estructura y legal elementos y atributos de un documento
+XML}. 
 
-\blockquote{
-La definitiva fuente de informaci\'{o}n respecto RSS 0.91 es la especificación de esta misma, pero 
-para su conveniencias nosotros tenemos un diagrama resumido. Cada caja en el diagrama representa
-un elemento XML, y una fila indica contención.
-
-Nosotros tenemos el <rss>, <channel>, y <item>, pero algunos nuevos elementos aquí merecen mensión:
-
-\begin{itemize}
-
-\item <image> - Este logotipo permite un sitio web para especificar una imagen de icono o logotipo para
-se mostrara cuando se muestra el suministro de noticias en un lector de noticias o en otra pagina web.
-
-\item <lastBuildDate> - Este elemento especifica la última vez que cualquier elemento de la noticias los
-cambios de alimentación.
-
-\item <pubDate> - Este elemento especifica el tiempo que el feed de noticias fue el último publicado, utilizando
-es RFC 822, formato de fecha. Tenga en cuenta que el canal en si tiene una fecha de publicación, pero los
-elementos individuales en el feed de noticias no lo hacen. Eso es un sería limitación para las aplicaciones
-que se basan sobre el tema data de ordenar los elementos.
-
-\item <textInput> - Otro elemento rara vez usado, <textInput> ofrece una manera para que un editor permita al
-lector a consultar el sitio web de la editorial.
-
-\item <skipDays> y <skipHours> - Estos elementos permiten a los editores para especificar los momentos en los
-que es poco probable un flujo que se actualice. La mayoria noticias lectores de feeds ingnoran estos
-valores.
-
-\end{itemize}
-
-Volvamos a nuestra lección de historia, recogiendo la historia con RSS 1.0.\cite{johnson2006rss}
-
-}
-
-\normalsize
+La definitiva fuente de informaci\'{o}n respecto RSS 0.91 es la especificación de esta misma, pero para su 
+conveniencias nosotros tenemos un diagrama Fig 2.1. Cada caja en el diagrama representa un elemento XML, 
+y una fila indica contenci\'{o}n.\cite{johnson2006rss}
 
 \begin{center}
-
-Elementos que componen un canal de noticias RSS 0.91.
-
+	Elementos que componen un canal de noticias RSS 0.91.
 \end{center}
 
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale=0.5]{rss091}
-\caption{los elementos XML que componen RSS 0.91}
-\end{figure}
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\includegraphics[scale=0.8]{rss091}
+	\captionof{figure}{los elementos XML que componen RSS 0.91}
+	\source{fuente: \cite{johnson2006rss}}
+
+\end{minipage}
 
 
 \section{RSS 1.0}
 
 Un importante desarrollador Rael Dornfest quiso expandir el alcande de RSS. Por lo tanto ellos introducen
-RDF y tambien un nuevo mecanismo, espacio de trabajo XML.
-
-\scriptsize
-
-\blockquote{
+RDF \footnote{Resource Description Framework Schema: un set de clases con ciertas propiedades.} y tambi\'{e}n un nuevo mecanismo, espacio de trabajo XML.
 
 Otros desarrolladores importantes, sin embargo, entre ellos Rael Dornfest, que trabajaba como director de
 tecnolog\'{i}a de O'Reilly, quer\'{i}a ampliar el alcance de RSS utilizando para otro prop\'{o}sitos y lo
 conectan con formatos adicionales. Por lo tanto, se reintrodujeron RDF y tambi\'{e}n introdujo un nuevo
 mecanismo, el espacio de nombres XML. Una especificaci\'{o}n relacionado fue publicado en diciembre de 2002;
-los desarrolladores llaman el formaro que se describe, RSS 1.0.\cite{johnson2006rss}
-}
+los desarrolladores llaman el formato que se describe, RSS 1.0.\cite{johnson2006rss}
+
+Esta norma, lanzado en diciembre de 2000, trajo dos cambios importantes en el mundo RSS: la introducci\'{o}n
+de RDF y con ella una introducci\'{o}n de espacios de nombres.\cite{hammersley2005developing}
  
-\normalsize
-
 \subsection{Los elementos de RSS 1.0}
-
-\scriptsize
-
-\blockquote{
 
 Comparando los RSS 0.91 y RSS 1.0 diagramas, tu puedes ver los formatos son significativos diferentes.
 Aqui son las palabras diferentes:
@@ -229,8 +111,6 @@ como lo hacen en RSS 0.91.
 
 \item Las noticias deben ser declaradas dentro del <channel> como recursos DRF. \par
 
-\normalsize
-
 \begin{center}
 
 Elementos que componen un canal de noticias RSS 1.0
@@ -238,11 +118,11 @@ Elementos que componen un canal de noticias RSS 1.0
 \end{center}
 
 \begin{minipage}{1.0\linewidth}
-	\includegraphics[scale=0.5]{rss010}
-		\captionof{figure}{Los elementos XML que componen RSS 1.0}	
+	\centering
+	\includegraphics[scale=0.8]{rss010}
+		\captionof{figure}{Los elementos XML que componen RSS 1.0}
+		\source{fuente: \cite{johnson2006rss}}
 \end{minipage}
-
-\scriptsize
 
 \item <image> y <textinput> elementos deberian ser declarado dentro los <RDF:rdf> elementos son RDF
 si han de ser incluidos dentro de la <channel> elemento.
@@ -253,97 +133,88 @@ mediante el uso de RSS 1.0 módulos, que se describen en la siguiente sección.\
 
 \end{itemize}
 
-}
+\section{RSS 2.0}
 
-\normalsize
+Se tiene RSS 2.0 esencialmente define sintaxis, El soporte de RSS 2.0 es considerado de baja especificaci\'{o}n
+ya que es uno de los formatos de mayores ventajas.
 
-\section{Los elementos de RSS 2.0}
+Hoy en d\'{i}a, es el formato RSS feed m\'{a}s utilizado. Es caracter\'{i}stico de este formato no especifique,
+o para dejar a los desarrolladores de aplicaciones para especificar: las conexiones entre Datos RSS, por una 
+parte, entre otros formatos de contenido, datos/formatos de metadatos, y entornos de publicaci\'{o}n.\cite{wittenbrink2005rss}
 
-Ultimamente RSS es el ampliamente el fomato usado. las conexionex entre RSS datos y contenidos de datos
-de formatos/metadatos en otros entornos.
+\subsection{Los elementos de RSS 2.0}
 
-\scriptsize
+\'{U}ltimamente RSS es ampliamente el formato m\'{a} usado. las conexiones entre RSS datos, contenidos de datos
+en formatos/metadatos en otros entornos.
 
-\blockquote{
 Hoy en d\'{i}a, es el formato RSS m\'{a}s utilizado. Es caracter\'{i}stico de este formato no especifique,
 o para dejar a los desarrolladores de aplicaciones para especificar: las conexiones entre Datos RSS, por una
 parte, entre otros formatos de contenido, datos/formatos de metadatos, y entornos de publicaci\'{o}n, por otro
 lado. Esencialmente, RSS 2.0 define la sintaxis, en tanto que significado y el uso de determinaron mediante el
-uso de ejemplos. Los partidiarios de RSS 2.0 considerar este bajo nivel de especificaci\'{o}n de una de las
+uso de ejemplos. Los partidiarios de RSS 2.0 consideran este bajo nivel de especificaci\'{o}n de una de las
 mayores ventajas del formato, mientras que los partidiarios de las versiones de RSS alternas ven como su mejor
 momento de debilidad.\cite{wittenbrink2005rss}
-}
 
-\blockquote{
-Los RSS 2.0 especificación provee un detallada descripci\'{o}n de cada elemento permitido en un RSS 2.0
-newfeed. Tu pueden encontrar la especificación aqui  http://blogs.law.harvard.edu/tech/rss. Resumiendo
-el XML que componen RSS 2.0, usando la misma notacion como nuestra previa figura, con un toque.
-}
+Esto, en realidad es la clave para el \'{e}xito de la RSS 2.0. La cosa m\'{a}s simple hay que hacer para hacer la validaci\'{o}n
+de alimentaci\'{o}n es muy sencillo de hecho (vease el ejemplo 4.2). Si bien esto no es ninguna ayuda cuando usted est\'{a}
+tratando de transmitir informaci\'{o}n compleja, como con RSS 1.0 o si usted est\'{a} tratando de construir un sistema centrada
+en el documento completo, al igual que con Atom, es muy \'{u}til para muchas otras aplicacion.\cite{hammersley2005developing}
 
-\normalsize
+Los RSS 2.0 especificación provee una detallada descripci\'{o}n de cada elemento permitido en un RSS 2.0
+newfeed. Tu puedes encontrar la especificaci\'{o}n aqu\'{i}  http://blogs.law.harvard.edu/tech/rss. Resumiendo
+el XML que componen RSS 2.0, usando la misma notaci\'{o}n como nuestra previa figura, con un toque.\cite{johnson2006rss}
 
-Elementos que componen un canal de noticias RSS 2.0
+Se tiene un nueva version la cual conlleva las ventajas de las anteriores versiones y esta pueda ser manipulable por
+lectores en equipos como agregadores online, tambien implementadas en applicaciones web.
 
+\begin{center}
+	Elementos que componen un canal de noticias RSS 2.0
+\end{center}
 
-\begin{figure}[!ht]
+\begin{minipage}{1.0\linewidth}
+	\centering
+	\includegraphics[scale=0.8]{rss020}
+		\captionof{figure}{Los elementos XML que componen RSS 2.0}
+		\source{fuente: \cite{johnson2006rss}}
+\end{minipage}
+
+\subsection{Plataforma Educativa LAEL}
+
+Se tiene la realizaci\'{o}n de la subscripci\'{o}n de un canal de noticias, para ello el usuario deber\'{i}a
+de encontrarse autentificado. 
+
+\begin{minipage}{1.0\linewidth}
 \centering
-\includegraphics[scale=0.5]{rss020}
-\caption{Los elementos XML que componen RSS 2.0}
-\end{figure}
+\includegraphics[scale=0.5]{basicFranceSubscribed}
+\captionof{figure}{Subscripci\'{o}n Programa Aprendizaje Frances B\'{a}sico}
+\source{fuente: (Propia)}
+\end{minipage}
 
-\scriptsize
+Haciendo uso de un navegador como Firefox, se puede utilizar un lector de noticias que encuentra disponible
+y poder identifcar los diferentes elementos que contiene un feed de noticas: T\'{i}tulo, Fecha Liberaci\'{o}n
+y Descripti\'{o}n.
+ 
+\begin{minipage}{1.0\linewidth}
+\centering
+\includegraphics[scale=0.4]{basicFranceRssFirefox}
+\captionof{figure}{Episodio1: Elemento canal de noticias}
+\source{fuente: (Propia)}
+\end{minipage}
 
-\blockquote {
-
-Algunos de los nuevos elementos aniadidos ademas de RSS 0.91 merecen explicacion:
-
-\begin{itemize}
-
-\item Ahora puede especificar categorías a nivel de canal o en el nivel de artículo por usando el <category>
- elemento. Se permite múltiples categorias. Si usted utiliza un sistema de taxonomía o clasificación 
- conocida, se puede observar que por especificando el URI de la taxonomía en el atributo de dominio opcional.
-
-\item El nivel de artículo <comentarios> elemento puede ser utilizado para especificar la dirección URL de la
-página de comentarios de una entrada de blog específico.
-
-\item El nivel de artículo <guid> elemento puede utilizarse para especificar un identificador único global.
-para cada elemento. A menos que especifique el atributo ispermalink="false", el GUID se considerará el 
-enlace permanente a la representación web del tema newsfeed. Desafortunadamente, esto presenta la oportunidad
-para la confusión por que el elemento <link> se utiliza a veces como enlace permanente al tema.
-
-\item El nivel de artículo <author> elemento le permite especificar el correo electrónico del autor. Si deseas
-especificar el nombre del autor, se puede utilizar el Dublin Core Module <dc:creator> element.
-
-\item El nivel de artículo <enclosure> elemento puede utilizarse para adjuntar un archivo a un elemento. Para incluirlo
-un archivo, debe especificar el archivo de URL, tipo de contenido, y la longitud.\cite{johnson2006rss}
-
-\end{itemize}
-
-}
-
-\normalsize
 
 \subsection{Las nueve versiones incompatibles de RSS}
-
-\scriptsize
-
-\blockquote{
 
 Un influente blogger nombre Mark Pilgrim tiene que ser seguidor el desarrollador RSS de cerca, y el tiene que hacer
 algunas importantes contribuciones. Trabajando con Sam Ruby, otro influente blogger, Pilgrim desarrollo servicio validacion de noticias lugar http://www.feedvalidator.org/ que maneja toda la comúnmente uso de RSS y Atom noticas
 formato. 
-
 Pilgrim señalaron que había nueve incompatibilidades versiones de RSS. Resumiendo estas incompatibles versiones y
-autores, fecha y estado de cada una.
+autores, fecha y estado de cada una.\cite{johnson2006rss}
 
-}
+\begin{minipage}[b]{\hsize}\centering
 
-\begin{table}[h]
+\begin{tabular}{>{\centering\arraybackslash}m{.05\linewidth} |>{\centering\arraybackslash}m{.17\linewidth}|>{\centering\arraybackslash}m{.1\linewidth}|>{\centering\arraybackslash}m{.2\linewidth}|>{\centering\arraybackslash}m{.4\linewidth}}
 
-\begin{center}
-
-\begin{tabular}{>{\centering\arraybackslash}m{.1\linewidth} |>{\centering\arraybackslash}m{.2\linewidth}|>{\centering\arraybackslash}m{.1\linewidth}|>{\centering\arraybackslash}m{.2\linewidth}|>{\centering\arraybackslash}m{.4\linewidth}}
- & \textbf{Liberado por} & \textbf{Fecha} & \textbf{Estado} & \textbf{Nota} \\
+& \textbf{Liberado por} & \textbf{Fecha} & \textbf{Estado} & \textbf{Nota} \\
 \hline
 
 \textbf{RSS 0.90} & Libby/Netscape & Enero 1999 & \textbf{Obsoleto} y rara vez se encuentra en la naturaleza & RDF- basado formato. \\
@@ -375,127 +246,39 @@ autores, fecha y estado de cada una.
 
 \end{tabular}
 
-\caption{Las nueve versiones incompatibles de RSS}
-
-\end{center}
-
-\end{table}
-
-
-\blockquote{
-
-Para más información en cada una de estas versiones de RSS, ver la especificaciones encontradas sobre la Web 
-en las siguientes direcciones:
-
-\begin{itemize}
-
-\item RSS 0.90 - http://www.purplepages.ie/RSS/netscape/rss0.90.html
-\item RSS 0.91 (Netscape) - http://my.netscape.com/publish/formats/rss-spec-0.91.html
-\item RSS 0.91 (UserLand) - http://backend.userland.com/rss091
-\item RSS 0.92 - http://backend.userland.com/rss092
-\item RSS 0.93 - http://backend.userland.com/rss093
-\item RSS 0.94 - No esta disponible en linea.
-\item RSS 1.0 - http://web.resource.org/rss/1.0/spec
-\item RSS 2.0 - No disponible en linea.
-\item RSS 2.0.1 - http://blogs.law.harvard.edu/tech/rss.\cite{johnson2006rss}
-
-\end{itemize}
-
-}
-
-\normalsize
+\captionof{table}{Las nueve versiones incompatibles de RSS}
+\source{fuente: \cite{johnson2006rss}}
+\end{minipage}
 
 \section{El nuevo estandar: Atom}
 
-\scriptsize
+A principios del 2003 un grupo de blooggers desilucionados con estado de newfeeds publicaron un nuevo estandar API
+\footnote{Es un conjunto particular de reglas y especificaci\'{o}n que el programas pueden seguir para comunicarse entre si} el cual deberia ser conocido como Atom.
 
-\blockquote{
-En 2003, un grupo de bloggers que eran disolucionados con el estado de las noticias y publicación estandar API
-se unieron para crear un nuevo estandar. cual deberia despuesser conocido como Atom. Querian empezar de nuevo y
-hacer las cosas bien esta vez. Debido a que el grupo fue dirigido por los bloggers de renombre y XML expertos
-Joe Gregorio, Mark Pilgrim, y Sam Ruby, atraco de la atención y participacion de los principales dessarrolladores
-de servidores de blog.
+Atom es un formato de documento basado en XML que describe las listas de informaci\'{o}n relacionada conocida como
+\textquotedblleft feeds\textquotedblright. Feeds se componen de una serie de elementos, conocidos como \textquotedblleft 
+entradas \textquotedblright, cada uno con un conjunto extensible de metadatos adjunto.%\cite{nottingham2005atom}
 
 Si piensas Atom es una mejora sobre RSS o solamente otro formato, como un aplicación de blog usted 
 tendra que aprender Atom. Todo el mayor servidor blog si soporta Atom ahora o tiene planes para hacer, y Blogger.com,
 uno de los largos servicios blogging, ofrece solo Atom noticias - no RSS.\cite{johnson2006rss}
-}
-\normalsize
 
-\subsection{Construcciones comunes Atom}
-
-\scriptsize
-
-\blockquote{
-
-Atom define un numero de comunes constructores, atributos, y elementos que son reusados a lo largo del formato.
-El mas significante son fechas, textos y personas. El contructor de texto y personas requiere explicación
-
-
-\textbf{\textit{Constructor Texto}}
-
-Un constructor de texto es un elemento que contiene texto. La manera del texto almacenado es indicando
-por un tipo de atributo. Si el tipo de atributo es texto "text", los elementos contienen un plan
-texto y no marcado de algun tipo. Si el tipo es "xhtml", los elementos continen sin escapar XHTML marcado
-en el formulario de XHTML XML elementos y texto.
-
-\normalsize
-
-Ejemplo b\'{a}sico de constructor de Texto.
-
-
-\begin{minipage}[t]{0.4\textwidth}
-
-\centering
-
-\includegraphics[scale=0.7]{textConstruct}
-\captionof{figure}{Constructor de texto}
-
-\end{minipage}
-
-\scriptsize
-
-\textbf{\textit{Constructor Persona}}
-
-Algunos constructores involucran mas que un XML elementos. Por ejemplo, Atom define un constructor de 
-persona que es usado para representar autores y contribuyentes, como es.\cite{johnson2006rss}
-
-\normalsize
-
-Ejemplo b\'{a}sico de constructor de Persona.
-
-
-\begin{minipage}{0.5\textwidth}
-\centering
-\includegraphics[scale=0.7]{personConstruct}
-\captionof{figure}{Constructor de Persona}
-\end{minipage}
-
-}
 
 \subsection{Los elementos de Atom}
 
-\scriptsize
-
-\blockquote{
 
 Nosotros tenemos usado la notación <<text>>, <<person>>, y <<fecha>> a indicar cuales elementos son constructores
 comunes. Requeridos elementos son compartidos.
-}
-
-\normalsize
 
 Elementos que componen un canal de noticias Atom.
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[scale=0.6]{elementsXML}
+\includegraphics[scale=0.8]{elementsXML}
 \caption{Los elementos XML que conforman un servicio de noticias Atom}
+\source{fuente: \cite{johnson2006rss}}
 \end{figure}
 
-\scriptsize
-
-\blockquote{
 
 Algunos requisitos importantes no son evidentes a partir de este diagrama formato Atom, Por lo tanto permiteme
 revisar ellos. Primero, el nivel feed requisito.
@@ -525,43 +308,21 @@ elemento, el <content> elemento contiene algun otro texto, o el <content> refere
 
 \end{itemize}
 
-}
-
-\normalsize
-
 \subsection{Podcasting con Atom}
 
-\scriptsize
-
-\blockquote{
+La Figura 2.5, muestra la evoluci\'{o}n y los distintos caminos tomados por los formatos 
+RSS y Atom.
 
 Podcasting originado como una caracteristica de RSS, pero a medida que el mundo se mueve Atom como el nuevo estándar.
-Los podcasters también lo hará - y para buenas razones. Atom puede soportar podacsting a travez del elemento <link>.
+Los podcasters también lo hará - y para buenas razones. Atom puede soportar podcasting a travez del elemento <link>.
 Como es el caso con RSS 2.0-basado podcasts, usted puedes tener solo un podcast por entrada. Pero con Atom, tu puedes
-tener diferentes representacion por cada lenguage y por cada tipo de contenido. Por ejemplo, si usted quiere hacer un
-podcast disponible en Ingles y German y en ambos mp3 y WMV formatos, usted puede hacer algo parecido a esto:
-
-<link href=”http://example.com/podcasts/show001-usenglish.mpg”
-rel=”enclosure” hreflang=”en-US” length=”21472922” type=”audio/mpg”/>
-
-<link href=”http://example.com/podcasts/show001-usenglish.wmv”
-rel=”enclosure” hreflang=”en-US” length=”23889921” type=”audio/wmv”/>
-
-<link href=”http://example.com/podcasts/show001-german.mp3”
-rel=”enclosure” hreflang=”de-DE” length=”20032879” type=”audio/mpg”/>
-
-<link href=”http://example.com/podcasts/show001-german.wmv”
-rel=”enclosure” hreflang=”de-DE” length=”19907766” type=”audio/wmv”/>.\cite{johnson2006rss}
-
-}
-
-\normalsize
+tener diferentes representacion por cada lenguage y por cada tipo de contenido.\cite{johnson2006rss}
 
 Cronolog\'{i}a del tiempo respecto Atom.
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale=0.8]{newsFeed}
-\caption{Newfeed árbol formato}
+\includegraphics[scale=1]{newsFeed}
+\caption{News feed árbol formato}
+\source{fuente: \cite{johnson2006rss}}
 \end{figure}
-
