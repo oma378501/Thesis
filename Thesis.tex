@@ -3,9 +3,9 @@
 %% LaTeX Thesis Template defined by Torsten Schön, May 2013
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[a4paper,11pt]{report}
+\documentclass[11pt, twoside, openright]{report}
 
-% define margingdocument
+% define marging document
 \usepackage[a4paper, left=3cm, right=2cm, top=2cm, bottom=2cm]{geometry}
 
 % define font arial
@@ -52,8 +52,30 @@
 %degine source image
 \newcommand{\source}[1]{\ttfamily #1}
 
-% add subsubsection the document
-\setcounter{secnumdepth}{5}
+% add code laguage programming
+\usepackage{xcolor}
+\usepackage{listings}
+
+\lstset{
+	%language = PHP, 
+	commentstyle = \color{gray},
+	extendedchars = \true,
+	inputencoding = utf8,
+	keepspaces = true,
+	keywordstyle = \bfseries,
+	morekeywords = {function, return},
+	numbers = left,
+	captionpos = b,
+	showspaces = false,
+	showstringspaces = false,
+	showtabs = false
+}
+% define label caption listing
+\renewcommand{\lstlistingname}{Segmento C\'{o}digo}
+
+% enumerate number item in list.
+\usepackage{enumerate}
+
 
 \begin{document}
 
@@ -69,6 +91,11 @@
 
 \input{tex/Chapter03}\newpage\cleardoublepage
 
+\input{tex/Chapter04}\newpage\cleardoublepage
+
+\input{tex/Chapter05}\newpage\cleardoublepage
+
+\input{tex/Chapter06}\newpage\cleardoublepage
 
 \bibliography{bib/Literature}\newpage\cleardoublepage
 
