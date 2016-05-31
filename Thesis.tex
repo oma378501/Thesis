@@ -3,10 +3,10 @@
 %% LaTeX Thesis Template defined by Torsten Schön, May 2013
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[11pt, twoside, openright]{report}
+\documentclass[a4paper,11pt,twoside]{report}
 
 % define marging document
-\usepackage[a4paper, left=3cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage[a4paper,left=3cm,right=2cm,top=2cm,bottom=3cm,asymmetric]{geometry}
 
 % define font arial
 \usepackage{helvet}
@@ -31,13 +31,16 @@
 % caption into figure
 \usepackage{caption}
 
-\usepackage[font=small, skip=0pt]{caption}
+\usepackage[font=small,skip=0pt]{caption}
 
 % custom table
 \usepackage{array} 
 
 % space betwenn paragraph
 \setlength{\parskip}{1em}
+
+% space between bleeding
+\setlength{\parindent}{0em}
 
 % style for cite
 \usepackage[autostyle]{csquotes}
@@ -60,7 +63,7 @@
 	%language = PHP, 
 	commentstyle = \color{gray},
 	extendedchars = \true,
-	inputencoding = utf8,
+	%inputencoding = utf8,
 	keepspaces = true,
 	keywordstyle = \bfseries,
 	morekeywords = {function, return},
@@ -70,20 +73,42 @@
 	showstringspaces = false,
 	showtabs = false
 }
-% define label caption listing
-\renewcommand{\lstlistingname}{Segmento C\'{o}digo}
 
 % enumerate number item in list.
 \usepackage{enumerate}
 
+% define label caption listing
+\renewcommand{\lstlistingname}{Segmento C\'{o}digo}
+
+% landscape table
+\usepackage{lscape}
+
+% add appendix
+\usepackage{appendix}
+
+\renewcommand{\appendixname}{Anexos}
+\renewcommand{\appendixtocname}{Anexos}
+\renewcommand{\appendixpagename}{Anexos}
+
+% enumerate table
+\pagenumbering{roman}
 
 \begin{document}
 
+\newcounter{rom}
 
 \input{tex/Title}\newpage\thispagestyle{plain}
-
+\cleardoublepage
 \justifying
 \noindent
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\newpage\thispagestyle{plain}~
+\clearpage
+\pagenumbering{arabic}
 
 \input{tex/Chapter01}\newpage\cleardoublepage
 
@@ -98,5 +123,16 @@
 \input{tex/Chapter06}\newpage\cleardoublepage
 
 \bibliography{bib/Literature}\newpage\cleardoublepage
+
+\appendix
+\addappheadtotoc
+\appendixpage
+\newpage\cleardoublepage
+
+\input{tex/AnexoA}\newpage\cleardoublepage
+
+\input{tex/AnexoB}\newpage\cleardoublepage
+
+\input{tex/AnexoC}\newpage\cleardoublepage
 
 \end{document}

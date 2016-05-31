@@ -56,7 +56,6 @@ Con RSS es posible integrar t\'{i}tulos desde otros sitios en la portada. Los
 usuarios deberian personalizar y suscribirse a un n\'{u}mero de canales que 
 ofrece un canal de noticias RSS.
 
-
 RSS fue inicialmente una abreviatura de \textquotedblleft RDF Site Summary\textquotedblright.
 Con RSS, es posible integrar los titulares de otros sitios con enlaces a estos sitios en el 
 portal. El usuario puede personalizar el portal y suscribirse a un n\'{u}mero de sitios que
@@ -66,7 +65,7 @@ de datos RSS recibida tr\'{a}fico en el objetivo adicional m\'{a}s importante de
 sitios web en los tiempos de la boom de las punto-com. Puesta que es f\'{a}cil de convertir
 RSS a HTML. Otros sitios pronto empezaron a utilizar la misma tecnolog\'{i}a. Slashdot pronto
 utiliza RSS en lugar de su propio formato de t\'{i}tulo, y herramientas fueron desarrolladas
-para crear y el proceso de RSS en los lenguages de programaci\'{o}n comunes.\cite{wittenbrink2005rss}
+para crear y el proceso de RSS en los lenguajes de programaci\'{o}n comunes.\cite{wittenbrink2005rss}
 
 
 Se tiene una tecnolog\'{i}a RSS, de tal forma que pueda obtener informaci\'{o}n de
@@ -76,10 +75,10 @@ acceder al sitio web.
 \section{Los elementos de RSS 0.91}
 
 Una versi\'{o}n importante de Netscape RSS 0.91 a comparaci\'{o}n de RSS 0.90 de
-validar documentos de este formato a comparacion de un DTD \footnote{DTD: Es un 
+validar documentos de este formato a comparaci\'{o}n de un DTD \footnote{DTD: Es un 
 tipo de documento: define la estructura y legal elementos y atributos de un documento XML}. 
 
-La definitiva fuente de informaci\'{o}n respecto RSS 0.91 es la especificación de
+La definitiva fuente de informaci\'{o}n respecto RSS 0.91 es la especificaci\'{o}n de
 esta misma, para su conveniencia se provee un resumen en la Figura \ref{Elementos
 que componen un canal de noticias RSS 0.91}. En cada caja en el diagrama
 representa un elemento XML y una fila indica contenci\'{o}n. Por ejemplo, un elemento
@@ -91,7 +90,7 @@ composici\'{o}n de un feed que comprende la informaci\'{o}n de un canal de notic
 los elementos que lo componenen, como categor\'{i}a primera se tiene la etiqueta <rss>
 seguido de <channel> a continuaci\'{o}n la informaci\'{o}n propia del canal de noticias:
 <title>, <link> y <description>. Tomando en cuenta los elementos se puede apreciar como
-segunda categoria a <item> que contiene: <title>, <link> y <description>.   
+segunda categor\'{i}a a <item> que contiene: <title>, <link> y <description>.   
 
 \begin{minipage}{1.0\textwidth}
 	\centering
@@ -126,14 +125,14 @@ diferentes. Son las diferencias:
 
 \begin{itemize}
 
-\item Un típico flujo RS 1.0 es más largo y más complejo, pero no lo hace incluir
+\item Un t\'{i}pico flujo RS 1.0 es m\'{a}s largo y m\'{a}s complejo, pero no lo hace incluir
 tantos metadatos como el equivalente RSS 0.91 newfeed.
 
-\item RSS 1.0 es más complejo, pero sólo porque es más flexible y extensible.
+\item RSS 1.0 es m\'{a}s complejo, pero s\'{o}lo porque es m\'{a}s flexible y extensible.
 
-\item El elemento raíz es <RDF:rdf>  en lugar de <rss>.
+\item El elemento ra\'{i}z es <RDF:rdf>  en lugar de <rss>.
 
-\item Las noticias existen como hijos de elemento raíz del documento y no como 
+\item Las noticias existen como hijos de elemento ra\'{i}z del documento y no como 
 hijos del elemento <channel>,como lo hacen en RSS 0.91.
 
 \item Las noticias deben ser declaradas dentro del <channel> como recursos DRF. \par
@@ -198,7 +197,7 @@ tratando de transmitir informaci\'{o}n compleja, como con RSS 1.0 o si usted est
 tratando de construir un sistema centrada en el documento completo, al igual que con
 Atom, es muy \'{u}til para muchas otras aplicaciones.\cite{hammersley2005developing}
 
-Los RSS 2.0 especificación provee una detallada descripci\'{o}n de cada elemento 
+Los RSS 2.0 especificaci\'{o}n provee una detallada descripci\'{o}n de cada elemento 
 permitido en un RSS 2.0 newfeed. Tu puedes encontrar la especificaci\'{o}n aqu\'{i} 
 RSS2.0 \footnote{RSS2.0:http://blogs.law.harvard.edu/tech/rss}. Figura \ref{Los 
 elementos XML que componen RSS 2.0} resumiendo el XML que componen RSS 2.0, 
@@ -217,7 +216,7 @@ la etiqueta <item> comformado por los componenetes <title> y <description> minim
 \begin{minipage}{1.0\linewidth}
 	\centering
 	\fbox{
-		\includegraphics[scale=1.0]{rss020}
+		\includegraphics[scale=0.8]{rss020}
 	}
 	\captionof{figure}{Los elementos XML que componen RSS 2.0}
 	\source{fuente: \cite{johnson2006rss}}
@@ -276,10 +275,10 @@ de cada una.\cite{johnson2006rss}
 \textbf{RSS 0.90} & Libby/Netscape & Enero 1999 & \textbf{Obsoleto} y rara vez se encuentra en la naturaleza & RDF- basado formato. \\
 \hline
 
-\textbf{RSS 0.91 } & Libby/Netscape & Julio 1999 & \textbf{Obsoleto} pero ampliamente usado & XML-basado con DTD; caído todos los elementos RDF; Añadido soporte para módulos. \\
+\textbf{RSS 0.91 } & Libby/Netscape & Julio 1999 & \textbf{Obsoleto} pero ampliamente usado & XML-basado con DTD; ca\'{i}do todos los elementos RDF; A\~{n}adido soporte para m\'{o}dulos. \\
 \hline 
 
-\textbf{RSS 0.91 (UserLand) } & Winer/Userland & Junio 2000 & \textbf{Obsoleto} pero ampliamente usado & caído DTD. \\
+\textbf{RSS 0.91 (UserLand) } & Winer/Userland & Junio 2000 & \textbf{Obsoleto} pero ampliamente usado & ca\'{i}do DTD. \\
 \hline 
 
 \textbf{RSS 1.0} & RSS-DEV & Diciembre 2000 & \textbf{Viable} y ampliamente usado & RDF-basado formato nuevamente.\\
@@ -288,13 +287,13 @@ de cada una.\cite{johnson2006rss}
 \textbf{RSS 0.92} & Winner/Userland & Diciembre 2000 & \textbf{Obsoleto} pero ampliamente usado & Contenido tipo de <description> elemento cambiado desde texto plano\\
 \hline
 
-\textbf{RSS 0.93} & Winer/Userland & Abril 2001 & \textbf{Obsoleto} y rara vez que se encuentra en la naturaleza & Aniadidp <pubDate> y <expirationDate> elementos. tambien permite multiples <enclousure> elementos por <item> \\
+\textbf{RSS 0.93} & Winer/Userland & Abril 2001 & \textbf{Obsoleto} y rara vez que se encuentra en la naturaleza & Aniadidp <pubDate> y <expirationDate> elementos. tambi\'{e}n permite multiples <enclousure> elementos por <item> \\
 \hline
 
-\textbf{RSS 0.94} & Winer/Userland & Verano 2002 & \textbf{Obsoleto} y rara vez que se encuentra en la naturaleza & eliminado <expirationDate> elemento. Especificación ya no está disponible en línea\\
+\textbf{RSS 0.94} & Winer/Userland & Verano 2002 & \textbf{Obsoleto} y rara vez que se encuentra en la naturaleza & eliminado <expirationDate> elemento. Especificaci\'{o}n ya no est\'{a} disponible en l\'{i}nea\\
 \hline
 
-\textbf{RSS 2.0} & Winer/Userland & Agosto 2002 & \textbf{Viable} y ampliamente usado. Final version de RSS & Permite adición de nuevos elementos siempre y cuando se definen por Espacio de nombres XML\\
+\textbf{RSS 2.0} & Winer/Userland & Agosto 2002 & \textbf{Viable} y ampliamente usado. Final versi\'{o}n de RSS & Permite adici\'{o}n de nuevos elementos siempre y cuando se definen por Espacio de nombres XML\\
 \hline 
 
 \textbf{RSS 2.0.1} & Winer/Harvard & Julio 2003 & Menor cambio a RSS 2.0 & Agregado elemento <rating>\\
@@ -318,7 +317,7 @@ relacionada conocida como \textquotedblleft feeds\textquotedblright. Feeds se co
 de una serie de elementos, conocidos como \textquotedblleft entradas \textquotedblright,
 cada uno con un conjunto extensible de metadatos adjunto.\cite{nottingham2005atom}
 
-Si piensas Atom es una mejora sobre RSS o solamente otro formato, como un aplicación
+Si piensas Atom es una mejora sobre RSS o solamente otro formato, como un aplicaci\'{o}n
 de blog usted tendra que aprender Atom. Todo el mayor servidor blog si soporta Atom
 ahora o tiene planes para hacer, y Blogger.com, uno de los largos servicios blogging,
 ofrece solo Atom noticias - no RSS.\cite{johnson2006rss}
@@ -356,41 +355,44 @@ que contiene un enlace del feed mismo. Esto hace posible para un programa, cual 
 tener solo una copia de un documento de noticias, a encontrar la URL de las noticias.
 \item El feed debe incluir un solo enlace, significando un <link> elemento con rel=
 \textquotedblleft alternate\textquotedblright - tipicamente un enlace alternativo de
-un alimento hace referencia a una alternativa representación de la alimentación.
+un alimento hace referencia a una alternativa representaci\'{o}n de la alimentaci\'{o}n.
 \item El autor debe ser especifico lugar el nivel feed o en cada individual entrada.
 
 \end{itemize}
 
-A continuaci\'{o}n se realiza un detalle de los elementos a considerar en cada nivel.
+A continuaci\'{o}n se realiza un detalle de los elementos a considerar en cada 
+nivel.\cite{johnson2006rss}
 
 \begin{itemize}
 
 \item Cada entrada debe contener un <id> elemento.
-\item Si la entrada no tienen un <content> elemento, deberia tener una alternativo
-enlace. Un enlace alternativo es su enalce permanente, un enlace permanente entradas
-representacion web.
-\item Un enlace puede tener multiples enlaces alternativos para diferentes lenguajes
-y tipos de contenidos, pero una entrada deberia no contener mas que una enlace 
-alternativo para cada combinacion de languages y tipo de contenido.
-\item La entrada deberia incluir un <summary> elemento si el contenido es no 
-facilmente leible, por ejemplo es no <content> elemento, el <content> elemento 
+\item Si la entrada no tienen un <content> elemento, deberia tener un enlace 
+alternativo.
+Un enlace alternativo es su enlace permanente, un enlace de permanentes entradas
+en la web.
+\item Un enlace puede tener m\'{u}ltiples enlaces alternativos para diferentes 
+lenguajes y tipos de contenidos, pero una entrada no deber\'{i}a contener 
+m\'{a}s que una enlace alternativo para cada combinaci\'{o}n de languajes y tipo
+de contenido.
+\item La entrada deber\'{i}a incluir un <summary> elemento si el contenido es no 
+f\'{a}cilmente leible, por ejemplo es no <content> elemento, el <content> elemento 
 contiene algun otro texto, o el <content> referencia de elementos contenido en otros
-lugares.\cite{johnson2006rss}
+lugares.
 
 \end{itemize}
 
 \subsection{Podcasting con Atom}
 
 
-Podcasting originado como una caracteristica de RSS, pero a medida que el mundo se
-mueve Atom como el nuevo estándar. Los podcasters también lo hará - y para buenas
-razones. Atom puede soportar podcasting a travez del elemento <link>. Como es el
-caso con RSS 2.0-basado podcasts, usted puedes tener solo un podcast por entrada.
-Pero con Atom, tu puedes tener diferentes representacion por cada lenguage y por
-cada tipo de contenido.\cite{johnson2006rss}
+Podcasting originado como una caracter\'{i}stica de RSS, pero a medida que el 
+mundo se mueve Atom como el nuevo est\'{a}ndar. Los podcasters tambi\'{e}n lo
+har\'{a} - y para buenas razones. Atom puede soportar podcasting a travez del
+elemento <link>. Como es el caso con RSS 2.0-basado podcasts, usted puedes tener
+solo un podcast por entrada. Pero con Atom, tu puedes tener diferentes 
+representaci\'{o}n por cada lenguaje y por cada tipo de contenido.\cite{johnson2006rss}
 
 La Figura \ref{News feed árbol formato}, Se tiene la evoluci\'{o}n y los distintos
-caminos tomados por los formatos por RSS y Atom en transcurir del tiempo
+caminos tomados por los formatos por RSS y Atom en transcurso del tiempo
 
 \begin{figure}[!htb]
 	\centering
