@@ -319,45 +319,7 @@
     <bcf:option>doi</bcf:option>
     <bcf:option>eprint</bcf:option>
     <bcf:option>related</bcf:option>
-    <bcf:option>acronyms</bcf:option>
-    <bcf:option>shorthandinbib</bcf:option>
-    <bcf:option>shorthandwidth</bcf:option>
-    <bcf:option>shortjournal</bcf:option>
-    <bcf:option>terselos</bcf:option>
-    <bcf:option>xref</bcf:option>
-    <bcf:option>pagetotal</bcf:option>
-    <bcf:option>journalnumber</bcf:option>
-    <bcf:option>bernhard</bcf:option>
-    <bcf:option>series</bcf:option>
-    <bcf:option>seriesformat</bcf:option>
-    <bcf:option>annotation</bcf:option>
-    <bcf:option>edbyidem</bcf:option>
-    <bcf:option>editionstring</bcf:option>
-    <bcf:option>edsuper</bcf:option>
-    <bcf:option>idembib</bcf:option>
-    <bcf:option>library</bcf:option>
-    <bcf:option>nolocation</bcf:option>
-    <bcf:option>nopublisher</bcf:option>
-    <bcf:option>oldauthor</bcf:option>
-    <bcf:option>origfields</bcf:option>
-    <bcf:option>pseudoauthor</bcf:option>
-    <bcf:option>origfieldsformat</bcf:option>
-    <bcf:option>namefont</bcf:option>
-    <bcf:option>firstnamefont</bcf:option>
-    <bcf:option>idemfont</bcf:option>
-    <bcf:option>ibidemfont</bcf:option>
-    <bcf:option>idembibformat</bcf:option>
-    <bcf:option>editorstring</bcf:option>
-    <bcf:option>editorstringfont</bcf:option>
-    <bcf:option>citedas</bcf:option>
-    <bcf:option>edstringincitations</bcf:option>
-    <bcf:option>firstfullname</bcf:option>
-    <bcf:option>omiteditor</bcf:option>
-    <bcf:option>shorthandibid</bcf:option>
-    <bcf:option>citeauthor</bcf:option>
-    <bcf:option>ibidpage</bcf:option>
-    <bcf:option>pageref</bcf:option>
-    <bcf:option>citepages</bcf:option>
+    <bcf:option>subentry</bcf:option>
   </bcf:optionscope>
   <bcf:optionscope type="PER_TYPE">
     <bcf:option>alphaothers</bcf:option>
@@ -452,12 +414,6 @@
     <bcf:option>skipbiblist</bcf:option>
     <bcf:option>skiplab</bcf:option>
     <bcf:option>dataonly</bcf:option>
-    <bcf:option>acronym</bcf:option>
-    <bcf:option>oldbookauthor</bcf:option>
-    <bcf:option>oldauthor</bcf:option>
-    <bcf:option>pseudoauthor</bcf:option>
-    <bcf:option>citedas</bcf:option>
-    <bcf:option>shorthandibid</bcf:option>
   </bcf:optionscope>
   <!-- SOURCEMAP -->
   <bcf:sourcemap>
@@ -2278,24 +2234,96 @@
   <bcf:bibdata section="0">
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">zimmerman1989social</bcf:citekey>
-    <bcf:citekey order="2">HVLMC2013</bcf:citekey>
-    <bcf:citekey order="3">wittenbrink2005rss</bcf:citekey>
-    <bcf:citekey order="4">wittenbrink2005rss</bcf:citekey>
-    <bcf:citekey order="5">wittenbrink2005rss</bcf:citekey>
-    <bcf:citekey order="6">wittenbrink2005rss</bcf:citekey>
-    <bcf:citekey order="7">wittenbrink2005rss</bcf:citekey>
-    <bcf:citekey order="8">wittenbrink2005rss</bcf:citekey>
-    <bcf:citekey order="9">johnson2006rss</bcf:citekey>
-    <bcf:citekey order="10">johnson2006rss</bcf:citekey>
-    <bcf:citekey order="11">johnson2006rss</bcf:citekey>
-    <bcf:citekey order="12">johnson2006rss</bcf:citekey>
+    <bcf:citekey order="1">severin2013enfoques</bcf:citekey>
+    <bcf:citekey order="2">duart2000aprender</bcf:citekey>
+    <bcf:citekey order="3">CHLMV2014</bcf:citekey>
+    <bcf:citekey order="4">CMNPZ2015</bcf:citekey>
+    <bcf:citekey order="5">AFSTVV2015</bcf:citekey>
+    <bcf:citekey order="6">CCZ2015</bcf:citekey>
+    <bcf:citekey order="7">BDFJR2015</bcf:citekey>
+    <bcf:citekey order="8">CGL2015</bcf:citekey>
+    <bcf:citekey order="9">hammersley2005developing</bcf:citekey>
+    <bcf:citekey order="10">hammersley2005developing</bcf:citekey>
+    <bcf:citekey order="11">wittenbrink2005rss</bcf:citekey>
+    <bcf:citekey order="12">zeki2004rss</bcf:citekey>
     <bcf:citekey order="13">wittenbrink2005rss</bcf:citekey>
-    <bcf:citekey order="14">johnson2006rss</bcf:citekey>
-    <bcf:citekey order="15">johnson2006rss</bcf:citekey>
-    <bcf:citekey order="16">johnson2006rss</bcf:citekey>
-    <bcf:citekey order="17">johnson2006rss</bcf:citekey>
+    <bcf:citekey order="14">zeki2004rss</bcf:citekey>
+    <bcf:citekey order="15">wittenbrink2005rss</bcf:citekey>
+    <bcf:citekey order="16">wittenbrink2005rss</bcf:citekey>
+    <bcf:citekey order="17">dtd</bcf:citekey>
     <bcf:citekey order="18">johnson2006rss</bcf:citekey>
     <bcf:citekey order="19">johnson2006rss</bcf:citekey>
+    <bcf:citekey order="20">rdf</bcf:citekey>
+    <bcf:citekey order="21">johnson2006rss</bcf:citekey>
+    <bcf:citekey order="22">hammersley2005developing</bcf:citekey>
+    <bcf:citekey order="23">johnson2006rss</bcf:citekey>
+    <bcf:citekey order="24">johnson2006rss</bcf:citekey>
+    <bcf:citekey order="25">wittenbrink2005rss</bcf:citekey>
+    <bcf:citekey order="26">wittenbrink2005rss</bcf:citekey>
+    <bcf:citekey order="27">hammersley2005developing</bcf:citekey>
+    <bcf:citekey order="28">johnson2006rss</bcf:citekey>
+    <bcf:citekey order="29">johnson2006rss</bcf:citekey>
+    <bcf:citekey order="30">johnson2006rss</bcf:citekey>
+    <bcf:citekey order="31">johnson2006rss</bcf:citekey>
+    <bcf:citekey order="32">api</bcf:citekey>
+    <bcf:citekey order="33">nottingham2005atom</bcf:citekey>
+    <bcf:citekey order="34">johnson2006rss</bcf:citekey>
+    <bcf:citekey order="35">johnson2006rss</bcf:citekey>
+    <bcf:citekey order="36">johnson2006rss</bcf:citekey>
+    <bcf:citekey order="37">johnson2006rss</bcf:citekey>
+    <bcf:citekey order="38">johnson2006rss</bcf:citekey>
+    <bcf:citekey order="39">severin2013enfoques</bcf:citekey>
+    <bcf:citekey order="40">severin2013enfoques</bcf:citekey>
+    <bcf:citekey order="41">duart2000aprender</bcf:citekey>
+    <bcf:citekey order="42">xmlHttpRequest</bcf:citekey>
+    <bcf:citekey order="43">zervaas2007practical</bcf:citekey>
+    <bcf:citekey order="44">sommerville2011software</bcf:citekey>
+    <bcf:citekey order="45">sommerville2011software</bcf:citekey>
+    <bcf:citekey order="46">sommerville2011software</bcf:citekey>
+    <bcf:citekey order="47">sommerville2011software</bcf:citekey>
+    <bcf:citekey order="48">reiersol2007php</bcf:citekey>
+    <bcf:citekey order="49">reiersol2007php</bcf:citekey>
+    <bcf:citekey order="50">framework</bcf:citekey>
+    <bcf:citekey order="51">ullman2013yii</bcf:citekey>
+    <bcf:citekey order="52">widget</bcf:citekey>
+    <bcf:citekey order="53">booster</bcf:citekey>
+    <bcf:citekey order="54">cascadedropdown</bcf:citekey>
+    <bcf:citekey order="55">efeed</bcf:citekey>
+    <bcf:citekey order="56">hybridauth</bcf:citekey>
+    <bcf:citekey order="57">hoauth</bcf:citekey>
+    <bcf:citekey order="58">image</bcf:citekey>
+    <bcf:citekey order="59">mediaelement</bcf:citekey>
+    <bcf:citekey order="60">yiiImageZoomer</bcf:citekey>
+    <bcf:citekey order="61">phpMailer</bcf:citekey>
+    <bcf:citekey order="62">yiiMailer</bcf:citekey>
+    <bcf:citekey order="63">flanagan2006javascript</bcf:citekey>
+    <bcf:citekey order="64">lindley2009jquery</bcf:citekey>
+    <bcf:citekey order="65">wang2013definitive</bcf:citekey>
+    <bcf:citekey order="66">weyl2012s</bcf:citekey>
+    <bcf:citekey order="67">spurlock2013bootstrap</bcf:citekey>
+    <bcf:citekey order="68">spurlock2013bootstrap</bcf:citekey>
+    <bcf:citekey order="69">chacon2009pro</bcf:citekey>
+    <bcf:citekey order="70">pivotalTracker</bcf:citekey>
+    <bcf:citekey order="71">Q2014</bcf:citekey>
+    <bcf:citekey order="72">ossCamp2014</bcf:citekey>
+    <bcf:citekey order="73">background</bcf:citekey>
+    <bcf:citekey order="74">oauthFacebook</bcf:citekey>
+    <bcf:citekey order="75">oauthGoogle</bcf:citekey>
+    <bcf:citekey order="76">oauthTwitter</bcf:citekey>
+    <bcf:citekey order="77">utf8</bcf:citekey>
+    <bcf:citekey order="78">modal</bcf:citekey>
+    <bcf:citekey order="79">html</bcf:citekey>
+    <bcf:citekey order="80">hEntry</bcf:citekey>
+    <bcf:citekey order="81">microformats2</bcf:citekey>
+    <bcf:citekey order="82">html5</bcf:citekey>
+    <bcf:citekey order="83">ajax</bcf:citekey>
+    <bcf:citekey order="84">test</bcf:citekey>
+    <bcf:citekey order="85">transaction</bcf:citekey>
+    <bcf:citekey order="86">composer</bcf:citekey>
+    <bcf:citekey order="87">testing</bcf:citekey>
+    <bcf:citekey order="88">api</bcf:citekey>
+    <bcf:citekey order="89">nginx</bcf:citekey>
+    <bcf:citekey order="90">lighttps</bcf:citekey>
+    <bcf:citekey order="91">openSource</bcf:citekey>
   </bcf:section>
 </bcf:controlfile>

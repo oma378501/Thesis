@@ -2,9 +2,11 @@
 
 \section{\textquestiondown Que es feed de noticia?}
 
-El feed \footnote{feed: Suministrar informaci\'{o}n} puede ser m\'{a}s que t\'{i}tulos
-y enlaces, esto permite a los usuarios obtengan las \'{u}ltimas actualizaciones del sitio
-a diferentes dispositivos enviados desde un sitio web.
+El feed \footnote{feed: Un archivo coherente, legible por la m\'{a}quina que 
+permite a los sitios web para compartir su contenido con otras aplicaciones en
+una forma est\'{a}ndar \cite{hammersley2005developing}} puede ser m\'{a}s que 
+t\'{i}tulos y enlaces, esto permite a los usuarios obtengan las \'{u}ltimas 
+actualizaciones del sitio a diferentes dispositivos enviados desde un sitio web.
 
 Los feeds pueden ser cualquier cosa de pocos titulares y enlaces a historia a todo
 el contenido del sitio, despojados de su trazado y con metadatos aplicados generosamente.
@@ -17,8 +19,14 @@ RSS y Atom son XML formatos para mensajes y otra informaci\'{o}n que es actualiz
 frecuentemente. Los documentos que son escritos en estos formatos son llamados newfeeds
 or feed.\cite{wittenbrink2005rss}
 
-Se define RSS \footnote{RSS: Really Simple Syndication} como un formato basado en XML 
-\footnote{XML:Extensible Markup Language: designado para almacenar y transportar datos} 
+Se define RSS \footnote{RSS: Es un m\'{e}todo de noticias descubriendo un otro 
+contenido Web que est\'{a} disponible para la alimentaci\'{o}n 
+\cite{zeki2004rss}} como un formato basado en XML 
+\footnote{XML: Es un metalenguaje para definir idiomas para el intercambio de 
+informaci\'{o}n en la Web, los formatos de fuentes son tambi\'{e}n a menudo se
+llama \textquotedblleft dialectos XML\textquotedblright o \textquotedblleft XML
+vocabularios \textquotedblright \cite{wittenbrink2005rss}} 
+
 para compartir contenido del sitio web.
 
 Si un sitio web quiere compartir y publicar parte de su contenido a otros sitios en el
@@ -74,9 +82,12 @@ acceder al sitio web.
 
 \section{Los elementos de RSS 0.91}
 
-Una versi\'{o}n importante de Netscape RSS 0.91 a comparaci\'{o}n de RSS 0.90 de
-validar documentos de este formato a comparaci\'{o}n de un DTD \footnote{DTD: Es un 
-tipo de documento: define la estructura y legal elementos y atributos de un documento XML}. 
+Una versi\'{o}n importante de Netscape RSS 0.91 a comparaci\'{o}n de RSS 0.90 
+de validar documentos de este formato a comparaci\'{o}n de un DTD 
+\footnote{DTD: Es la definici\'{o}n de un documento espec\'{i}fico y 
+restrictivo definici\'{o}n o un conjunto de sentencias que siguen las reglas 
+del lenguaje de marcado generalizando est\'{a}ndares o del lenguaje de marcado
+extensible, un subconjunto de SGML \cite{dtd}} 
 
 La definitiva fuente de informaci\'{o}n respecto RSS 0.91 es la especificaci\'{o}n de
 esta misma, para su conveniencia se provee un resumen en la Figura \ref{Elementos
@@ -108,11 +119,14 @@ segunda categor\'{i}a a <item> que contiene: <title>, <link> y <description>.
 Otros desarrolladores importantes, entre ellos Rael Dornfest, que 
 trabajaba como director de tecnolog\'{i}a de O'Reilly, quer\'{i}a ampliar el 
 alcance de RSS utilizando para otro prop\'{o}sito y lo conectan con formatos
-adicionales. Por lo tanto, se dio introducci\'{o}n RDF \footnote{RDF :Resource
-Description Framework Schema un set de clases con ciertas propiedades.} y 
-tambi\'{e}n introdujo un nuevo mecanismo, el espacio de nombres XML. Una 
-especificaci\'{o}n relacionado fue publicado en diciembre de 2002; los 
-desarrolladores llaman el formato que se describe, RSS 1.0.\cite{johnson2006rss}
+adicionales. Por lo tanto, se dio introducci\'{o}n RDF \footnote{RDF: Tiene 
+caracter\'{i}sticas que facilitan la fusi\'{o}n de datos incluso si los 
+esquemas subyacentes son diferentes, y que espec\'{i}ficamente apoya la 
+evoluci\'{o}n de esquemas con el tiempo sin necesidad de todos los consumidores
+de datos que ser cambio \cite{rdf}}  y tambi\'{e}n introdujo un nuevo mecanismo
+, el espacio de nombres XML. Una especificaci\'{o}n relacionado fue publicado 
+en diciembre de 2002; los desarrolladores llaman el formato que se describe, 
+RSS 1.0.\cite{johnson2006rss}
 
 Esta norma, lanzado en diciembre de 2000, trajo dos cambios importantes en el 
 mundo RSS: la introducci\'{o}n de RDF y con ella una introducci\'{o}n de espacios
@@ -308,9 +322,10 @@ de cada una.\cite{johnson2006rss}
 \section{El nuevo estandar: Atom}
 
 A principios del 2003 un grupo de blooggers desilucionados con estado de newfeeds
-publicaron un nuevo estandar API \footnote{API: Es un conjunto particular de reglas
-y especificaci\'{o}n que el programas pueden seguir para comunicarse entre si} el
-cual deberia ser conocido como Atom.
+publicaron un nuevo estandar API \footnote{API: Es una interfaz a trav\'{e}s del
+cual se accede a otra persona o c\'{o}digo a trav\'{e}s del cual el c\'{o}digo 
+de otra persona accede a la suya. En efecto los m\'{e}todos p\'{u}plicos y 
+propiedades \cite{api}} el cual deberia ser conocido como Atom.
 
 Atom es un formato de documento basado en XML que describe las listas de informaci\'{o}n
 relacionada conocida como \textquotedblleft feeds\textquotedblright. Feeds se componen

@@ -1,8 +1,7 @@
 \chapter{DESARROLLO DEL PROYECTO}
 
 Se pone a consideraci\'{o}n los siguientes aspectos que se ven convenientes para
-describir el proceso desarrollo. Se considera para cada componente que los 
-siguientes aspectos son opcionales.
+describir el proceso desarrollo. para cada objetivo espec\'{i}fico
 
 \begin{itemize}
 
@@ -10,7 +9,6 @@ siguientes aspectos son opcionales.
 \item Arquitectura de Componente
 \item Modelo de Componente
 \item Componente
-\item Reporte Pruebas
 \item Implementaci\'{o}n de Componente
 \item Problema/Soluci\'{o}n de Componente
 
@@ -36,7 +34,7 @@ finales pueden optar por dar de baja la misma.
 En la Figura \ref{Job Queue Architecture} se muestra la comunicaci\'{o}n de
 componentes que interactuan para ejecutar un proceso en segundo plano 
 \footnote{segund plano: Es un programa que se ejecuta sin intervenci\'{o}n del
-usuario}, el mismo debe ejecutarse en base fecha liberaci\'{o}n definida en un
+usuario \cite{background}}, el mismo debe ejecutarse en base fecha liberaci\'{o}n definida en un
 podcast al momento del registro.   
 
 \subsection{Tarjetas de Historias de Usuario}
@@ -59,7 +57,7 @@ Tiempo Estimado Inicial: 20 & Riesgo en Desarrollo: & Tipo de Historia: Funciona
 \multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Pre Condición:	\\ \\ Usuario Autentificado. \\ Contenido publicado. \\ Servidor SMTP configurado.\end{tabular}} \\ \hline
 \multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Post Condición:\\ \\ Recibir mensajes en mi bandeja de entrada de mi cuenta de correo.\end{tabular}} \\ \hline
 \multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Observaciones:\\ \\ La suscripción del usuario Aprendiz Autorregulado le permite acceder solo a un  producto,\\ sin permitirle dejar comentarios o interactuar de otra manera en la plataforma.\end{tabular}} \\ \hline
-\begin{tabular}[c]{@{}l@{}}.....................................................\\ Msc. Lic. Vladimir Costas Juaregui\\ PROJECT MANAGER\end{tabular} & \begin{tabular}[c]{@{}l@{}}..........................................\\ Lic. Manuel Camacho Arce\\ PRODUCT OWNER\end{tabular} & \begin{tabular}[c]{@{}l@{}}.........................................\\ Juan Omar Huanca Balboa\\ SCRUMMASTER\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}.....................................................\\ Msc. Lic. Vladimir Costas Juaregui\\ PROJECT MANAGER\end{tabular} & \begin{tabular}[c]{@{}l@{}}..........................................\\ Lic. Manuel Camacho Arce\\ PRODUCT OWNER\end{tabular} & \begin{tabular}[c]{@{}l@{}}.........................................\\ Juan Omar Huanca Balboa\\ SCRUM MASTER\end{tabular} \\ \hline
 \end{tabular}
 \captionof{table}{Tarjeta Historia de Usuario 03}
 \source{fuente: (Elaboraci\'{o}n Propia)}
@@ -79,7 +77,7 @@ Tiempo Estimado Inicial: 20 & Riesgo en Desarrollo: & Tipo de Historia: Funciona
 \multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Pre Condición:	\\ \\ Usuario Autentificado.\end{tabular}} \\ \hline
 \multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Post Condición:\\ \\ Agregar a mis intereses la sub categoria.\end{tabular}} \\ \hline
 \multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Observaciones:\\ \\ El usuario al momento de regitrarse a un contenido, estara subscrito a\\ todo el programa de aprendizaje.\end{tabular}} \\ \hline
-\begin{tabular}[c]{@{}l@{}}.....................................................\\ Msc. Lic. Vladimir Costas Juaregui\\ PROJECT MANAGER\end{tabular} & \begin{tabular}[c]{@{}l@{}}..........................................\\ Lic. Manuel Camacho Arce\\ PRODUCT OWNER\end{tabular} & \begin{tabular}[c]{@{}l@{}}.........................................\\ Juan Omar Huanca Balboa\\ SCRUMMASTER\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}.....................................................\\ Msc. Lic. Vladimir Costas Juaregui\\ PROJECT MANAGER\end{tabular} & \begin{tabular}[c]{@{}l@{}}..........................................\\ Lic. Manuel Camacho Arce\\ PRODUCT OWNER\end{tabular} & \begin{tabular}[c]{@{}l@{}}.........................................\\ Juan Omar Huanca Balboa\\ SCRUM MASTER\end{tabular} \\ \hline
 \end{tabular}
 \captionof{table}{Tarjeta Historia de Usuario 57}
 \source{fuente: (Elaboraci\'{o}n Propia)}
@@ -99,7 +97,7 @@ Tiempo Estimado Inicial: 35 & Riesgo en Desarrollo: & Tipo de Historia: Funciona
 \multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Pre Condición:	\\ \\ Usuario Autentificado.\end{tabular}} \\ \hline
 \multicolumn{3}{|l|}{Post Condición:} \\ \hline
 \multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Observaciones:\\ \\ La liberación de los contenidos deberia estar bajo un cronograma de liberación secuencial.\end{tabular}} \\ \hline
-\begin{tabular}[c]{@{}l@{}}.....................................................\\ Msc. Lic. Vladimir Costas Juaregui\\ PROJECT MANAGER\end{tabular} & \begin{tabular}[c]{@{}l@{}}..........................................\\ Lic. Manuel Camacho Arce\\ PRODUCT OWNER\end{tabular} & \begin{tabular}[c]{@{}l@{}}.........................................\\ Juan Omar Huanca Balboa\\ SCRUMMASTER\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}.....................................................\\ Msc. Lic. Vladimir Costas Juaregui\\ PROJECT MANAGER\end{tabular} & \begin{tabular}[c]{@{}l@{}}..........................................\\ Lic. Manuel Camacho Arce\\ PRODUCT OWNER\end{tabular} & \begin{tabular}[c]{@{}l@{}}.........................................\\ Juan Omar Huanca Balboa\\ SCRUM MASTER\end{tabular} \\ \hline
 \end{tabular}
 \captionof{table}{Tarjeta Historia de Usuario 56}
 \source{fuente: (Elaboraci\'{o}n Propia)}
@@ -119,7 +117,7 @@ Tiempo Estimado Inicial: 15 & Riesgo en Desarrollo: & Tipo de Historia: Funciona
 \multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Pre Condición:\\ \\ Usuario Autentificado. \\ Usuario Suscrito\end{tabular}} \\ \hline
 \multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Post Condición:\\ \\ Dejar de recibir notificaciones a mi bandeja de entrada.\end{tabular}} \\ \hline
 \multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Como Probarlo:\\ \\ Pinchar en el enlace que aparece en cada mensaje de noticias y pinchar.\end{tabular}} \\ \hline
-\begin{tabular}[c]{@{}l@{}}.....................................................\\ Msc. Lic. Vladimir Costas Juaregui\\ PROJECT MANAGER\end{tabular} & \begin{tabular}[c]{@{}l@{}}..........................................\\ Lic. Manuel Camacho Arce\\ PRODUCT OWNER\end{tabular} & \begin{tabular}[c]{@{}l@{}}.........................................\\ Juan Omar Huanca Balboa\\ SCRUMMASTER\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}.....................................................\\ Msc. Lic. Vladimir Costas Juaregui\\ PROJECT MANAGER\end{tabular} & \begin{tabular}[c]{@{}l@{}}..........................................\\ Lic. Manuel Camacho Arce\\ PRODUCT OWNER\end{tabular} & \begin{tabular}[c]{@{}l@{}}.........................................\\ Juan Omar Huanca Balboa\\ SCRUM MASTER\end{tabular} \\ \hline
 \end{tabular}
 \captionof{table}{Tarjeta Historia de Usuario 58}
 \source{fuente: (Elaboraci\'{o}n Propia)}
@@ -188,13 +186,13 @@ de un programa de aprendizaje orientado a un rol autentificado.
 	\label{fig:Modelo Subscripci\'{o}n Modelo de Datos}
 \end{minipage}
 
-Se define subscripci\'{o}n por programa aprendizaje (category), debido cuando se
-tenga m\'{a}s de un podcast agregado dentro del programa aprendizaje, este debe
-ser sujeto a notificaci\'{o}n, tomando en cuenta que dentro del sistema un 
-usuario puede llegar a tener m\'{a}s de un rol asignado. Adem\'{a}s se considera
-mantener una bit\'{a}cora \footnote{bit\'{a}cora: Mecanismo persistencia de actividades
-en el tiempo} de acciones de subscripci\'{o}n y dar de baja hacia un programa 
-aprendizaje en el tiempo por fechas.
+Se define subscripci\'{o}n por programa aprendizaje (category), este debe ser
+sujeto a notificaci\'{o}n, tomando en cuenta que dentro del sistema un usuario
+puede llegar a tener m\'{a}s de un rol asignado. Adem\'{a}s se considera 
+mantener una bit\'{a}cora \footnote{bit\'{a}cora: Mecanismo persistencia de 
+actividades en el tiempo (Elaboraci\'{o}n Propia)} (detail\textunderscore 
+subscription) de acciones de subscripci\'{o}n y dar de baja la 
+subscripci\'{o}n realizadas.
 
 \subsection{Componente}
 
@@ -305,8 +303,10 @@ En la linea 2 se tiene por funcionalidad de: Limpiar el b\'{u}ffer de
 salida y deshabilitar el uso del b\'{u}ffer de salida.
 
 En la linea 3 es agrega la cabecera de un documento XML y su respectiva
-codificaci\'{o}n en UTF-8 \footnote{UTF-8: Su objetivo es reemplazar los conjuntos
-de caracteres existentes con su formato de transformaci\'{o}n Unicode est\'{a}ndar}
+codificaci\'{o}n en UTF-8 \footnote{UTF-8: El est\'{a}ndar Unicode cubre todos
+los caracteres, signos de puntuaci\'{o}n y s\'{i}mbolos en el mundo. Unicode 
+procesamiento, almacenamiento y transporte de texto, independiente de la 
+plataforma y lenguaje \cite{utf8}}
 
 \item \textbf{Implementaci\'{o}n en el Servidor} Se define por medio de contrab
 un shell sobre una distribuci\'{o}n linux especificar la funci\'{o}n asincrona
@@ -337,9 +337,10 @@ para el Servicio Agregador de Noticias.
 
 \begin{itemize}
 
-\item Generaci\'{o}n \'{u}nica de modal \footnote{modal: Describe una ventana
-secundaria que restringe la interacci\'{o}n de un usuario con la ventana de 
-propietario} respecto a Programa Aprendizaje (sub-categor\'{i}a)
+\item Generaci\'{o}n \'{u}nica de modal \footnote{modal: Una ventana modal es, 
+por tanto, normalmente una ventana secundaria. El usuario tiene que interactuar
+con \'{e}l antes de que el control se pueda devolver a la solicitud principal
+\cite{modal}} respecto a Programa Aprendizaje (sub-categor\'{i}a)
 \item Env\'{i}o de mensaje de notificaci\'{o}n de liberaci\'{o}n contenido tarea
 en segundo plano. 
 
@@ -376,9 +377,9 @@ Programa Aprendizaje: Fon\'{e}tica Quechua
 
 Se tubo problemas al momento de enviar la notificaci\'{o}n a las cuentas de correo
 que se encuentran subscritos a un programa de aprendizaje, debido que el mensaje de 
-correo contiene etiquetas propias de HTML \footnote{HTML: Es el lenguaje de marcado
-est\'{a}ndar utilizado para crear p\'{a}ginas web y sus elementos forman los bloques
-de construcci\'{o}n de todos los sitios web}
+correo contiene etiquetas propias de HTML \footnote{HTML: Es el conjunto de 
+s\'{i}mbolos de marcado o c\'{o}digos insertados en un archivo destinado a la
+visualizaci\'{o}n de una p\'{a}gina Web Mundial. \cite{html}} 
 
 \item \textbf{Envio Mensajes - Implementaci\'{o}n en el Servidor}
 
@@ -448,7 +449,7 @@ Tiempo Estimado Inicial: 35 & Riesgo en Desarrollo: & Tipo de Historia: Funciona
 \multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Como Probarlo:\\ \\ Se tiene que pinchar sobre botón play reproductor\\
 pinchar dos veces sobre el boton Mostrar/Ocultar\\ Transcripción, para poder apreciar la transcripción además de una \\
  traducción a un lenguaje destino.\end{tabular}} \\ \hline
-\begin{tabular}[c]{@{}l@{}}.....................................................\\ Msc. Lic. Vladimir Costas Juaregui\\ PROJECT MANAGER\end{tabular} & \begin{tabular}[c]{@{}l@{}}..........................................\\ Lic. Manuel Camacho Arce\\ PRODUCT OWNER\end{tabular} & \begin{tabular}[c]{@{}l@{}}.........................................\\ Juan Omar Huanca Balboa\\ SCRUMMASTER\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}.....................................................\\ Msc. Lic. Vladimir Costas Juaregui\\ PROJECT MANAGER\end{tabular} & \begin{tabular}[c]{@{}l@{}}..........................................\\ Lic. Manuel Camacho Arce\\ PRODUCT OWNER\end{tabular} & \begin{tabular}[c]{@{}l@{}}.........................................\\ Juan Omar Huanca Balboa\\ SCRUM MASTER\end{tabular} \\ \hline
 \end{tabular}
 \captionof{table}{Tarjeta Historia de Usuario 59}
 \source{fuente: (Elaboraci\'{o}n Propia)}
@@ -468,7 +469,7 @@ Tiempo Estimado Inicial: 30 & Riesgo en Desarrollo: & Tipo de Historia: Funciona
 \multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Pre Condición:\\ \\ Usuario Autentificado.\end{tabular}} \\ \hline
 \multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Como Probarlo: \\ \\ Se tiene que situar sobre detalle Podcast, para luego pinchar sobre la segunda\\ opción Definición Glosario dentro del Tab de opciones.\end{tabular}} \\ \hline
 \multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Observaciones:\\ \\ Se realizara al gestión para podcast de tipo audio.\end{tabular}} \\ \hline
-\begin{tabular}[c]{@{}l@{}}.....................................................\\ Msc. Lic. Vladimir Costas Juaregui\\ PROJECT MANAGER\end{tabular} & \begin{tabular}[c]{@{}l@{}}..........................................\\ Lic. Manuel Camacho Arce\\ PRODUCT OWNER\end{tabular} & \begin{tabular}[c]{@{}l@{}}.........................................\\ Juan Omar Huanca Balboa\\ SCRUMMASTER\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}.....................................................\\ Msc. Lic. Vladimir Costas Juaregui\\ PROJECT MANAGER\end{tabular} & \begin{tabular}[c]{@{}l@{}}..........................................\\ Lic. Manuel Camacho Arce\\ PRODUCT OWNER\end{tabular} & \begin{tabular}[c]{@{}l@{}}.........................................\\ Juan Omar Huanca Balboa\\ SCRUM MASTER\end{tabular} \\ \hline
 \end{tabular}
 \captionof{table}{Tarjeta Historia de Usuario 60}
 \source{fuente: (Elaboraci\'{o}n Propia)}
@@ -896,8 +897,9 @@ de contenido sem\'{a}ntico sobre la capa vista del sistema.
 
 \begin{itemize}
 
-\item uso de HTML5 \footnote{HTML5: Una gran cantidad de microdatos de HTML5
-para a\~nadir significado sem\'{a}ntico a los documentos} para agregar 
+\item uso de HTML5 \footnote{HTML5: Es una vesi\'{o}n del lenguaje de marcado
+de hypertexto, el lenguaje de programaci\'{o}n est\'{a}ndar para describir el
+contenido y la apariencia de las p\'{a}ginas Web \cite{html5}}  para agregar 
 contenido sem\'{a}ntico
 \item agregaci\'{o}n de microformatos lado del Servidor
 
@@ -916,11 +918,11 @@ de informaci\'{o}n.
 
 Para realizar el evento de subtitulado inicialmente se penso utilizar la 
 funcionalidad Segmento C\'{o}digo \ref{lst:fillSubtitle} que realiza el llenado
-de elementos por una sola llamda AJAX \footnote{AJAX: (Synchronous JavaScript 
-and XML) es un m\'{e}todo para la creaci\'{o}n de aplicaciones interactivas para
-la Web que procesan las peticiones del usuario inmediato.}, pero luego se 
+de elementos por una sola llamda AJAX \footnote{AJAX: (Asynchronous JavaScript
+and XML) is a method of bulding interactive applications for the Web that 
+process user request immediately \cite{ajax}} , pero luego se 
 considero que al momento de utilizar un servicio extractor externo este no 
-funcina correctamente asi que se opto por realizar el llenado en lenguaje 
+funcina correctamente asi que se opto por realizar el llenado en lado del 
 servidor.
 
 \begin{lstlisting}[language = PHP]
@@ -951,13 +953,15 @@ $model_translations));
 Para implementar pruebas sobre servicio agregador de noticias se utilizaron pruebas
 funcionales contemplando la capa del modelo de datos y para la situaci\'{o}n de pruebas
 de reproducci\'{o}n Audio, Video se tubo que tener soporte de emulador web para
-automatizar pruebas de integraci\'{o}n estas solo contemplan la capa visa de la arquitectura del proyecto. 
+automatizar pruebas de integraci\'{o}n estas solo contemplan la capa visa de la
+arquitectura del proyecto. 
 
 \subsection{Componente}
 
 En la Figura \ref{fig:Diagrama Clases Dependencia Subscripci\'{o}n} se puede
-apreciar el criterio optado para implementar test \footnote{test: Es un 
-m\'{e}todo de evaluaci\'{o}n de la funcionalidad de un programa de software}
+apreciar el criterio optado para implementar test \footnote{test: Las pruebas
+de software es un m\'{e}todo de evaluaci\'{o}n de la funcionalidad de un 
+programa de software \cite{test}} 
 empezando de arriba hacia abajo, se considero el grado dependencia.
 
 \begin{minipage}{1.0\textwidth}
@@ -973,8 +977,11 @@ empezando de arriba hacia abajo, se considero el grado dependencia.
 
 \subsection{Reporte Pruebas}
 
+Se define \'{u}nicamente esta secci\'{o}n el uso de Reportes por tratarse de pruebas
+funcionales, test integraci\'{o}n.
+
 Los reportes de pruebas se generan en base a la implementaci\'{o}n realizada a
-los siguientes modulos que se contenplaron como ser: Subscripci\'{o}n, debido
+los siguientes m\'{o}dulos que se contenplaron como ser: Subscripci\'{o}n, debido
 que el servicio agregador de noticias que se definio en Subsecci\'{o}n \ref{RSS}
 
 % report test 1
@@ -1208,9 +1215,9 @@ public function testCreateSubscription() {
 \item \textbf{Implementaci\'{o}n en el Servidor}
 Se define la funcionalidad de control a nivel de la capa modelo de Arquitectura
 de proyecto para realizar control, manejo haciendo uso de una transaccion. 
-\footnote{transaccion: Una transacci\'{o}n simboliza una unidad de trabajo 
-realizado dentro de un sistema de gesti\'{o}n de base de datos, y se trat\'{o}
-de una manera coherente y fiable independiente de otras trasacciones}
+\footnote{transaccion: Una secuencia de intercambio de informaci\'{o}n y el 
+trabajo relacionado que se trata como una unidad a efectos de satisfacer una
+solicitud como para asegurar la integridad de la base de datos \cite{transaction}} 
 
 \begin{lstlisting}[language = PHP]
 public function beforeSave() {
@@ -1268,11 +1275,11 @@ Se consideran las siguientes dificultades que surgieron:
 
 \item \textbf{PHPUnit, Dependencias}
 Se recomienda realizar la instalaci\'{o}n de phpunit por medio de composer 
-\footnote{composer: Es un gestor de paquetes a nivel de aplicaci\'{o}n para el
-lenguaje de programaci\'{o}n PHP que proporciona un formato est\'{a}ndar para
-la gesti\'{o}n de dependencias de software PHP y bibliotecas necesarias} para
-agregar contenido dependencias dentro la carpeta  /project/protected/composer.json
-y empezar utilizar sentencias para implementar test.
+\footnote{composer: Es un gestor de dependencias para PHP. Composer 
+gestionar\'{a} las dependencias que se requieren en un proyecto por ejemplo 
+\cite{composer}} para agregar contenido dependencias dentro la carpeta  
+/project/protected/composer.json y empezar utilizar sentencias para implementar
+test.
 
 \begin{lstlisting}[]
 {
@@ -1364,12 +1371,13 @@ Yii::import('system.test.CTestCase');
 require_once('PHPUnit/Extensions/SeleniumTestCase.php');
 \end{lstlisting}
 
-Para poder tener acceso a la API \footnote{API: Una interfaz de programaci\'{o}n
-de aplicacioneses un conjunto particular de normas y especificaci\'{o}nes que
-los programas de software pueden seguir para comunicarse entre s\'{i}} de 
-implementaci\'{o}n de test sobre Yii 1.x es conveniente reemplazar en el Segmento C\'{o}digo
-\ref{lst:fileCWebTestCase} en la linea 11 por la instrucci\'{o}n definida en la linea
-1 del Segmento C\'{o}digo \ref{lst:replaceCWebTestCase}
+Para poder tener acceso a la API \footnote{API: Es una interfaz a trav\'{e}s 
+del cual se accede a otra persona o c\'{o}digo a trav\'{e}s del cual el 
+c\'{o}digo de otra persona accede a la suya. En efecto los m\'{e}todos 
+p\'{u}plicos y propiedades \cite{api}} de implementaci\'{o}n de test sobre Yii
+1.x es conveniente reemplazar en el Segmento C\'{o}digo 
+\ref{lst:fileCWebTestCase} en la linea 11 por la instrucci\'{o}n definida en la
+linea 1 del Segmento C\'{o}digo \ref{lst:replaceCWebTestCase}
 
 \begin{lstlisting}[language=PHP, caption={Instrucci\'{o}n a Reemplazar}, label={lst:replaceCWebTestCase}]
 require_once('../../protected/vendor/phpunit/phpunit-selenium/

@@ -86,13 +86,14 @@
 % add appendix
 \usepackage{appendix}
 
+% add command about Anexos
 \renewcommand{\appendixname}{Anexos}
 \renewcommand{\appendixtocname}{Anexos}
 \renewcommand{\appendixpagename}{Anexos}
 
 % enumerate table
 \pagenumbering{roman}
-
+    
 \begin{document}
 
 \newcounter{rom}
@@ -102,9 +103,13 @@
 \justifying
 \noindent
 
-\tableofcontents
-\listoffigures
-\listoftables
+%\input{tex/Dedication}\newpage\cleardoublepage
+ 
+%\tableofcontents
+%\listoffigures
+%\listoftables
+
+%\input{tex/Abstract}\newpage\cleardoublepage
 
 \newpage\thispagestyle{plain}~
 \clearpage
@@ -134,5 +139,7 @@
 \input{tex/AnexoB}\newpage\cleardoublepage
 
 \input{tex/AnexoC}\newpage\cleardoublepage
+
+%\input{tex/AnexoD}\newpage\cleardoublepage
 
 \end{document}

@@ -1,0 +1,50 @@
+\chapter{Manual Instalaci\'{o}n}
+
+Plataforma Educativa Educativa LAEL es una sistema que cuenta con usuarios, 
+procesos y acciones.
+
+\section{Introducci\'{o}n}
+
+Los requisitos para realizar la instalaci\'{o}n son:
+
+\begin{itemize}
+
+\item Debian 8.0 u otra distribuci\'{o}n Linux
+\item 4 GB RAM
+\item 8 GB Disco Duro
+\item Servidor Web: 2.x
+\item Gestor Base de Datos: MySQL 5.x
+\item Lenguaje de Programaci\'{o}n: PHP 5.x
+\item Versinador de c\'{o}digo: GIT 1.7 o superior
+
+\end{itemize}
+
+\subsection{Instalaci\'{o}n Servidor Web}
+
+A continuaci\'{o}n se abra una terminal o consola
+identificarse como super usuario o root
+
+\begin{lstlisting}
+# apt-get update
+# apt-get install apache2
+\end{lstlisting}
+
+\subsection{Instlaci\'{o}n Servidor Base de Datos}
+
+A continuaci\'{o}n se necesita abrir una terminal o consola
+e identificarse como super usuario o root
+
+\begin{lstlisting}
+# apt-get update
+# apt-get install mysql-server mysql-server-core-5.x 
+	mysql-client-5.x phpmyadmin
+\end{lstlisting}
+
+\subsection{Crear Base de Datos y agregar Script}
+
+Se decea abrir una consola o terminal.
+
+\begin{lstlisting}
+$ mysql -u root -p
+$ mysql
+\end{lstlisting}
