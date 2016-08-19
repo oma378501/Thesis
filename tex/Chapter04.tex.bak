@@ -2,51 +2,39 @@
 
 \section{Arquitectura Cliente/Servidor}
 
-Arquitecturas cliente-servidor son generalmente consideradas como arquitecturas
-de sistemas distribuidos, pero el modelo lógico de servicios independientes
-que se ejecutan en servidores separados puede implementarse en un solo equipo.
-Una vez más, un beneficio importante es la separación e independencia.
-Los servicios y servidores se pueden cambiar sin afectar otras partes del sistema.
-Los clientes pueden tener que saber los nombres de los servidores disponibles y
-los servicios que ellos proveen. Sin embargo, los servidores no necesitan conocer
-la identidad de los clientes o cómo muchos clientes tienen acceso a sus
-servicios. Los clientes acceden a los servicios prestados por un servidor a 
-través de llamadas a procedimientos remotos utilizando un protocolo de 
-petición-respuesta como el http protocolo utilizando en la www, Esencialmente,
-un cliente realiza una solicitud a un servidor y espera que reciba una respuesta.
+Según \cite{sommerville2011software} arquitecturas cliente servidor son
+generalmente consideradas como arquitecturas de sistemas distribuidos, pero
+el modelo lógico de servicios independientes que se ejecutan en servidores
+separados puede implementarse en un solo equipo. Una vez más, un beneficio
+importante es la separación e independencia.
 
-Figura \ref{Una arquitectura cliente-servidor para una filmoteca} es un ejemplo de
-un sistema que se basa en el modelo cliente-servidor. Esta es un sistema basado en
-la web multi-usuario para proporcionar una biblioteca de cine y  fotografía.
-En este sistema, varios servidores de gestión, se muestran los diferentes tipos de
-medios.\cite{sommerville2011software}
+Esencialmente, el usuario final realiza por medio de un navegador web la
+solicitud de una página web, esperando una respuesta.
+
+Figura \ref{Una arquitectura cliente servidor para una filmoteca} es un ejemplo de
+un sistema que se basa en el modelo cliente servidor. \cite{sommerville2011software}
 
 \begin{figure}[!htb]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.5]{architectureClientServer}
 	}
-	\caption{Una arquitectura cliente-servidor para una filmoteca}
+	\caption{Una arquitectura cliente servidor para una filmoteca}
 	\source{fuente: \cite{sommerville2011software}}
-	\label{Una arquitectura cliente-servidor para una filmoteca}
+	\label{Una arquitectura cliente servidor para una filmoteca}
 \end{figure}
 
 \subsection{Patrón Diseño: Modelo Vista Controlador}
 
-La idea de los patrones como una forma de presentar, compartir y reutilizar el
-conocimiento sobre sistemas de software ahora se utiliza amplia mente.
-Usted puede pensar en un patrón arquitectónico como una estilizada 
-descripción, abstracta de buena práctica, que ha sido probada en 
-diferentes sistemas y entornos. Así que, un patrón arquitectónico
-debe describir una organización del sistema que ha sido con \'{e}xito
-en los sistemas anteriores. Debe incluir información de cuándo es
-y no es apropiado utilizar ese patrón, y los patrones de puntos fuertes
-y débiles. 
+Según \cite{sommerville2011software} la idea de los patrones como una forma
+de presentar, compartir y reutilizar el conocimiento sobre sistemas de
+software ahora se utiliza amplia-mente. Se piensa en un patrón
+arquitectónico como una estilizada descripción, abstracta de buena práctica,
+que ha sido probada en diferentes sistemas y entornos.
 
 Figura \ref{Arquitectura de aplicaciones Web utilizando el patrón MVC} muestra
-una posible arquitectura de tiempo ejecución cuando este patrón se utiliza
-para la gestión de la interacción en un sistema basado en la web.
-\cite{sommerville2011software}
+una arquitectura de ejecución cuando este patrón utiliza la gestión en un
+sistema basado en la web. \cite{sommerville2011software}
 
 \begin{minipage}{1.0\textwidth}
 	\centering
@@ -62,9 +50,9 @@ para la gestión de la interacción en un sistema basado en la web.
 
 \item \textbf{Diseño del Proyecto}
 
-Se toma como patrón de Diseño Model View Controller como base para  extender
-la funcionalidad de un Controller como Manager la cual realiza una abstracción
-de funcionalidad y re uso esta definido en la Figura 
+Se toma como patrón de Diseño Modelo Vista Controlador como base para  extender
+la funcionalidad de un Controlador, representado por Administrador; realiza una
+abstracción de funcionalidad y re-uso esta definido en la Figura 
 \ref{Arquitectura Extendida MVCM}
 
 \begin{minipage}{1.0\textwidth}
@@ -79,33 +67,32 @@ de funcionalidad y re uso esta definido en la Figura
 
 \end{itemize}
 
-\section{Administración de Roles}
+\section{Designación de Roles}
 
-En la Plataforma Web Educativa se implementaron 4 tipos de roles como ser:
+En la Plataforma Web Educativa se implementaron cuatro tipos de roles:
 
 \begin{itemize}
 
-\item \textbf{Autorregulado}, rol designado a un usuario interesado en
-realizar suscripción a un Programa de Aprendizaje, dar de baja una suscripción.
+\item \textbf{Autorregulado}, rol designado para
+realizar suscripción a un Programa de Aprendizaje o dar de baja.
 
-\item \textbf{Tutor}, rol designado a los Estudiantes Adscritos de Carrera LAEL,
-los cuales tiene la posibilidad de crear Podcast tipo audio/vídeo, agregar retro
-alimentación, agregar transcripción. 
+\item \textbf{Tutor}, rol designado a un estudiante adscrito de la Carrera
+LAEL, quien tiene la posibilidad de crear Podcast de tipo audio/vídeo, agregar
+retro-alimentación y agregar una transcripción. 
 
-\item \textbf{Coordinador}, rol designado a los tutores de la Carrera LAEL,
-los cuales tienen la posibilidad de crear un Programa de Aprendizaje, para que
-los Podcast se encuentren dentro un Programa de Aprendizaje, valga la redundancia.
+\item \textbf{Coordinador}, rol designado al docente de la Carrera LAEL, quien
+realiza la función de tutor; quien tiene la posibilidad de crear un Programa
+de Aprendizaje.
 
-\item \textbf{Administrador}, rol designado a los Adscritos de la Carrera de
-Informática y Sistemas, se encuentran encargados de la parte administrativa
-del sistema.
+\item \textbf{Administrador}, rol designado a un Adscrito de la Carrera de
+Informática, quien tiene la posibilidad de gestionar la seguridad del sistema.
 
 \end{itemize}
 
-\section{Representación de un Podcast}
+\section{Estructura de un Podcast} \label{structPodcast}
 
-A continuación se realiza la representación de un Podcast de tipo Audio como
-elementos esenciales: 
+El Podcast de tipo audio es representado como una estructura que contiene los
+siguientes datos: 
 
 \begin{itemize}
 
@@ -114,18 +101,21 @@ elementos esenciales:
 \item \textbf{descripción}, resumen del tema a considerar.
 \item \textbf{reproductor audio}, grabación de diálogos e interacción de
 personajes.
+\item \textbf{fecha liberación}, fecha de publicación.
 \item \textbf{historieta}, imágenes de personajes a representar.
-\item \textbf{transcripción}, texto sobre el dialogo de personajes presentes en
+\item \textbf{transcripción}, texto respecto al dialogo de personajes presentes en
 un escenario.
-\item \textbf{actividades}, retro alimentación de actividades.
-\item \textbf{resolución de actividades}, respuestas referente actividades.
-\item \textbf{glosario}, descripción y ejemplos de términos empleados inmersos
+\item \textbf{actividades}, retro-alimentación de actividades.
+\item \textbf{resolución de actividades}, respuestas de actividades.
+\item \textbf{glosario}, descripción y ejemplos de términos inmersos
 en la transcripción.
-\item \textbf{diccionario}, documento de referencia para definición de palabras. 
+\item \textbf{diccionario}, documento de referencia, definición de palabras. 
 
 \end{itemize}
 
-Se describe un Podcast de tipo Vídeo conformado de los siguientes elementos:
+Se describe la estructura de un Podcast de tipo vídeo; la diferencia es que
+este no cuenta con: transcripción, actividades, resolución de actividades,
+glosario.
 
 \begin{itemize}
 
@@ -133,35 +123,38 @@ Se describe un Podcast de tipo Vídeo conformado de los siguientes elementos:
 \item \textbf{imagen portada}, imagen representativa.
 \item \textbf{descripción}, resumen del tema a considerar.
 \item \textbf{reproductor vídeo}, uso de recursos como ser: imágenes, texto y
-audio.   
-\item \textbf{infografía}, representación pequeña de imágenes utilizadas
-para la representación del reproductor.
-\item \textbf{diccionario}, documento de referencia para definición de palabras. 
+audio.
+\item \textbf{fecha liberación}, fecha de publicación.
+\item \textbf{infografía}, representación pequeña de imágenes.
+\item \textbf{diccionario}, documento de referencia, definición de palabras. 
 
 \end{itemize}
 
 \section{Definición de Componentes}
 
-Se pone a consideración los siguientes aspectos que se ven convenientes para
-describir el proceso desarrollo. para cada objetivo específico.
+Se considera los siguientes aspectos para describir el proceso desarrollo. 
+En para cada objetivo específico.
 
 \begin{itemize}
-
 \item Tarjetas de Historias de Usuario.
 \item Arquitectura de Componente.
 \item Modelo de Componente.
 \item Componente.
 \item Implementar Componente.
 \item Problema/Solución de Componente.
-
 \end{itemize}
 
-\section{\textquestiondown Cómo implementar un servicio agregado de noticias?} \label{RSS}
+\section{\textquestiondown Cómo implementar un servicio agregado de noticia?} \label{serviceFeed}
 
-La característica de un servicio agregado de noticias es realizar notificaciones
-vía correo electrónico respecto a nuevo(s) contenido(s) dentro aplicación
-web sujeto a subscribir, también tomando en cuenta que los usuarios 
-finales pueden optar por dar de baja la misma, si así lo desean. 
+La principal tarea de un servicio agregado de noticia realizara notificación
+vía correo electrónico, para nuevo contenido mostrar en la web.
+
+En la Figura \ref{Job Queue Architecture} muestra la comunicación de
+componentes de un servicio agregado de noticia, un proceso en segundo plano 
+\footnote{segundo plano: Es un programa que se ejecuta sin intervención del
+usuario. \cite{background}} se ejecuta respecto la fecha de liberación
+descrito en la estructura de un podcast. Sección \ref{structPodcast}
+
 
 \begin{minipage}{1.0\textwidth}
 	\centering
@@ -173,18 +166,10 @@ finales pueden optar por dar de baja la misma, si así lo desean.
 	\label{Job Queue Architecture}
 \end{minipage}
 
-En la Figura \ref{Job Queue Architecture} se muestra la comunicación de
-componentes se comunican para ejecutar un proceso en segundo plano 
-\footnote{segundo plano: Es un programa que se ejecuta sin intervención del
-usuario \cite{background}}, el mismo debe ejecutarse en base fecha liberación
-definida en un Podcast al momento del registro.   
-
 \subsection{Tarjetas de Historias de Usuario}
 
-Las Historias de Usuario se elaboran en base a deseos de Carrera LAEL y
-gestionado por un Coordinador designado como responsable del proyecto 
-adscripción, el mismo que sugirió cambios de funcionalidades en el
-transcurso del tiempo.
+La historia es construido en base a deseos del coordinador designado por la
+Carrera LAEL, quien sugirió modificación, sugerencia en el tiempo.
 
 % add history card 03
 \begin{minipage}[b]{\hsize}\centering
@@ -235,7 +220,8 @@ ID Historia: 56 & \begin{tabular}[c]{@{}l@{}}Nombre: Liberación \\ de contenido
 \multicolumn{3}{|l|}{Rol: Tutor} \\ \hline
 \begin{tabular}[c]{@{}l@{}}Modificación de Historia\\ Numero:\end{tabular} & Iteración Asignada: 10 & Prioridad en Negocio: Medio \\ \hline
 Tiempo Estimado Inicial: 35 & Riesgo en Desarrollo: & Tipo de Historia: Funcional \\ \hline
-\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción:\\ \\ Yo como usuario Tutor deseo realizar la auto publicación de mis Episodios tal que me beneficie \\ una publicación según crono grama.\end{tabular}} \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción:\\ \\ Yo como usuario Tutor deseo realizar la auto-publicación de mis Episodios tal que se publiquen\\ de acuerdo a fecha indicada en el registro
+de la publicación.\end{tabular}} \\ \hline
 \multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Pre Condición:	\\ \\ Usuario Autentificado.\end{tabular}} \\ \hline
 \multicolumn{3}{|l|}{Post Condición:} \\ \hline
 \multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Observaciones:\\ \\ La liberación de los contenidos debería estar bajo un crono grama de liberación secuencial.\end{tabular}} \\ \hline
@@ -255,7 +241,7 @@ ID Historia: 58 & \begin{tabular}[c]{@{}l@{}}Nombre: Darse de baja \\ subscripto
 \multicolumn{3}{|l|}{Rol: Aprendiz Autorregulado} \\ \hline
 \begin{tabular}[c]{@{}l@{}}Modificación de Historia\\ Numero: 04\end{tabular} & Iteración Asignada: 11 & Prioridad en Negocio: Bajo \\ \hline
 Tiempo Estimado Inicial: 15 & Riesgo en Desarrollo: & Tipo de Historia: Funcional \\ \hline
-\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción:\\ \\ Yo como usuario Aprendiz Autorregulado deseo dar de baja mi suscripción de un determinado \\ Podcast de algún canal de noticias tal que me beneficie de no recibir más notificaciones.\\ \\ Para esto necesito pinchar en un enlace con la etiqueta Dar de baja dentro del cuerpo\\ de un mensaje.\end{tabular}} \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción:\\ \\ Yo como usuario Aprendiz Autorregulado deseo dar de baja mi suscripción a un determinado \\ Programa de Aprendizaje tal que me beneficie no recibir más notificaciones.\\ \\ Para esto necesito pinchar en un enlace con la etiqueta Dar de baja dentro del cuerpo\\ de un mensaje.\end{tabular}} \\ \hline
 \multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Pre Condición:\\ \\ Usuario Autentificado. \\ Usuario Suscrito\end{tabular}} \\ \hline
 \multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Post Condición:\\ \\ Dejar de recibir notificaciones a mi bandeja de entrada.\end{tabular}} \\ \hline
 \multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Como Probarlo:\\ \\ Pinchar en el enlace que aparece en cada mensaje de noticias y pinchar.\end{tabular}} \\ \hline
@@ -268,10 +254,9 @@ Tiempo Estimado Inicial: 15 & Riesgo en Desarrollo: & Tipo de Historia: Funciona
 
 \subsection{Arquitectura de Componente}
 
-En la Figura \ref{fig:Diagrama Caso de Uso Subscriptor} se identifica los 
-diferentes procesos Actores como ser: Coordinador, Administrador, Tutor, 
-Autorregulado que tienen eventos dentro el sistema mediante procesos descritos
-en un lenguaje natural en Cuadro \ref{Tarjeta Historia de Usuario 03}, Cuadro
+En la Figura \ref{fig:Diagrama Caso de Uso Subscriptor} el actor
+(autorregulado) realiza el requerimiento de sistema, la especificación
+se la realiza: Cuadro \ref{Tarjeta Historia de Usuario 03}, Cuadro 
 \ref{Tarjeta Historia de Usuario 58}
 
 \begin{minipage}{1.0\textwidth}
@@ -284,8 +269,8 @@ en un lenguaje natural en Cuadro \ref{Tarjeta Historia de Usuario 03}, Cuadro
 	\label{fig:Diagrama Caso de Uso Subscriptor}
 \end{minipage}
 
-En la Figura \ref{fig:Diagrama Clases Subscriptor} se identifica la
-representación de datos por cada Clase, atributos y composición.
+En la Figura \ref{fig:Diagrama Clases Subscriptor} las diferentes clases
+tiene la representación de datos y composición.
 
 \begin{minipage}{1.0\textwidth}
 	\centering
@@ -297,26 +282,23 @@ representación de datos por cada Clase, atributos y composición.
 	\label{fig:Diagrama Clases Subscriptor}
 \end{minipage}
 
-En la Figura \ref{fig:Diagrama Secuencia Subscriptor} se realiza la
-representación de subscriptor en forma dinámica. Además se 
-realiza la representación sobre la acción dar de baja por programa
-aprendizaje (category), brindando un historial en el tiempo sobre los registros. 
+En la Figura \ref{fig:Diagrama Secuencia Subscriptor} el rol (autorregulado)
+tiene comunicación con diferentes clases. 
 
 \begin{minipage}{1.0\textwidth}
-\centering
-\fbox{
-	\includegraphics[scale=0.7]{sequenceSubscription}
-}
-\captionof{figure}{Diagrama Secuencia Subscriptor}
-\source{fuente: (Elaboración Propia)}
-\label{fig:Diagrama Secuencia Subscriptor}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.7]{sequenceSubscription}
+	}
+	\captionof{figure}{Diagrama Secuencia Subscriptor}
+	\source{fuente: (Elaboración Propia)}
+	\label{fig:Diagrama Secuencia Subscriptor}
 \end{minipage}
 
 \subsection{Modelo de Componente}
 
-En la Figura \ref{fig:Modelo Subscriptor Modelo de Datos} se define el 
-modelo parcial base de datos respecto a personalización en subscriptor
-de un programa de aprendizaje orientado a un rol autentificado. 
+En la Figura \ref{fig:Modelo Subscriptor Modelo de Datos} el modelo de datos,
+personalización de subscriptor por programa de aprendizaje. 
 
 \begin{minipage}{1.0\textwidth}
 	\centering
@@ -328,22 +310,26 @@ de un programa de aprendizaje orientado a un rol autentificado.
 	\label{fig:Modelo Subscriptor Modelo de Datos}
 \end{minipage}
 
-Se define subscriptor por programa aprendizaje (category), este debe ser
-sujeto a notificación, tomando en cuenta que dentro del sistema un usuario
-puede llegar a tener m\'{a}s de un rol asignado. Además se considera 
-mantener una bitácora \footnote{bitácora: Mecanismo persistencia de 
-actividades en el tiempo (Elaboración Propia)} (detail\textunderscore
-subscription) de acciones de subscribir y dar de baja.
+El subscriptor se conforma: programa aprendizaje (category) genera una
+bitácora \footnote{bitácora: Mecanismo persistencia de actividades en el
+tiempo. (Elaboración Propia)}, detail\textunderscore subscription
 
 \subsection{Componente}
 
-En la Figura \ref{fig:Ventana emergente subscriptor} se opta por 
-subscriptor por programa de aprendizaje (category), el
-usuario debe autentificarse para poder subscribirse.
+Se brinda dos opciones para subscriptor: 
 
-Se brinda dos opciones para subscriptor como ser: Primera Opción
-Manual, la misma permite ingresar solo una dirección de correo sujeto a
-verificación. Segunda Opción Red Social, Google, Facebook, Twitter. 
+\begin{itemize}
+
+\item \textbf{Manual}, permite subscribirse con una dirección de
+correo sujeto a verificación de sistema.
+
+\item \textbf{Token de red social}, permite subscribirse con un servicio
+externo provisto por algunas redes sociales: Google, Facebook, Twitter.
+
+\end{itemize}
+
+\textbf{Manual} en la Figura \ref{fig:Ventana emergente subscriptor} poder
+suscribirse ingresar una única de dirección de correo.
 
 \begin{minipage}{1.0\textwidth}
 	\centering
@@ -355,9 +341,12 @@ verificación. Segunda Opción Red Social, Google, Facebook, Twitter.
 	\label{fig:Ventana emergente subscriptor}
 \end{minipage}
 
-En la Figura \ref{fig:Formulario de Autentificar} una opción emergente
-luego de pinchar sobre opción Inicio Sesión. Se Ingresa a Sistema con
-los siguientes campos: Nombre Usuario, Contraseña.
+\textbf{Token \footnote{Token: Se clasifica como una de las cinco clases de
+fichas que describen sus funciones (constantes, identificadores, operadores,
+palabras reservadas y separadores) de acuerdo con las reglas del lenguaje de
+programación. \cite{token}} de red social} en la Figura \ref{fig:Formulario
+de Autentificar} se ingresa dentro sistema con los campos: nombre 
+usuario, contraseña.
 
 \begin{minipage}{1.0\textwidth}
 	\centering
@@ -369,9 +358,11 @@ los siguientes campos: Nombre Usuario, Contraseña.
 	\label{fig:Formulario de Autentificar}
 \end{minipage}
 
-En la Figura \ref{fig:Facebook OAuth Autenticatition} se facilita el Diagrama 
-Secuencia en uso de un servicio externo, para facilitar un acceso, partiendo
-de una cuenta válida dentro los usuarios en Facebook.
+\begin{enumerate}
+
+\item \textbf{Facebook}, en la Figura \ref{fig:Facebook OAuth Autenticatition}
+la representación gráfica de un servicio externo facilita el acceso para una
+cuenta válida de usuario.
 
 \begin{minipage}{1.0\textwidth}
 	\centering
@@ -383,9 +374,9 @@ de una cuenta válida dentro los usuarios en Facebook.
 	\label{fig:Facebook OAuth Autenticatition}
 \end{minipage}
 
-En la Figura \ref{Aplicaciones de servidor web} se facilita el Diagrama Secuencia
-en uso de un servicio externo, para facilitar un acceso, partiendo de una cuenta
-válida dentro los usuarios en Google.
+\item \textbf{Google}, en la Figura \ref{Aplicaciones de servidor web} el
+diagrama secuencia de uso de un servicio externo facilita el acceso para una
+cuenta válida de un usuario.
 
 \begin{minipage}{1.0\textwidth}
 	\centering
@@ -394,12 +385,12 @@ válida dentro los usuarios en Google.
 	}
 	\captionof{figure}{Aplicaciones de servidor web}
 	\source{fuente: \cite{oauthGoogle}}
-	\label{Aplicaciones de servidor web}
+	\label{Aplicaciones de servidor web}	
 \end{minipage}
 
-En la Figura \ref{Aplicación de autentificar} se facilita el 
-Diagrama Secuencia en uso de un servicio externo, para facilitar un acceso,
-partiendo de una cuenta válida dentro los usuarios en Twitter.
+\item \textbf{Twitter}, en la Figura \ref{Aplicación de autentificar} la
+representación gráfica de un servicio externo facilita el acceso de una
+cuenta válida de un usuario.
 
 \begin{minipage}{1.0\textwidth}
 	\centering
@@ -410,17 +401,18 @@ partiendo de una cuenta válida dentro los usuarios en Twitter.
 	\source{fuente: \cite{oauthTwitter}}
 	\label{Aplicación de autentificar}
 \end{minipage}
+
+\end{enumerate}
 	
 \subsection{Implementar Componente}
 
 \begin{itemize}
 
-\item \textbf{Implementar en el Servidor} Se define el siguiente Segmento
-Código donde se personaliza la subscribir por programa de aprendizaje.
-El cual permite poder visualizar programas de aprendizaje habilitados sujetos
-al subscriptor.
+\item \textbf{Implementar en el Servidor} el siguiente segmento de código
+puede personalizar subscriptor por programa de aprendizaje, el subscriptor
+obtiene los programas de aprendizaje habilitados. 
 
-\begin{lstlisting}[language = PHP]
+\begin{lstlisting}[language = PHP, caption={Personalización de subscriptor.}]
 public function actionCustomRss($idCategory) {
 ob_end_clean();
 header('Content-type: text/xml; charset=utf-8');
@@ -440,27 +432,48 @@ $this->renderPartial('_viewItemChannel', array('data' => $data));
 }
 \end{lstlisting}
 
-En la linea 2 se tiene por funcionalidad de: Limpiar el búffer de
-salida y des habilitar el uso del búffer de salida.
+En la linea dos tiene la funcionalidad limpiar buffer de salida y
+des-habilitar su uso.
 
-En la linea 3 es agrega la cabecera de un documento XML y su respectiva
-codificación en UTF-8 \footnote{UTF-8: El estándar Unicode cubre todos
+En la linea tres agrega la cabecera de un documento XML y codificacion con
+el formato UTF-8 \footnote{UTF-8: El estándar Unicode cubre todos
 los caracteres, signos de puntuación y símbolos en el mundo. Unicode 
 procesamiento, almacenamiento y transporte de texto, independiente de la 
-plataforma y lenguaje \cite{utf8}}
+plataforma y lenguaje \cite{utf8}}.
 
-\item \textbf{Implementar en el Servidor} Se define por medio de contrab
-un shell utilizando una distribución linux, especificar la función asíncrona
-la cual permite ejecutar un script ejecución de liberación de Podcast el cual 
-realiza la comparación de la fecha actual de sistema con la fecha de liberación.
+\item \textbf{Implementar en el Servidor} el proceso cron utiliza una tabla
+para definición de tareas, la instrucción representa la ejecución de un
+script para liberación de podcast suscrito.
 
-\begin{lstlisting}[language = PHP]
+Ejecutar el comando sobre una terminal. A continuación se debe iniciar sesión
+como usuario \textquotedouble{root}.
+
+\begin{lstlisting}[language=bash, caption={Acceso archivo crontab.}]
+# contrab -e
+\end{lstlisting}
+
+\textbf{sobre una linea} escribir la instrucción dentro el archivo crontab.
+La sintaxis de comando dentro el archivo es el siguiente: Minuto (0-59)
+Hora (0-23) Día del mes (1-31) Mes del año (1-12) Día de la semana (0-7)
+Comando/Script/tarea a ejecutar.
+
+\begin{lstlisting}[language=bash, caption={Comando para ejecución de tarea.}]
+0 0 * * * 
+php /var/www/html/plataformaeducativalael/protected/utils/job.php job
+\end{lstlisting}
+
+A continuación, la función principal del archivo job.php obtienen podcast
+listo para ser liberado. Enviar notificación por correo electrónico a los
+usuarios suscritos por programa de aprendizaje.
+
+\begin{lstlisting}[language = PHP, caption={Método principal de clase JobCommand.}]
 public function run($args) {	
 $jobs = $this->getJobs();
 foreach ($jobs as $job) {
 	...
     // set field available
-    $job->content_status = Yii::app()->params['stateContentAvailable'];
+    $job->content_status = 
+    Yii::app()->params['stateContentAvailable'];
     // save data
     $job->save();
     $this->sendMailSubscribed($job->category_id_category, 
@@ -473,32 +486,33 @@ foreach ($jobs as $job) {
 
 \subsection{Problema/Solución de Componente}
 
-Se consideran las siguientes dificultades que surgieron para la implementar
-el Servicio Agregado de Noticias.
+Las siguientes dificultades sirven para la realizar el servicio agregado de
+noticia.
 
 \begin{itemize}
 
 \item Generación única de modal \footnote{modal: Una ventana modal es, 
 por tanto, normalmente una ventana secundaria. El usuario tiene interarticular
-con el antes de que el control se pueda devolver a la solicitud principal
-\cite{modal}} respecto a Programa Aprendizaje (sub categoría)
-\item Envió de mensajes según notificación de liberación contenido.
+con el antes de que el control se pueda devolver a la solicitud principal.
+\cite{modal}} respecto a Programa Aprendizaje.
+
+\item Envió de mensajes para notificación de liberación.
 
 \end{itemize}
 
-En la generación de programas de aprendizaje de acceso por medio de una
-ventana modal, el último identificador realizaba replicas en los demás.
+Para la generación programa de aprendizaje se realiza por medio de la
+ventana modal; el último identificador tiende a replicar sobre los anteriores.
 
 \begin{enumerate}
 
 \item \textbf{Generar Único identificador por Modal - Implementar en
 el Cliente}
 
-Se define como mecanismo de solución generar un identificador por cada
-programa de aprendizaje como ser: Francés Básico, Inglés Básico, Quechua
-Básico, Quechua Psicosocial, Fonética Quechua.
+Como mecanismo de solución tiene que generar un identificador por programa de
+aprendizaje: Francés Básico, Inglés Básico, Quechua Básico,
+Quechua Psicosocial, Fonética Quechua.
 
-\begin{lstlisting}[]
+\begin{lstlisting}[caption={Generador ventana modal.}]
 <?php $this->beginWidget(
         'booster.widgets.TbModal', array(
     'id' => 'myModal' . $category_id,
@@ -512,18 +526,17 @@ Básico, Quechua Psicosocial, Fonética Quechua.
 <?php $this->endWidget(); ?>
 \end{lstlisting}
 
-Se tubo problemas al momento de enviar notificación vía correo electrónico
-referente a usuarios subscritos, debido que en la elaboración del mensaje
-contiene etiquetas propias de HTML \footnote{HTML: Es el conjunto de 
-símbolos de marcado o códigos insertados en un archivo destinado a la
-visualización de una página Web Mundial. \cite{html}} 
+Los problemas de notificación vía correo electrónico se genera por etiquetas
+propias de HTML \footnote{HTML: Es el conjunto de símbolos de marcado o
+códigos insertados en un archivo destinado a la visualización de una página
+web mundial. \cite{html}}.
 
-\item \textbf{Envió Mensajes - Implementar en el Servidor}
+\item \textbf{Envió Mensaje - Implementar en el Servidor}
 
-Se define Segmento Código la forma de implementar el envió de correo con la 
-característica de que muestra el mensaje de correo sin página maestra.
+El segmento de código implementar el envió de correo tiene la característica
+mostrar un mensaje sin página maestra.
 
-\begin{lstlisting}[language = PHP]
+\begin{lstlisting}[language = PHP, caption={Envió de mensaje sin  contenedor de página.}]
 private function sendMailSubscribed($idCategory, $idUser,
 $title, $summary) {
 $userRols = Category::model()->getRecentUserSubscribe($idCategory);
@@ -531,8 +544,8 @@ foreach ($userRols->categoryUserRol as $userRol) {
 if ($idUser != $userRol->user_id_user) {
 // set properties
 $subject = Yii::app()->params['setSubjectContentRelease'];
-$body = Yii::app()->params['setBodyContentRelease'] . $title . $summary
-. Yii::app()->params['setBodyBelowContentRelease'] . 
+$body = Yii::app()->params['setBodyContentRelease'] . $title .
+$summary . Yii::app()->params['setBodyBelowContentRelease'] . 
 Yii::app()->params['adminEmail'] . 
 Yii::app()->params['setBodyBottomContentRelease'];
 $to = $userRol->userIdUser->email;
@@ -540,8 +553,9 @@ $to = $userRol->userIdUser->email;
 $mail = new YiiMailer();
 //use "cron" view from views/mail
 $mail->setBody($body);
-$mail->setData(array('message' => $subject, 'name' => get_class($this),
-'description' => 'Cron job', 'mailer' => $mail));
+$mail->setData(array('message' => $subject, 'name' => 
+get_class($this), 'description' => 'Cron job', 
+'mailer' => $mail));
 //render HTML mail, layout is set from config file or with 
 //$mail->setLayout('layoutName')
 $mail->render();
@@ -558,33 +572,31 @@ $mail->AddAddress($to);
 
 \end{enumerate}
 
-\section{\textquestiondown Como Implementar Mecanismos de Transcripción?}
+\section{\textquestiondown Cómo Implementar un Glosario y Subtitulado?}
 
-Se desea poder relacionar un reproductor de un Podcast de tipo audio con su
-respectiva transcripción, de tal forma se tenga un efecto de subtitulado. De igual
-manera se desea definir de palabras con una descripción.
+Relacionar un reproductor de podcast de tipo audio con su transcripción
+tiene un efecto de subtitulado. 
+
+Definir un glosario de términos con significado.
  
 \subsection{Tarjetas de Historias de Usuario}
 
-Las Tarjetas de Historias de Usuario son aquellas que representan los deseos de la
-Unidad Patrocinadora representados por su Coordinador en lenguaje natural, para 
-definir la funcionalidad a realizar.
+Las historias representan los deseos del coordinador de proyecto de
+adscripción, quien define los requerimientos a desarrollar.
 
 % add user history card 59
 \begin{minipage}[b]{\hsize}\centering
 \begin{tabular}{|l|l|l|}
 \hline
  & \textbf{Tarjeta Historia de Usuario} &  \\ \hline
-ID Historia: 59 & \begin{tabular}[c]{@{}l@{}}Nombre: Gestionar\\ Karaoke podcast\end{tabular} & Fecha: 09/05/2015 \\ \hline
+ID Historia: 59 & \begin{tabular}[c]{@{}l@{}}Nombre: Gestionar\\ Subtitulado Podcast\end{tabular} & Fecha: 09/05/2015 \\ \hline
 \multicolumn{3}{|l|}{Rol: Tutor} \\ \hline
 \begin{tabular}[c]{@{}l@{}}Modificación de Historia\\ Numero:\end{tabular} & Iteración Asignada: 14 & Prioridad en Negocio: Medio \\ \hline
 Tiempo Estimado Inicial: 35 & Riesgo en Desarrollo: & Tipo de Historia: Funcional \\ \hline
-\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción:\\ \\ Yo como usuario Tutor deseo tener un karaoke tal que me beneficie poder relacionar\\ el reproductor con la conversación del podcast.\\ \\ Para esto necesito: Tipo Traducción, Frase, Lenguaje (Destino), Significado,\\ Tiempo Inicio, Tiempo Fin.\end{tabular}} \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción:\\ \\ Yo como usuario Tutor deseo tener un subtitulado tal que me beneficie poder relacionar:\\ reproductor con la transcripción de un podcast.\\ \\ Para esto necesito: Traducción, Frase, Lenguaje Destino, Significado,\\ Tiempo Inicio, Tiempo Fin.\end{tabular}} \\ \hline
 \multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Pre Condición:	\\ \\ Usuario Autentificado.\end{tabular}} \\ \hline
 \multicolumn{3}{|l|}{Post Condición:} \\ \hline
-\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Como Probarlo:\\ \\ Se tiene que pinchar sobre botón play reproductor\\
-pinchar dos veces sobre el botón Mostrar/Ocultar\\ Transcripción, para poder apreciar la transcripción además de una \\
- traducción a un lenguaje destino.\end{tabular}} \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Como Probarlo:\\ \\ Se tiene que pinchar sobre botón play reproductor pinchar dos veces sobre el botón \\ Mostrar/Ocultar Traducción, para poder ver la transcripción además de una \\ traducción a un lenguaje destino.\end{tabular}} \\ \hline
 \begin{tabular}[c]{@{}l@{}}.....................................................\\ Msc. Lic. Vladimir Costas Juaregui\\ PROJECT MANAGER\end{tabular} & \begin{tabular}[c]{@{}l@{}}..........................................\\ Lic. Manuel Camacho Arce\\ PRODUCT OWNER\end{tabular} & \begin{tabular}[c]{@{}l@{}}.........................................\\ Juan Omar Huanca Balboa\\ SCRUM MASTER\end{tabular} \\ \hline
 \end{tabular}
 \captionof{table}{Tarjeta Historia de Usuario 59}
@@ -601,7 +613,7 @@ ID Historia: 60 & \begin{tabular}[c]{@{}l@{}}Nombre: Gestionar\\ Glosario audio 
 \multicolumn{3}{|l|}{Rol: Tutor} \\ \hline
 \begin{tabular}[c]{@{}l@{}}Modificación de Historia\\ Numero: 04\end{tabular} & Iteración Asignada: 14 & Prioridad en Negocio: Medio \\ \hline
 Tiempo Estimado Inicial: 30 & Riesgo en Desarrollo: & Tipo de Historia: Funcional \\ \hline
-\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción:\\ \\ Yo como usuario Tutor deseo gestionar un glosario tal que me beneficie poder definir términos \\ por cada Episodio.\\ \\ Para esto necesito: Tipo Traducción, Frase, Lenguaje (Destino), Significado.\end{tabular}} \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción:\\ \\ Yo como usuario Tutor deseo gestionar un glosario tal que me beneficie en la definición de términos.\\ \\ Para esto necesito: Tipo Traducción, Frase, Lenguaje (Destino), Significado.\end{tabular}} \\ \hline
 \multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Pre Condición:\\ \\ Usuario Autentificado.\end{tabular}} \\ \hline
 \multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Como Probarlo: \\ \\ Se tiene que situar sobre detalle Podcast, para luego pinchar sobre la segunda\\ opción Definición Glosario dentro del Tab de opciones.\end{tabular}} \\ \hline
 \multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Observaciones:\\ \\ Se realizara al gestión para podcast de tipo audio.\end{tabular}} \\ \hline
@@ -614,10 +626,9 @@ Tiempo Estimado Inicial: 30 & Riesgo en Desarrollo: & Tipo de Historia: Funciona
 
 \subsection{Arquitectura de Componente}
 
-En la Figura \ref{fig:Diagrama Caso de Uso Traducción} se realiza la 
-representación de funcionalidad especificada Procesos, Actores definida en
-los Cuadros  \ref{Tarjeta Historia de Usuario 59}, Cuadro \ref{Tarjeta Historia
-de Usuario 60}
+En la Figura \ref{fig:Diagrama Caso de Uso Traducción} las acciones del rol:
+Tutor. Descrito en: Cuadro \ref{Tarjeta Historia de Usuario 59},
+Cuadro \ref{Tarjeta Historia de Usuario 60}
 
 \begin{minipage}{1.0\textwidth}
 	\centering
@@ -629,9 +640,8 @@ de Usuario 60}
 	\label{fig:Diagrama Caso de Uso Traducción}
 \end{minipage}
 
-En la Figura \ref{fig:Diagrama Clases Traducción} se realiza la
-representación de Datos por medio de Clases como ser: Tutor, Content, Lyric, 
-Glossary.
+En la Figura \ref{fig:Diagrama Clases Traducción} las diferentes clases tiene
+la representación de datos y composición de atributos.
 
 \begin{minipage}{1.0\textwidth}
 	\centering
@@ -643,8 +653,9 @@ Glossary.
 	\label{fig:Diagrama Clases Traducción}
 \end{minipage}
 
-En la Figura \ref{fig:Diagrama Secuencia Traducción} se realiza la 
-interacción de Clases y Actor (Aprendiz Autorregulado).
+En la Figura \ref{fig:Diagrama Secuencia Traducción} el rol autorregulado
+tiene comunicación con las clases, utilizando envió de mensajes para
+definición de subtitulado y glosario.
 
 \begin{minipage}{1.0\textwidth}
 	\centering
@@ -658,8 +669,8 @@ interacción de Clases y Actor (Aprendiz Autorregulado).
 
 \subsection{Modelo de Componente}
 
-En la Figura \ref{fig:Modelo Transcripción}	se define el modelo parcial de 
-Base de Datos de un mecanismo de transcripción.
+En la Figura \ref{fig:Modelo Transcripción} las diferentes tablas realizan
+la representación de persistencia de: traducción y glosario.
 
 \begin{minipage}{1.0\textwidth}
 	\centering
@@ -673,9 +684,17 @@ Base de Datos de un mecanismo de transcripción.
 
 \subsection{Componente}
 
-En la Figura \ref{fig:Formulario Registro Glosario} se representa la
-funcionalidad de creación de glosario representado en un frase, lenguaje
-destino, significado.
+\begin{itemize}
+
+\item \textbf{Glosario de términos} permite crear frases con significado.
+\item \textbf{Subtitulado de transcripción}, permite relacionar reproductor
+de tipo audio con transcripción.
+
+\end{itemize}
+
+\textbf{Glosario} en la Figura \ref{fig:Formulario Registro Glosario} el
+formulario brinda la funcionalidad de crear glosario. considerando lo
+siguientes campos: tipo, frase, lenguaje destino, significado.
 
 \begin{minipage}{1.0\textwidth}
 	\centering
@@ -687,25 +706,9 @@ destino, significado.
 	\label{fig:Formulario Registro Glosario}
 \end{minipage}
 
-En la Figura \ref{fig:Diagrama Estados Karaoke} se define la estructura la
-que se tomó en cuenta para la elaboración del subtitulado de una frase
-para definir tanto para el subtitulado origen, subtitulado destino, tiempos 
-inicio, tiempo fin de una frase.
-
-\begin{minipage}{1.0\textwidth}
-	\centering
-	\fbox{
-		\includegraphics[scale=0.7]{stateLyric}
-	}
-	\captionof{figure}{Diagrama Estados Karaoke}
-	\source{fuente: (Elaboración Propia)}
-	\label{fig:Diagrama Estados Karaoke}
-\end{minipage}
-
-En la Figura \ref{fig:Formulario Registro Transcripción} se representa los 
-distintos campos necesarios para realizar el subtitulado del lenguaje origen, 
-lenguaje destino, tomando en cuenta el reproductor del Podcast que es fundamental
-para la asignación.
+\textbf{Subtitulado} en la Figura \ref{fig:Formulario Registro Transcripción}
+los siguientes campos para la definición de subtitulado: frase, lenguaje
+destino, significado, reproductor, tiempo inicio, tiempo fin.
 
 \begin{minipage}{1.0\textwidth}
 	\centering
@@ -717,16 +720,27 @@ para la asignación.
 	\label{fig:Formulario Registro Transcripción}
 \end{minipage}
 
+En la Figura \ref{fig:Diagrama Estados Subtitulado} el diagrama de estado de
+un reproductor para la definición de subtitulado.
+
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.7]{stateLyric}
+	}
+	\captionof{figure}{Diagrama Estados Subtitulado}
+	\source{fuente: (Elaboración Propia)}
+	\label{fig:Diagrama Estados Subtitulado}
+\end{minipage}
+
 \subsection{Implementar Componente}
 
 \begin{itemize}
 
-\item \textbf{Implementar en el Cliente}
-Se define la funcionalidad para obtener dos listas en los siguiente: 
-Transcripción lenguaje origen propio Podcast, Transcripción
-a un lenguaje destino para mayor comprensión.
+\item \textbf{Implementar en el Cliente} la funcionalidad para obtener dos
+listas: transcripción origen, traducción destino.
 
-\begin{lstlisting}[caption={Llenado elementos subtitulado}, label={lst:fillSubtitle}]
+\begin{lstlisting}[caption={Llenado de elementos en subtitulado.}, label={lst:fillSubtitle}]
 // get object audio player
 var myPlayer = document.getElementById("audio-player");
 // flag for run one time
@@ -739,17 +753,17 @@ if (!flag) {
 // get property through ajax
 $.ajax({
 type: "POST",
-url: "<?php echo CController::createUrl('Translation/getItemSentences'
-        ); ?>",
+url: "<?php echo CController::createUrl('Translation/
+getItemSentences'); ?>",
 data: {
 idTypeTranslation: "<?php echo Yii::app()->params[''
     . 'idTypeTranslationSentence']; ?>",
-idContent: "<?php echo Yii::app()->getRequest()->getParam('id_content'
-        ); ?>",
-idUser: "<?php echo Yii::app()->getRequest()->getParam('user_id_user'
-        ); ?>",
-idLanguage: "<?php echo $model_translation->language_id_language; ?>"
-},
+idContent: "<?php echo Yii::app()->getRequest()->getParam(
+'id_content'); ?>",
+idUser: "<?php echo Yii::app()->getRequest()->getParam(
+'user_id_user'); ?>",
+idLanguage: "<?php echo $model_translation->language_id_language; 
+?>"},
 dataType: "html",
 success: function (data) {
 var div = document.getElementById("idSentence");
@@ -766,12 +780,11 @@ play(myPlayer);
 <?php endif; ?>
 \end{lstlisting}
 
-\item \textbf{Implementar en el Cliente}
-Se define la siguiente función, donde se realiza las acciones necesarias para
-mostrar/ocultar el subtitulado del lenguaje origen sujeto a la acción de un 
-botón.  
+\item \textbf{Implementar en el Cliente} la acción necesarias para
+mostrar/ocultar la transcripción de podcast, por lo cual el botón realizar los
+eventos de control.  
 
-\begin{lstlisting}[]
+\begin{lstlisting}[caption={Control de Mostrar/Ocultar subtitulado.}]
 function play(myPlayer) {
 var controlDuplicate = [];
 myPlayer.ontimeupdate = function () {
@@ -801,7 +814,8 @@ $('#idSentence li').filter(':not([start_time_translation]), \n\
     [start_time_translation="' + timeConvert + '"]').addClass(
     'sentence_show');
 ...
-} else if (controlDuplicate[controlDuplicate.length - 1] != timeConvert) {
+} else if (controlDuplicate[controlDuplicate.length - 1] != 
+timeConvert) {
     controlDuplicate.push(timeConvert);
 $('#idSentence li').filter(':not([start_time_translation]), \n\
     [start_time_translation="'+ timeConvert + '"]').addClass(
@@ -819,22 +833,25 @@ $('#idSentence li').filter(':not([start_time_translation]), \n\
 
 \subsection{Problema/Solución de Componente}
 
-Se considera las siguientes dificultades que surgieron para la implementar
-Mecanismos de Transcripción.
-
+Los diferentes problemas se puede describir a continuación.
+ 
 \begin{itemize}
 
-\item Definición de segundos, minutos para tiempo inicio, tiempo final frase inicial.
-\item Definición de campos: tiempo inicio, tiempo final para la frases.
+\item Definición de formato de hora: minutos para tiempo inicio, minuto tiempo final.
+\item Frase de transcripción: tiempo inicio, tiempo final.
 
 \end{itemize}
 
 \begin{enumerate}
-\item \textbf{Definir Tiempos}
-La siguiente funcionalidad se debe para realizar el control de la definición
-de campos tiempo inicio, tiempo fin en base al reproductor definido para un Podcast,
-considerando el formato de tiempo como ser: MM:SS.
-\begin{lstlisting}[]
+
+\item \textbf{Formato de hora} los atributos se genera a través de la acción
+reproducir/detener de un reproductor, de manera que el tiempo tiene que
+tener el siguiente formato mm:ss
+
+Por tanto, la unidad de tiempo obtenida de un reproductor es insuficiente para
+esto agregar un cero por delante.
+
+\begin{lstlisting}[caption={Generador de formato para minuto y segundo.}]
 var myPlayer = document.getElementById("playerMyTranslation");
 myPlayer.addEventListener("play", function () {
 var status_start_translation = document.getElementById(
@@ -860,16 +877,11 @@ document.getElementById('start_translation').value =
 ...
 \end{lstlisting}
 
-El manejo de minutos y segundos extraídos de un reproductor se toman en cuenta
-para segundos y minutos es conveniente agregar un cero si se encuentra como
-unidad entera.
+\item \textbf{Revertir valor de inicio} los eventos de un reproductor
+reproducir/pausa realiza el cambio de valores de los atributos de tiempo:
+inicio, final.
 
-\item \textbf{Frase}
-
-La siguiente funcionalidad se debe realizar nuevamente iniciar los campos tiempo
-inicio, tiempo fin, como del reproductor a un estado inicial.
-
-\begin{lstlisting}[]
+\begin{lstlisting}[caption={Revertir valores para: tiempo y reproductor.}]
 function resetPlayer() {
 var status_start_translation = document.getElementById(
     'start_translation').disabled;
@@ -890,17 +902,18 @@ if (!status_start_translation && !status_end_translation) {
 
 \end{enumerate}
 
-\section{\textquestiondown Cómo facilitar representación de Subtitulado y representación de Glosario?}
+\section{\textquestiondown Cómo facilitar representación de Glosario y Subtitulado?}
 
-Se desea utilizar un mecanismo para poder agregar contenido semántico a las
-siguientes funcionalidades 
+Se agrega contenido semántico agregado a: subtitulado y glosario. 
 
 \subsection{Componente}
 
-Se facilita el esquema de representación de un micro formato h-entry para la
-representación de un Glosario de Podcast. \cite{hEntry}
+El esquema de representación de un micro-formato de tipo h-entry para la
+representación de un glosario de podcast. \cite{hEntry}
 
-\textbf{h-entry}
+\begin{itemize}
+
+\item \textbf{Representación de glosario uso de h-entry}
 
 \begin{itemize}
 
@@ -924,9 +937,8 @@ opcional mente una h-cite.
 
 \end{itemize}
 
-En la Figura \ref{fig:Presentación Glosario} se da a conocer la funcionalidad
-de glosario perteneciente para cada Podast de tipo audio, que tiene los
-elementos: frase, descripción.
+En la Figura \ref{fig:Presentación Glosario} el glosario podcast tiene como
+elementos: frase, significado. 
 
 \begin{minipage}{1.0\textwidth}
 	\centering
@@ -938,12 +950,12 @@ elementos: frase, descripción.
 	\label{fig:Presentación Glosario}
 \end{minipage}
 
-Se debe agregar contenido semántico al Subtitulado, entonces se realizo una
-extensión a micro formatos 2 con el concepto se reutilizan 
-micro formatos base para construcciones más complejas a continuación se 
-facilita el diseño del esquemas. \cite{microformats2}
 
-\textbf{microformats 2}
+\item \textbf{Representación de subtitulado} los micro-formatos tiene una
+cantidad definida de tipos, se debe agregar que micro-formatos 2 considerado
+como extension para extender funcionalidad. 
+
+\textbf{micro-formatos 2}
 
 \begin{itemize}
 
@@ -951,27 +963,38 @@ facilita el diseño del esquemas. \cite{microformats2}
 \item 'p-*' para las características simples (texto).
 \item 'u-*' para las características URL.
 \item 'dt-*' para la características de fecha/hora.
-\item 'e-*' para las propiedades de marcado incrustado.
+\item 'e-*' para las propiedades de marcado incrustado. \cite{microformats2}
  
 \end{itemize}
 
-Se realiza la siguiente representación sobre un esquema de tal manera que 
-se pueda realizar sincronizar el reproductor con subtitulado.
+\textbf{Representación de subtitulado}
 
-\begin{itemize}
+Se propone la siguiente estructura para agregar contenido semántica para una
+transcripción.
+
+
+\begin{enumerate}
 
 \item \textbf{h-x-lyrics} raíz de esquema.
-\item \textbf{p-lyric h-x-lyric} contenedora de elementos.
-\item \textbf{p-start-time} representa tiempo inicio.
-\item \textbf{p-content} representa contenido.
-\item \textbf{p-end-time} representa tiempo fin.
 
-\end{itemize}
+	\begin{enumerate}
+	
+		\item \textbf{p-lyric h-x-lyric} contenedora de elementos.
+		
+			\begin{enumerate}
 
-En la Figura \ref{fig:Presentación Subtitulado} se muestra la funcionalidad
-de Subtitulado contemplando sincronizar el reproductor con la transcripción,
-se muestra dos elementos transcripción como ser: lenguaje origen, traducción
-lenguaje destino. 
+				\item \textbf{p-start-time} representa tiempo inicio.
+				\item \textbf{p-content} representa contenido.
+				\item \textbf{p-end-time} representa tiempo fin.			
+
+				\end{enumerate}					
+
+	\end{enumerate}
+
+\end{enumerate}
+
+En la Figura \ref{fig:Presentación Subtitulado} la transcripción realiza la
+acción de sincronizar con el reproductor de audio.
 
 \begin{minipage}{1.0\textwidth}
 	\centering
@@ -983,15 +1006,17 @@ lenguaje destino.
 	\label{fig:Presentación Subtitulado}
 \end{minipage}
 
+\end{itemize}
+
+
 \subsection{Implementar Componente}
 
 \begin{itemize}
 
-\item \textbf{Implementar en el Cliente}
-Se define la siguiente agregación de contenido semántico para la 
-representación de un glosario tomando en cuenta un micro formato base h-entry.
+\item \textbf{Implementar en el Cliente} el segmento de código agrega contenido
+semántico para glosario tiene un micro-formato de tipo h-entry.
 
-\begin{lstlisting}[language = PHP]
+\begin{lstlisting}[language = PHP, caption={Representación de glosario.}]
 <dl class="h-entry">
     <dt class="p-name">
         <?php echo $data->sentence; ?> 
@@ -1002,11 +1027,10 @@ representación de un glosario tomando en cuenta un micro formato base h-entry.
 </dl>
 \end{lstlisting}
 
-\item \textbf{Implementar en el Cliente}
-Se define la siguiente agregación de contenido semántico de un Subtitulado
-brindando que la información el mismo que sirve de base.
+\item \textbf{Implementar en el Cliente} el segmento de código muestra la
+agregación utiliza la estructura propuesta para subtitulado.
 
-\begin{lstlisting}[language = PHP]
+\begin{lstlisting}[language = PHP, caption={Estructura de sentencia.}]
 <div>
 <ul class="h-sentence-lyrics ul_hide">
 <?php foreach ($model_translations as $translation): ?>  
@@ -1028,45 +1052,34 @@ brindando que la información el mismo que sirve de base.
 
 \subsection{Problema/Solución de Componente}
 
-Se considera los diferentes dificultades que se tuvieron dentro la agregación
-de contenido semántico sobre la capa vista del sistema.
+La dificultad para agregación de contenido semántico; sobre la capa vista.
 
 \begin{itemize}
 
-\item uso de HTML5 \footnote{HTML5: Es una vesi\'{o}n del lenguaje de marcado
-de hypertexto, el lenguaje de programación estándar para describir el
+\item Uso de HTML5 \footnote{HTML5: Es una vesi\'{o}n del lenguaje de marcado
+de hipertexto, el lenguaje de programación estándar para describir el
 contenido y la apariencia de las páginas Web \cite{html5}}  para agregar 
 contenido semántico.
-\item agregación de micro formatos en el lado del Servidor.
+\item Agregación de micro-formatos en el lado del servidor.
 
 \end{itemize}
 
 \begin{enumerate}
 
-\item \textbf{Uso de HTML5}
+\item \textbf{Uso de estándar HTML5} el uso de documento HTML5 permite el
+uso de los estilos para micro-formatos, 
 
-Se debe a que en los sprint: 11, 12, 13 compuesto cada sprint por un tiempo de
-10 días ha viles, se recomienda utilizar documentos HTML5 para evitar
-problemas como reconocimiento de micro formatos, servicios externos extractores
-de información.
+\item \textbf{Llenado en el lado del servidor} como resultado, la generación
+de subtitulado tiene que realizarse por lado de servidor, considerando el uso
+de extractores de micro-formatos externos utilizan la solicitud de servicios
+para el lado del servidor  
 
-\item \textbf{Llenado en el lado del Servidor}
-
-Para realizar el evento de subtitulado inicialmente se pensó utilizar la 
-funcionalidad Segmento Código \ref{lst:fillSubtitle} que realiza el llenado
-de elementos por una sola llamada AJAX \footnote{AJAX: (Asynchronous JavaScript
-and XML) es un método para la creación de aplicaciones interactivas para la Web
-que petición del usuario proceso de inmediato. \cite{ajax}} , pero luego se 
-consideró, al momento de utilizar un servicio extractor externo este no 
-funciona correctamente así que se opto por realizar el llenado en lado del 
-servidor.
-
-\begin{lstlisting}[language = PHP]
+\begin{lstlisting}[language = PHP, caption={Acción de obtención y envió para vista.}]
 public function actionViewContent($id_content, $user_id_user, 
     $type_content_id_type_content, $category_id_category) {
 Yii::app()->theme = 'front';
 //...
-// get property kareoke
+// get property subtitle
 $model_translations = Translation::model()->findAllByAttributes(
 array('type_translation_id_type_translation' => 
 $type_content_id_type_content, 'content_id_content' => $id_content,
@@ -1084,22 +1097,19 @@ $model_translations));
 
 \end{enumerate}
 
-\section{\textquestiondown Cómo facilitar pruebas de Servicio Agregado de Noticias, Reproducción Audio y Vídeo?}
+\section{\textquestiondown Cómo facilitar pruebas de Servicio Agregado de Noticia, Reproducción de Audio y Vídeo?}
 
-Para implementar pruebas sobre servicio agregado de noticias se utilizaron pruebas
-unitarias contemplando la capa del modelo de datos (model) y para la situación de pruebas
-de reproducción Audio, Vídeo se tubo que tener soporte de emulador web para
-automatizar pruebas de integración estas solo contemplan la capa vista (view) de la
-arquitectura del proyecto. 
+Utilizar de pruebas unitarias se utiliza la capa modelo.
+
+Ademas, las pruebas de integración requiere el uso de un servidor web. 
+
 
 \subsection{Componente}
 
-En la Figura \ref{fig:Diagrama Clases Dependencia Subscriptor} se puede
-apreciar el criterio optado para implementar test \footnote{test: Las pruebas
-de software es un método de evaluación de la funcionalidad de un 
-programa de software. \cite{test}} 
-empezando de arriba hacia abajo, se considero el grado dependencia en la
-construcción en uso.
+En la Figura \ref{fig:Diagrama Clases Dependencia Subscriptor} considerando
+el grado dependencia entre clases para utilizar prueba \footnote{prueba:
+Las pruebas de software es un método de evaluación de la funcionalidad de un 
+programa de software. \cite{test}}.
 
 \begin{minipage}{1.0\textwidth}
 	\centering
@@ -1112,14 +1122,13 @@ construcción en uso.
 \end{minipage}
 
 
-\subsection{Reporte Pruebas}
+\subsection{Reportes de pruebas}
 
-Se define únicamente esta sección el uso de Reportes por tratarse de pruebas
-unitarias, test integración.
+Únicamente, esta sección utiliza el uso de reportes para especificar la
+ejecución de prueba.
 
-Los reportes de pruebas se generan en base implementan realizadas a
-los siguientes módulos que se contemplaron como ser: Subscriptor, debido
-que el servicio agregado de noticias que se definió en Subsección \ref{RSS}.
+Acorde con componente subscriptor Subsección \ref{serviceFeed} se puede
+realizar las prueba necesarias.
 
 % report test 1
 \begin{landscape}
@@ -1267,7 +1276,7 @@ Input fields & \begin{tabular}[c]{@{}l@{}}category\_id\_category=7\\ id\_user\_r
 \centering
 \begin{tabular}{|l|l|l|l|l|l|}
 \hline
-\multicolumn{6}{|c|}{\textbf{Test Case Unit}} \\ \hline
+\multicolumn{6}{|c|}{\textbf{Test Case Integration}} \\ \hline
 \multicolumn{2}{|l|}{Test Case ID:  8} & \multicolumn{2}{l|}{Test Priority: Low} & \multicolumn{2}{l|}{Module Name: Content} \\ \hline
 \multicolumn{2}{|l|}{Test Title: testPlayAudioLocalHost} & \multicolumn{2}{l|}{Test Designed date: 15-03-2016} & \multicolumn{2}{l|}{Test Execution by: 23-05-2016} \\ \hline
 \multicolumn{6}{|l|}{Pre-conditions: Content available, phpunit installed, Selenium webdriver running.} \\ \hline
@@ -1287,7 +1296,7 @@ Get URL resource & \begin{tabular}[c]{@{}l@{}}http://localhost/plataformaeducati
 \centering
 \begin{tabular}{|l|l|l|l|l|l|}
 \hline
-\multicolumn{6}{|c|}{\textbf{Test Case Unit}} \\ \hline
+\multicolumn{6}{|c|}{\textbf{Test Case Integration}} \\ \hline
 \multicolumn{2}{|l|}{Test Case ID:  9} & \multicolumn{2}{l|}{Test Priority: Low} & \multicolumn{2}{l|}{Module Name: Content} \\ \hline
 \multicolumn{2}{|l|}{Test Title: testPlayVideoLocalHost} & \multicolumn{2}{l|}{Test Designed date: 15-03-2016} & \multicolumn{2}{l|}{Test Execution by: 23-05-2016} \\ \hline
 \multicolumn{6}{|l|}{Pre-conditions: Content available, phpunit installed, Selenium webdriver running.} \\ \hline
@@ -1301,31 +1310,49 @@ Get URL resource & \begin{tabular}[c]{@{}l@{}}http://localhost/plataformaeducati
 \end{table}
 \end{landscape}
 
-En la Figura \ref{fig:Ejecución Test Subscriptor} se puede apreciar la
-ejecución del test, referente creación de una subscriptor de un 
-usuario a un Programa de Aprendizaje.
+En la Figura \ref{fig:Ejecución Prueba Subscriptor} la prueba utiliza de
+phpunit para definir la consistencia de funcionalidad;
 
 \begin{minipage}{1.0\textwidth}
 	\centering
 	\fbox{
 		\includegraphics[scale=0.7]{runSubscriptionTest}
 	}
-	\captionof{figure}{Ejecución Test Subscriptor}
+	\captionof{figure}{Ejecución Prueba Subscriptor}
 	\source{fuente: (Elaboración Propia)}
-	\label{fig:Ejecución Test Subscriptor}
+	\label{fig:Ejecución Prueba Subscriptor}
 \end{minipage}
 
 
 \subsection{Implementar Componente}
 
+
 \begin{itemize}
 
-\item \textbf{Implementar en el Servidor}
-Se define implementar de una prueba como ser: \textquotedouble{executeSubscription}
-la cual se describe el reporte en Cuadro \ref{Reporte Prueba 7}, agregando el
-grado dependencia expuesto en la Figura \ref{fig:Diagrama Clases Dependencia Subscriptor}
+\item \textbf{Pruebas unitarias} se hace uso de phpunit y creación de prueba.
 
-\begin{lstlisting}[language = PHP]
+\item \textbf{Pruebas de integración} se hace uso de selenium server
+standalone y un módulo webdriver-bindings \footnote{webdriver-bindings:
+Permite ejecutar pruebas funcionales utilizando funciones WebDriver de
+selenium Server 2.0 WebDriver se ejecuta como plug-in de navegador remoto,
+por lo que es mucho más fiable que la prueba estándar de selenium se inyecta
+a través de JavaScript. \cite{webdriverTest}}.
+
+\end{itemize}
+
+
+\begin{itemize}
+
+\item \textbf{Pruebas unitarias}
+
+\begin{enumerate}
+
+\item \textbf{Implementar en el Servidor} la definición de la prueba
+\textquotedouble{executeSubscription} comprueba la ejecución de una
+suscripción, la descripción de la prueba se la aprecia en 
+Cuadro \ref{Reporte Prueba 7}.
+
+\begin{lstlisting}[language=PHP, caption={Prueba ejecución de suscripción.}]
 // before each run test
 public function setUp() {
     parent::setUp();
@@ -1349,15 +1376,14 @@ public function testExecuteSubscription() {
 }
 \end{lstlisting}
 
-\item \textbf{Implementar en el Servidor}
-Se define la funcionalidad de control a nivel de la capa modelo (model)
-referente Arquitectura de proyecto para realizar manejo de excepciones,
-haciendo uso de una transacción. \footnote{transacción: Una secuencia de
-intercambio de información y el trabajo relacionado que se trata como una
-unidad a efectos de satisfacer una solicitud como para asegurar la integridad
-de la base de datos. \cite{transaction}} 
+\item \textbf{Implementar en el Servidor} la clase Suscripción tiene una
+función para control de excepción, la transacción \footnote{transacción:
+Una secuencia de intercambio de información y el trabajo relacionado que se
+trata como una unidad a efectos de satisfacer una solicitud como para
+asegurar la integridad de la base de datos. \cite{transaction}} sirvió como
+mecanismo manejo de tarea. 
 
-\begin{lstlisting}[language = PHP]
+\begin{lstlisting}[language=PHP, caption={Función callback para control dependencia.}]
 public function beforeSave() {
 $res = false;
 if ($this->isNewRecord) {
@@ -1394,33 +1420,92 @@ if ($res) {
 }
 \end{lstlisting}
 
+\end{enumerate}
+
+\item \textbf{Pruebas de integración}
+
+\begin{enumerate}
+
+\item \textbf{Reproducir audio}
+
+\begin{enumerate}
+
+\item \textbf{Implementar en el Servidor} la función de prueba
+\textquotedouble{playAudioLocalHost} realiza la verificación de existencia
+de un reproductor de tipo audio.
+
+\begin{lstlisting}[language=PHP, caption={Prueba reproducir reproductor de audio.}]
+protected function setUp() {
+parent::setUp('localhost', 4444, 'firefox');
+}
+public function testPlayAudioLocalHost() {
+$this->get('http://localhost/plataformaeducativalael/'
+.'content/viewContent/id_content/1/user_id_user/27/'
+.'type_content_id_type_content/1/category_id_category/'
+.'2');
+$this->click('audio-player');
+sleep(5);
+$elem = $this->findElementBy(LocatorStrategy::id,
+    'audio-player');
+$this->assertNotNull($elem, 'Results not found!');
+} 
+\end{lstlisting}
+
+\end{enumerate}
+
+\item \textbf{Reproducir vídeo}
+
+\begin{enumerate}
+
+\item \textbf{Implementar en el servidor} la función de prueba
+\textquotedouble{playVideoLocalHost} realiza la verificación de un reproductor
+de tipo vídeo.
+
+\begin{lstlisting}
+protected function setUp() {
+parent::setUp('localhost', 4444, 'firefox');
+}
+public function testPlayVideoLocalHost() {
+$this->get('http://localhost/plataformaeducativalael/'
+.'content/viewContent?id_content=2&user_id_user=27&'
+.'type_content_id_type_content=2&category_id_category=4');
+$this->click('audio-player');
+sleep(5);
+$elem = $this->findElementBy(LocatorStrategy::id,
+    'audio-player');
+$this->assertNotNull($elem, 'Results not found!');
+}
+\end{lstlisting}
+
+\end{enumerate}
+
+\end{enumerate}
+
 \end{itemize}
 
 \subsection{Problema/Solución de Componente}
 
-Se consideran las siguientes dificultades que surgieron:
+Las siguientes dificultades son considerados a continuación:
 
 \begin{itemize}
 
 \item Instalar PHPUnit y dependencias desde composer.
-\item Verificar funcionalidad de Firefox sobre consola sobre linux.
-\item Configurar archivos bootstrap y phpunit.xml sobre Yii.
-\item Editar archivos CWebTestCase para reconocimiento de comando(s) phpunit.
-\item Iniciar sesión con uso de selenium-server-standalone-Z.jar.
+\item Verificar funcionalidad de firefox sobre consola linux.
+\item Configurar archivos bootstrap y phpunit.xml sobre yii.
+\item Editar archivos CWebTestCase para reconocimiento de sentencia phpunit.
+\item Iniciar sesión en selenium-server-standalone-Z.jar.
  
 \end{itemize}
 
 \begin{enumerate}
 
-\item \textbf{PHPUnit, Dependencias}
-Se recomienda realizar la instalación de phpunit por medio de composer 
-\footnote{composer: Es un gestor de dependencias para PHP. Composer 
-gestionará las dependencias que se requieren en un proyecto por ejemplo. 
-\cite{composer}} para agregar contenido dependencias dentro la carpeta  
-/project/protected/composer.json y empezar utilizar sentencias para implementar
-test.
+\item \textbf{Uso dependencias phpunit} realizar la instalación de
+dependencias utilizar composer \footnote{composer: Es un gestor de
+dependencias para PHP. Composer gestionará las dependencias que se requieren
+en un proyecto por ejemplo. \cite{composer}}, a continuación se define la
+ruta de instalación \textquotedouble{/project/protected/composer.json}
 
-\begin{lstlisting}[]
+\begin{lstlisting}[caption={Dependencias de phpunit.}]
 {
     "name": "kevin/protected",
     "authors": [
@@ -1438,12 +1523,10 @@ test.
 }
 \end{lstlisting}
 
-\item \textbf{Firefox sobre Consola}
-Particularmente se desarrollo el proyecto sobre una distribución Debian 8,
-para el mismo viene con un navegador denominado iceweasel, se tubo que reemplazar
-iceweasel por mozilla firefox.
+\item \textbf{Ejecución firefox sobre consola} debian 8 utiliza un navegador
+iceweasel reemplazar el por mozilla firefox.
 
-\begin{lstlisting}[]
+\begin{lstlisting}[language=bash, caption={Instrucciones de instalación para Mozilla Firefox.}]
 $ wget ftp://ftp.mozilla.org/pub/mozilla.org/firefox/
 	releases/Y.0/linux-x86_64/en-US/firefox-Y.0.tar.bz2
 cd /home/hugh/
@@ -1453,15 +1536,17 @@ $ sudo mv firefox /opt/firefoxY.0
 $ sudo ln -sf /opt/firefoxY.0/firefox /usr/bin/firefox
 \end{lstlisting}
 
-Se tubo problemas en el momento de ejecutar firefox sobre selenium-web-driver
-para contemplar pruebas de integración, así que lo recomendable es realizar
-la instalación de navegador de forma manual.
+La instalación de firefox tiene que ser de forma manual, un servidor web
+emulador como selenium-server-standalone-Z.jar utiliza la configuración de los
+navegadores populares.
+
 
 \item \textbf{Configurar Archivos bootstrap y phpunit}
-Estos archivos son particulares, es como el guión de entrada y es el punto
-de partida cuando se ejecuta una serie de pruebas. \cite{testing}
 
-\begin{lstlisting}[language=PHP]
+Según \cite{testing} estos archivos son particulares, es como el guión de
+entrada y es el punto de partida cuando se ejecuta una serie de pruebas. 
+
+\begin{lstlisting}[language=PHP, caption={Estrucuta de configuración archivo bootstrap.php.}]
 // change the following paths if necessary
 $vendors=dirname(__FILE__).'/../vendor/autoload.php';
 $yiit=dirname(__FILE__).'/../../framework/yiit.php';
@@ -1474,11 +1559,10 @@ require_once(dirname(__FILE__).'/WebTestCase.php');
 Yii::createWebApplication($config);
 \end{lstlisting}
 
-El archivo phpunit.xml es aquel archivo de configuración, también se 
-define el navegador a ejecutarse en pruebas de integración haciendo uso
-de selenium-server-standalone-Z.jar.
+El archivo phpunit.xml tiene la configuración y uso de un navegador en
+específico.
 
-\begin{lstlisting}[]
+\begin{lstlisting}[caption={Estrutura configuración archivo phpunit.xml.}]
 <phpunit bootstrap="bootstrap.php"
 	colors="false"
     convertErrorsToExceptions="true"
@@ -1492,9 +1576,8 @@ de selenium-server-standalone-Z.jar.
 </phpunit>
 \end{lstlisting}
 
-\item \textbf{Editar Archivo CWebTestCase}
-Se tiene el la siguiente configuración por defecto, la cual se encuentra en
-el archivo /project/framework/test/CWebTestCase.php
+\item \textbf{Editar Archivo CWebTestCase} el segmento de código muestra
+el archivo CWebTestCase.php contempla tiene la configuración de inicio.
 
 \begin{lstlisting}[language=PHP, caption={Cabecera Archivo CWebTestCase}, label={lst:fileCWebTestCase}]
 <?php
@@ -1510,29 +1593,31 @@ Yii::import('system.test.CTestCase');
 require_once('PHPUnit/Extensions/SeleniumTestCase.php');
 \end{lstlisting}
 
-Para poder tener acceso a la API \footnote{API: Es una interfaz a través 
-del cual se accede a otra persona o código a través del cual el 
-código de otra persona accede a la suya. En efecto los métodos 
-públicos y propiedades. \cite{api}} considerando implementar test sobre Yii
-1.x es conveniente reemplazar en el Segmento Código 
-\ref{lst:fileCWebTestCase} en la linea 11 por la instrucción definida en la
-linea 1 del Segmento Código \ref{lst:replaceCWebTestCase}
+A continuación, el segmento de código muestra el archivo CWebTestCase.php
+contiene una modificación. 
 
-\begin{lstlisting}[language=PHP, caption={Instrucci\'{o}n a Reemplazar}, label={lst:replaceCWebTestCase}]
+\begin{lstlisting}[language=PHP, caption={Instrucción a Reemplazar}, label={lst:replaceCWebTestCase}]
 require_once('../../protected/vendor/phpunit/phpunit-selenium/
 	PHPUnit/Extensions/SeleniumTestCase.php');
 \end{lstlisting}
 
-\item \textbf{Iniciar Sesión Selenium Server Standalone}
-A continuación se tiene que iniciar una terminal para luego autentificarse
-como super usuario(root), considerando estar presente donde se encuentra el
-ejecutable y ejecutar. En la Figura 
-\ref{fig:Ejecución Selenium Server Standalone}, muestra la ejecución del
-inicio respecto al servidor web, para realizar las prueba(s) de integración.
+Como resultado, pruebas sobre Yii 1.X se debe realizar el cambio de sentencia
+definido en segmento de código \ref{lst:replaceCWebTestCase} por segmento de
+código \ref{lst:fileCWebTestCase}.
 
-\begin{lstlisting}[language=bash]
+
+\item \textbf{Iniciar sesión selenium server standalone} el comando descrito
+en el segmento de código siguiente realiza el inicio del servidor web emulado.
+
+A continuación, iniciar sesión como usuario \textquotedouble{root}.
+
+\begin{lstlisting}[language=bash, caption={Ejecución Servidor Server Standalone.}]
 # java -jar  selenium-server-standalone-Z.jar
 \end{lstlisting}
+
+
+En la figura \ref{fig:Ejecución Selenium Server Standalone} selenium server
+standalone empieza a funcionar.
 
 \begin{minipage}{1.0\textwidth}
 	\centering
@@ -1544,23 +1629,21 @@ inicio respecto al servidor web, para realizar las prueba(s) de integración.
 	\label{fig:Ejecución Selenium Server Standalone}
 \end{minipage}
 
-Luego se debe de abrir un navegador web como ser: Firefox, agregando la
-siguiente dirección local mente: http://127.0.0.1:4444/wd/hub, la cual se
-puede visualizar en la Figura \ref{fig:Ejecución Selenium Server Standalone},
-la misma nos ayuda a seleccionar un navegador web para automatizar pruebas a
-realizar.
+Realizar pruebas de integración requiere de ejecutar la dirección 
+\textquotedouble{http://127.0.0.1:4444/wd/hub}, navegador firefox requiere 
+seleccionar la opción y crear una sesión de entorno.
 
 \end{enumerate}
 
 \section{Duración Proyecto}
 
-Se utilizó 10 días hábiles para poder definir un sprint, el mismo sirvió de
-base para poder realizar la estimación del equipo de desarrollo por lo que
-que se logró obtener 21 sprints los cuales contemplan: En los Cuadros: 
+Definir el tiempo de un sprint 10 días hábiles para realizar la estimación
+de esfuerzo de avance del equipo desarrollo, en consecuencia 21 sprint
+sirvio para definir el siguiente orden de prioridad de las historias: cuadro
 \ref{tab:Product Backlog - Primera Parte}, 
 \ref{tab:Product Backlog - Segunda Parte},
-\ref{tab:Product Backlog - Tercera Parte}
-implementar y re facto rizar funcionalidad.
+\ref{tab:Product Backlog - Tercera Parte}.
+
 
 % first part product backlog
 

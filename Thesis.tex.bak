@@ -61,9 +61,6 @@
 % custom table
 \usepackage{array} 
 
-% space betwenn paragraph
-%\setlength{\parskip}{1em}
-
 % space between bleeding
 \setlength{\parindent}{0em}
 
@@ -73,6 +70,10 @@
 % style bibliography
 \usepackage{apacite}
 \bibliographystyle{apacite}
+
+% renew reference to bibliography
+\renewcommand{\bibname}{Bibliografía}
+\AtBeginDocument{\renewcommand{\bibname}{Bibliografía}}
 
 % align text justify
 \usepackage{ragged2e}
@@ -103,7 +104,10 @@
 \usepackage{enumerate}
 
 % define label caption listing
-\renewcommand{\lstlistingname}{Segmento C\'{o}digo}
+\renewcommand{\lstlistingname}{Segmento de Código}
+
+% rename list of listing
+\renewcommand{\lstlistlistingname}{Índice de segmento de códigos}
 
 % landscape table
 \usepackage{lscape}
@@ -111,10 +115,13 @@
 % add appendix
 \usepackage{appendix}
 
-% add command about Anexos
+% add command about annes
 \renewcommand{\appendixname}{Anexos}
 \renewcommand{\appendixtocname}{Anexos}
 \renewcommand{\appendixpagename}{Anexos}
+
+% rename appendix to annex
+\AtBeginDocument{\renewcommand\appendixname{Anexo}}
 
 % enumerate table
 \pagenumbering{roman}
@@ -127,14 +134,14 @@
 
 \let\OldTextGreater\textgreater
 
-%\renewcommand{\textgreater}{\OldTextGreater\xspace}
+% vertical white space
+\usepackage[compact]{titlesec}
     
 \begin{document}
 
-
 \newcounter{rom}
 
-\input{tex/Title}\newpage\thispagestyle{plain}
+\input{tex/Title}\thispagestyle{plain}
 \cleardoublepage
 \justifying
 \noindent
@@ -144,10 +151,11 @@
 \tableofcontents
 \listoffigures
 \listoftables
+\lstlistoflistings
 
 %\input{tex/Abstract}\newpage\cleardoublepage
 
-\newpage
+%\newpage
 \thispagestyle{plain}~
 \clearpage
 \pagenumbering{arabic}
@@ -167,12 +175,15 @@
 \appendix
 \addappheadtotoc
 \appendixpage
+
 \newpage\cleardoublepage
 
-\input{tex/AnexoA}\newpage\cleardoublepage
+\input{tex/AnnexA}\newpage\cleardoublepage
 
-\input{tex/AnexoB}\newpage\cleardoublepage
+\input{tex/AnnexB}\newpage\cleardoublepage
 
-\input{tex/AnexoC}\newpage\cleardoublepage
+\input{tex/AnnexC}\newpage\cleardoublepage
+
+\input{tex/AnnexD}
 
 \end{document}
