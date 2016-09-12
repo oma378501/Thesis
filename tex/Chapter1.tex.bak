@@ -1,0 +1,132 @@
+\chapter{Introducción}
+
+La ley general de derechos y políticas lingüísticas 269 \textquotedouble{promueve
+la implementación de una lengua originaria según la región}. Esta
+disposición brinda el marco legal que promueve la enseñanza, su difusión,
+aunque su alcance inicialmente está restringido a funcionarios públicos y/o
+privados. Entonces su implementación exige la elaboración de recursos
+educativos adecuados para la enseñanza de lenguas originarias. Esta demanda
+crece más si se añade la exigencia de aprender una lengua extranjera, como
+el inglés o francés, para fines de promover el turismo, el comercio y la
+formación profesional.
+
+De acuerdo con esta conjetura expuesta, este proyecto de adscripción se
+propone implementar la gestión de podcast de tipo audio/vídeo elaborado por
+la Carrera de Lingüística Aplicada a la Enseñanza de Lenguas (LAEL) de la
+Universidad Mayor de San Simón, mediante la creación de un mecanismo de
+notificación, a través de correo electrónico, del nuevo material pedagógico.
+
+Así que, la plataforma web educativa fue diseñado para la gestión de podcast.
+la plataforma utiliza la licencia LPG-Bolivia propuesta por
+la ADSIB \footnote{ADSIB: Agencia para el desarrollo de la sociedad de la
+información en Bolivia. \cite{LPGBolivia}}. De acuerdo con \cite{LPGBolivia}
+\textquotedouble{protege los derechos intelectuales y materiales de
+software en instituciones públicas}.
+
+\section{Antecedentes}
+
+En el año 2013, la carrera de LAEL impulsó la elaboración de recursos digitales
+educativos para el fortalecimiento de lenguas originarias, destinado a
+funcionarios públicos y/o privados de la zona urbana del municipio de Cochabamba.
+
+En razón a lo expuesto, el año 2014, la Carrera de LAEL firmó un proyecto de
+adscripción con la Carrera de Informática. Se acordó que se conformarían equipos
+de trabajo entre ambas carreras para la elaboración, difusión de audio y vídeo.
+Los estudiantes de lingüística se encargarían de escoger los contenidos y
+elaborar recursos pedagógicos de los podcasts; mientras los de informática
+aportaría en su difusión a través de la red de Internet. Desde esa fecha, se
+conformaron seis equipos de trabajo.
+
+\section{Definición del problema}
+
+La Carrera de LAEL llevan varios años produciendo materiales educativos para la
+enseñanza de lenguas. Sin embargo, estos permanecen inaccesibles, para la
+mayoría de la población a la que se supone que esta dirigida. 
+
+El material producido se queda almacenado en los estantes de la biblioteca
+de LAEL, al cual los posibles beneficiarios no pueden acceder debido a las
+condiciones de préstamo que impone la universidad y la escasa difusión de
+ellos. 
+
+En consecuencia la población externa e interesada en aprender una lengua
+extranjera suele recurrir a material disponible vía Internet que en su
+mayoría se realizó en el exterior. Por una parte, estos aunque beneficioso,
+no siempre están adecuados a las condiciones y necesidades de los usuarios
+en un contexto urbano/rural.
+
+Por otra parte, los recursos educativos para el fortalecimiento de quechua
+son escasos, difíciles de encontrar. El material creado por los estudiantes
+si estuviera disponible, serían de gran provecho y ayuda a la población
+demandante.
+ 				
+Se puede definir el problema de investigación, por lo previamente mencionado
+de la siguiente manera:
+											
+La escasa difusión de los \textbf{recursos digitales educativos} producido por 
+la Carrera de LAEL dificulta el desarrollo del \textbf{aprendizaje 
+autorregulado de las lenguas de francés, inglés y quechua}.
+
+\section{Objetivo}
+
+\subsection{General}
+
+Implementar un \textbf{suscriptor de podcast} para el fortalecimiento del 
+\textbf{aprendizaje autorregulado las lenguas francés, inglés y quechua} mediante
+el desarrollo de una plataforma web educativa.
+
+\subsection{Específicos}
+
+\begin{itemize}
+
+\item Proveer personalización para suscripción por programa de aprendizaje (categoría).
+\item Implementar glosario y subtitulado de podcast.
+\item Representar el uso de web semántica para glosario y subtitulado.
+\item Realizar un prueba de unidad para suscripción, reproducción de audio y
+reproducción de vídeo.
+
+\end{itemize}
+
+\section{Justificación}
+
+\subsection{Tecnológica}
+
+Los entornos virtuales de aprendizaje apoya el fortalecimiento y enseñanza de
+una lengua, la plataforma web educativa realiza la difusión de los recursos
+digitales educativos. 
+
+\subsection{Social}
+
+Los recursos digitales educativos creados en la Carrera de LAEL, al contrario
+de los que se encuentran en Internet, están adecuados a la realidad de los
+posibles beneficiarios del departamento, estos responden a sus necesidades y
+se encuentran contextualizados al entorno cultural, social y lingüístico.
+
+\subsection{Económica}
+
+Los recursos digitales educativos son simples y gratuitos.
+
+\section{Limitaciones}
+
+\begin{itemize}
+
+\item La plataforma no brinda un módulo avanzado de usuario, un rol de sistema
+tiene acceso a los diferentes privilegios en comparación de otro.
+
+\item La plataforma solamente gestiona: podcast, actividad, transcripción,
+infografía; la plataforma no brinda creación de ningún tipo de recurso.
+
+\item El suscripción de noticia utiliza la version RSS 2.0 para la generación
+de un canal de noticia se crea por categoría.
+
+\item La plataforma es de tipo web no debe funcionar como sistema
+de escritorio.
+
+\item Realizar la baja la suscripción de un usuario sera únicamente dentro
+de sistema.
+
+\item La conexión a Internet necesita de un servicio de un proveedor ISP
+\footnote{ISP: Es una empresa que proporciona a los individuos y otras empresas
+el acceso de Internet y Otros servicios relacionados, tales como la creación
+de sitios web y de alojamiento virtual. \cite{isp}}. 
+
+\end{itemize}

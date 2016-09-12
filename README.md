@@ -1,12 +1,15 @@
 # Thesis
+
 Template define by Torsen Schön, May 2013
 
 Custom by Juan Omar Huanca, 2016
 
 Tool
 
-Gimp - editor image
+Gimp - editor image.
 
-Visual Paradigm Community Edition - diagram UML
+Visual Paradigm Community Edition - diagram UML.
 
-TexMaker - editor text Latex
+TexMaker - editor text Latex.
+
+MysqlWorkbench - diagram database E-R.

@@ -171,7 +171,7 @@ year={2014}
 	author = {Antonio},
 	title = {Yii 1.1: yiibooster},
 	howpublished = {\url{http://www.yiiframework.com/extension/}\\\url{yiibooster/}},
-	note = {Online; Acceso 3 Mayo 2016},
+	note = {En Línea; Acceso 3 Mayo 2016},
 	month = 12,
 	year = 2012	
 }
@@ -180,7 +180,7 @@ year={2014}
 	author = {Joblo},
 	title = {cascadedropdown},
 	howpublished = {\url{http://www.yiiframework.com/extension/}\\\url{cascadedropdown/}},
-	note = {Online; Acceso 3 Mayo 2016},
+	note = {En Línea; Acceso 3 Mayo 2016},
 	month = 9,
 	year = 2012
 }
@@ -189,7 +189,7 @@ year={2014}
 	author = {Antonio},
 	title = {Yii 1.1: effed},
 	howpublished = {\url{http://www.yiiframework.com/extension/efeed}},
-	note = {Online; Acceso 3 Mayo 2016},
+	note = {En Línea; Acceso 3 Mayo 2016},
 	month = 2,
 	year = 2013
 }
@@ -198,7 +198,7 @@ year={2014}
 	author = {SleepWalker},
 	title = {Yii 1.1: effed},
 	howpublished = {\url{http://www.yiiframework.com/extension/hoauth}},
-	note = {Online; Acceso 3 Mayo 2016},
+	note = {En Línea; Acceso 3 Mayo 2016},
 	month = 9,
 	year = 2014
 }
@@ -207,7 +207,7 @@ year={2014}
 	author = {Miles},
 	title = {Yii 1.1: image},
 	howpublished = {\url{http://www.yiiframework.com/extension/image/}},
-	note = {Online; Acceso 3 Mayo 2016},
+	note = {En Línea; Acceso 3 Mayo 2016},
 	month = 10,
 	year = 2010
 }
@@ -216,7 +216,7 @@ year={2014}
 	author = {Shiv},
 	title = {Yii 1.1: mediaelement},
 	howpublished = {\url{http://www.yiiframework.com/extension/}\\\url{mediaelement/}},
-	note = {Online; Acceso 3 Mayo 2016},
+	note = {En Línea; Acceso 3 Mayo 2016},
 	month = 4,
 	year = 2013
 }
@@ -225,7 +225,7 @@ year={2014}
 	author = {Gogi},
 	title = {yii-image-zoomer},
 	howpublished = {\url{http://www.yiiframework.com/extension/}\\\url{yii-image-zoomer/}},
-	note = {Online; Acceso 3 Mayo 2016},
+	note = {En Línea; Acceso 3 Mayo 2016},
 	month = 3,
 	year = 2013
 }
@@ -234,7 +234,7 @@ year={2014}
 	author = {Vernes},
 	title = {Yii 1.1: yiimailer},
 	howpublished = {\url{http://www.yiiframework.com/extension/yiimailer/}},
-	note = {Online; Acceso 3 Mayo 2016},
+	note = {En Línea; Acceso 3 Mayo 2016},
 	month = 7,
 	year = 2014	
 }
@@ -243,7 +243,7 @@ year={2014}
 	author = {PivotalTracker},
 	title = {Pivotal Tracker Help},
 	howpublished = {\url{http://www.pivotaltracker.com/help/}\\\url{gettingstarted}},
-	note = {Online; Acceso 5 Mayo 2016},
+	note = {En Línea; Acceso 5 Mayo 2016},
 	month = 5,
 	year = 2016
 }
@@ -252,7 +252,7 @@ year={2014}
 	author = {OSSCube},
 	title = {Job Queue Presentation - OSSCamp 2014},
 	howpublished = {\url{http://www.slideshare.net/osscube/job-queue}},
-	note = {Online; Acceso 10 Mayo 2016},
+	note = {En Línea; Acceso 10 Mayo 2016},
 	month = 8,
 	year = 2014
 }
@@ -261,7 +261,7 @@ year={2014}
 	author = {Tungwaiyip},
 	title = {FacebookOAuthAuthenticationFlow},
 	howpublished = {\url{http://tungwaiyip.info/blog/2011/02/19/}},
-	note = {Online; Acceso 11 Mayo 2016},
+	note = {En Línea; Acceso 11 Mayo 2016},
 	month = 2,
 	year = 2011
 }
@@ -270,7 +270,7 @@ year={2014}
 	author = {GoogleDevelopers},
 	title = {Using OAuth 2.0 to Access Google APIs},
 	howpublished = {\url{https://developers.google.com/identity/protocols/OAuth2}},
-	note = {Online; Acceso 11 Mayo 2016},
+	note = {En Línea; Acceso 11 Mayo 2016},
 	month = 4,
 	year = 2016
 }
@@ -279,7 +279,7 @@ year={2014}
 	author = {TwitterDevelopers},
 	title = {Application-only authentication},
 	howpublished = {\url{https://dev.twitter.com/oauth/application-only}},
-	note = {Online; Acceso 11 Mayo 2016},
+	note = {En Línea; Acceso 11 Mayo 2016},
 	year = 2016
 }
 
@@ -287,7 +287,7 @@ year={2014}
 	author = {Tantek Çelik},
 	title = {h-entry},
 	howpublished = {\url{http://microformats.org/wiki/h-entry}},
-	note = {Online; Acceso 19 Mayo 2016},
+	note = {En Línea; Acceso 19 Mayo 2016},
 	month = 5,
 	year = 2016
 }
@@ -296,7 +296,7 @@ year={2014}
 	author = {Wiki},
 	title = {microformats 2},
 	howpublished = {\url{http://microformats.org/wiki/microformats-2}},
-	note = {Online; Acceso 19 Mayo 2016},
+	note = {En Línea; Acceso 19 Mayo 2016},
 	month = 3,
 	year = 2016
 }
@@ -305,7 +305,7 @@ year={2014}
 	author = {yiiframework},
 	title = {testing},
 	howpublished = {\url{http://www.yiiframework.com/doc/guide/1.1/en/}\\\url{test.overview}},
-	note = {Online; Acceso 25 Mayo 2016},
+	note = {En Línea; Acceso 25 Mayo 2016},
 	year = 2016
 }
 
@@ -319,8 +319,8 @@ year={2014}
 @misc{background,
 	author = {JohnMerlino},
 	title = {what is background process?},
-	howpublished = {\url{http://unix.stackexchange.com/questions/82934/what-is-a-background-process}},
-	note = {Online; Acceso 2 Junio 2016},
+	howpublished = {\url{http://unix.stackexchange.com/questions}\\\url{/82934/what-is-a-background-process}},
+	note = {En Línea; Acceso 2 Junio 2016},
 	year = 2016
 }
 
@@ -328,7 +328,7 @@ year={2014}
 	author = {W3Schhol},
 	title = {HTML Unicode Reference},
 	howpublished = {\url{http://www.w3schools.com/charsets/}},
-	note = {Online; Acceso 2 Junio 2016},
+	note = {En Línea; Acceso 2 Junio 2016},
 	year = 2016
 }
 
@@ -336,7 +336,7 @@ year={2014}
 	author = {MacroScheduler},
 	title = {Modal Window},
 	howpublished = {\url{https://www.mjtnet.com/blog/2009/01/27/}},
-	note = {Online; Acceso 2 Junio 2016},
+	note = {En Línea; Acceso 2 Junio 2016},
 	year = 2016
 }
 
@@ -344,7 +344,7 @@ year={2014}
 	author = {Rouse},
 	title = {HTML},
 	howpublished = {\url{http://searchsoa.techtarget.com/definition/HTML}},
-	note = {Online; Acceso 2 Junio 2016},
+	note = {En Línea; Acceso 2 Junio 2016},
 	month = 9,
 	year = 2005
 }
@@ -353,7 +353,7 @@ year={2014}
 	author = {Rouse},
 	title = {HTML5},
 	howpublished = {\url{http://searchsoa.techtarget.com/definition/HTML5}},
-	note = {Online; Acceso 3 Junio 2016},
+	note = {En Línea; Acceso 3 Junio 2016},
 	month = 3,
 	year = 2014
 }
@@ -362,7 +362,7 @@ year={2014}
 	author = {Rouse},
 	title = {AJAX},
 	howpublished = {\url{http://searchwindevelopment.techtarget.com/definition/Ajax}},
-	note = {Online; Acceso 3 Junio 2016},
+	note = {En Línea; Acceso 3 Junio 2016},
 	month = 10,
 	year = 2007
 }
@@ -371,7 +371,7 @@ year={2014}
 	author = {Rouse},
 	title = {Software Testing},
 	howpublished = {\url{http://whatis.techtarget.com/definition/}\\\url{software-testing}},
-	note = {Online; Acceso 3 Junio 2016},
+	note = {En Línea; Acceso 3 Junio 2016},
 	month = 12,
 	year = 2012
 }
@@ -380,7 +380,7 @@ year={2014}
 	author = {Rouse},
 	title = {Transaction},
 	howpublished = {\url{http://searchcio.techtarget.com/definition/transaction}},
-	note = {Online; Acceso 3 Junio 2016},
+	note = {En Línea; Acceso 3 Junio 2016},
 	month = 4,
 	year = 2005
 }
@@ -389,7 +389,7 @@ year={2014}
 	author = {Brown},
 	title = {What is PHP Composer?},
 	howpublished = {\url{http://culttt.com/2013/01/07/}\\\url{what-is-php-composer/}},
-	note = {Online; Acceso 3 Junio 2016},
+	note = {En Línea; Acceso 3 Junio 2016},
 	month = 1,
 	year = 2013
 }
@@ -398,7 +398,7 @@ year={2014}
 	author = {Klee},
 	title = {What is an API?},
 	howpublished = {\url{http://stackoverflow.com/questions/7440379/}},
-	note = {Online; Acceso 3 Junio 2016},
+	note = {En Línea; Acceso 3 Junio 2016},
 	month = 9,
 	year = 2011
 }
@@ -407,7 +407,7 @@ year={2014}
 	author = {W3C},
 	title = {XMLhttpRequest Level 1},
 	howpublished = {\url{https://www.w3.org/TR/XMLHttpRequest/}},
-	note = {Online; Acceso 3 Junio 2016},
+	note = {En Línea; Acceso 3 Junio 2016},
 	month = 1,
 	year = 2014
 }
@@ -416,7 +416,7 @@ year={2014}
 	author = {Rouse},
 	title = {Web Development Framework},
 	howpublished = {\url{http://searchcontentmanagement.}\\\url{techtarget.com/definition/web-development-framework-WDF}},
-	note = {Online; Acceso 3 Junio 2016},
+	note = {En Línea; Acceso 3 Junio 2016},
 	month = 1,
 	year = 2013
 }
@@ -425,7 +425,7 @@ year={2014}
 	author = {Rouse},
 	title = {Widget},
 	howpublished = {\url{http://whatis.techtarget.com/definition/widget}},
-	note = {Online; Acceso 3 Junio 2016},
+	note = {En Línea; Acceso 3 Junio 2016},
 	month = 12,
 	year = 2015
 }
@@ -434,7 +434,7 @@ year={2014}
 	author = {Github},
 	title = {HybridAuth, open source social sign on php library},
 	howpublished = {\url{http://hybridauth.sourceforge.net/}},
-	note = {Online; Acceso 3 Junio 2016},
+	note = {En Línea; Acceso 3 Junio 2016},
 	year = 2015
 }
 
@@ -442,7 +442,7 @@ year={2014}
 	author = {Prusty},
 	title = {Sending Email in PHP with PHPMailer},
 	howpublished = {\url{https://www.sitepoint.com/sending-emails-php-phpmailer/}},
-	note = {Online; Acceso 3 Junio 2016},
+	note = {En Línea; Acceso 3 Junio 2016},
 	month = 4,
 	year = 2015
 }
@@ -451,7 +451,7 @@ year={2014}
 	author = {Rouse},
 	title = {Document Type Definition},
 	howpublished = {\url{http://searchsoa.techtarget.com/definition/}\\\url{Document-Type-Definition}},
-	note = {Online; Acceso 3 Junio 2016},
+	note = {En Línea; Acceso 3 Junio 2016},
 	month = 9,
 	year = 2005
 }
@@ -460,7 +460,7 @@ year={2014}
 	author = {W3C},
 	title = {RDF},
 	howpublished = {\url{https://www.w3.org/RDF/}},
-	note = {Online; Acceso 3 Junio 2016},
+	note = {En Línea; Acceso 3 Junio 2016},
 	month = 3,
 	year = 2014
 }
@@ -469,7 +469,7 @@ year={2014}
 	author = {NGINX},
 	title = {Welcome to NGINX Wiki's documentation!},
 	howpublished = {\url{https://www.nginx.com/resources/wiki/}},
-	note = {Online; Acceso 3 Junio 2016},
+	note = {En Línea; Acceso 3 Junio 2016},
 	year = 2016
 }
 
@@ -477,7 +477,7 @@ year={2014}
 	author = {Light},
 	title = {Welcome to NGINX Wiki's documentation!},
 	howpublished = {\url{https://www.lighttpd.net/}},
-	note = {Online; Acceso 3 Junio 2016},
+	note = {En Línea; Acceso 3 Junio 2016},
 	year = 2016
 }
 
@@ -486,7 +486,7 @@ year={2014}
 	author = {RedHat},
 	title = {What is open source?},
 	howpublished = {\url{https://opensource.com/resources/}\\\url{what-open-source}},
-	note = {Online; Acceso 3 Junio 2016},
+	note = {En Línea; Acceso 3 Junio 2016},
 	year = 2016
 }
 
@@ -494,7 +494,7 @@ year={2014}
 	author = {FindIcons},
 	title = {Rss},
 	howpublished = {\url{http://findicons.com/search/rss}},
-	note = {Online; Acceso 27 Junio 2016},
+	note = {En Línea; Acceso 27 Junio 2016},
 	year = 2016
 }
 
@@ -502,7 +502,7 @@ year={2014}
 	author = {ADSIB},
 	title = {Repositorio Estatal de Sofware Libre},
 	howpublished = {\url{http://softwarelibre.gob.bo/licencia.php}},
-	note = {Online; Acceso 28 Junio 2016},
+	note = {En Línea; Acceso 28 Junio 2016},
 	year = 2016
 }
 
@@ -510,7 +510,7 @@ year={2014}
 	author = {Rouse},
 	title = {URI(Uniform Resource Identifier)},
 	howpublished = {\url{http://searchcio.techtarget.com/definition/}\\\url{software-license}},
-	note = {Online; Acceso 30 Junio 2016},
+	note = {En Línea; Acceso 30 Junio 2016},
 	year = 2016
 }
 
@@ -518,7 +518,7 @@ year={2014}
 	author = {Rouse},
 	title = {newsfeed},
 	howpublished = {\url{http://searchcio.techtarget.com/definition/newsfeed}},
-	note = {Online; Acceso 1 Julio 2016},
+	note = {En Línea; Acceso 1 Julio 2016},
 	year = 2016
 }
 
@@ -526,7 +526,7 @@ year={2014}
 	author = {Rouse},
 	title = {newsfeed},
 	howpublished = {\url{http://searchsoa.techtarget.com/definition/URI}},
-	note = {Online; Acceso 1 Julio 2016},
+	note = {En Línea; Acceso 1 Julio 2016},
 	year = 2016
 }
 
@@ -534,7 +534,7 @@ year={2014}
 	author = {Rouse},
 	title = {channel},
 	howpublished = {\url{http://searchdatacenter.techtarget.com/definition/channel}},
-	note = {Online; Acceso 1 Julio 2016},
+	note = {En Línea; Acceso 1 Julio 2016},
 	year = 2016
 }
 
@@ -612,7 +612,7 @@ year={2014}
 	author = {P{\'{e}}rez, Merino},
 	title = {tecnologia},
 	howpublished = {\url{http://definicion.de/tecnologia/}},
-	note = {Online; Acceso 8 Agosto 2016},
+	note = {En Línea; Acceso 8 Agosto 2016},
 	year = 2008
 }
 
@@ -620,7 +620,35 @@ year={2014}
 	author = {Rouse},
 	title = {token},
 	howpublished = {\url{http://whatis.techtarget.com/definition/token}},
-	note = {Online; Acceso 8 Agosto 2016},
+	note = {En Línea; Acceso 8 Agosto 2016},
 	month=9,
 	year = 2005
+}
+
+@misc{ip,
+	author = {Rouse},
+	title = {Internet Protocol},
+	howpublished = {\url{http://searchunifiedcommunications.techtarget.com/}\\\url{definition/Internet-Protocol}},
+	note = {En Línea; Acceso 11 Agosto 2016},
+	month=3,
+	year = 2008
+}
+
+
+@misc{webdriverTest,
+	author = {Lizewski},
+	title = {Yii 1.1: webdriver-test},
+	howpublished = {\url{http://www.yiiframework.com/extension/}\\\url{webdriver-test/}},
+	note = {En Línea; Acceso 18 Agosto 2016},
+	month = 6,
+	year = 2011	
+}
+
+@misc{isp,
+	author = {Rouse},
+	title = {Internet Service Provider},
+	howpublished = {\url{http://searchwindevelopment.techtarget.com/}\\\url{definition/ISP}},
+	note = {En Línea; Acceso 23 Agosto 2016},
+	month=2,
+	year = 2006
 }

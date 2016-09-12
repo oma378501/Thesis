@@ -3,10 +3,10 @@
 %% LaTeX Thesis Template defined by Torsten Schön, May 2013
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[a4paper,11pt,twoside]{report}
+\documentclass[letterpaper,11pt,twoside,openright]{report}
 
 % define marging document
-\usepackage[a4paper,left=3cm,right=2cm,top=2cm,bottom=3cm,asymmetric]{geometry}
+\usepackage[letterpaper,left=3cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 
 % define font arial
 \usepackage{helvet}
@@ -58,9 +58,6 @@
 
 \usepackage[font=small,skip=0pt]{caption}
 
-% custom table
-\usepackage{array} 
-
 % space between bleeding
 \setlength{\parindent}{0em}
 
@@ -86,10 +83,9 @@
 \usepackage{listings}
 
 \lstset{
-	%language = PHP, 
+	language=PHP, 
 	commentstyle = \color{gray},
 	extendedchars = \true,
-	%inputencoding = utf8,
 	keepspaces = true,
 	keywordstyle = \bfseries,
 	morekeywords = {function, return},
@@ -97,17 +93,18 @@
 	captionpos = b,
 	showspaces = false,
 	showstringspaces = false,
-	showtabs = false
+	showtabs = false,
+	basicstyle = \footnotesize,	
 }
 
 % enumerate number item in list.
 \usepackage{enumerate}
 
 % define label caption listing
-\renewcommand{\lstlistingname}{Segmento de Código}
+\renewcommand{\lstlistingname}{Segmento de código}
 
 % rename list of listing
-\renewcommand{\lstlistlistingname}{Índice de segmento de códigos}
+\renewcommand{\lstlistlistingname}{Índice para segmentos de código}
 
 % landscape table
 \usepackage{lscape}
@@ -135,54 +132,67 @@
 \let\OldTextGreater\textgreater
 
 % vertical white space
-\usepackage[compact]{titlesec}
-    
+%\usepackage[compact]{titlesec}
+
+% compacted space list
+%\usepackage{mdwlist}
+
+% autor
+\author{Juan Omar Huanca Balboa}
+
 \begin{document}
 
 \newcounter{rom}
 
-\input{tex/Title}\thispagestyle{plain}
-\cleardoublepage
 \justifying
 \noindent
 
-%\input{tex/Dedication}\newpage\cleardoublepage
+\input{tex/Title}\thispagestyle{plain}
+
+%\input{tex/Dedication}
+
+%\input{tex/Abstract}
  
 \tableofcontents
 \listoffigures
 \listoftables
 \lstlistoflistings
 
-%\input{tex/Abstract}\newpage\cleardoublepage
-
-%\newpage
-\thispagestyle{plain}~
 \clearpage
+
+\thispagestyle{plain}~
+
+% begin numeration for ordinal number
+\clearpage
+
 \pagenumbering{arabic}
 
-\input{tex/Chapter01}\newpage\cleardoublepage
+\input{tex/Chapter1}
 
-\input{tex/Chapter02}\newpage\cleardoublepage
+\input{tex/Chapter2}
 
-\input{tex/Chapter03}\newpage\cleardoublepage
+\input{tex/Chapter3}
 
-\input{tex/Chapter04}\newpage\cleardoublepage
+\input{tex/Chapter4}
 
-\input{tex/Chapter05}\newpage\cleardoublepage
+\input{tex/Chapter5}
 
-\bibliography{bib/Literature}\newpage\cleardoublepage
+\bibliography{bib/Literature}
+
+% remove empty page after appendix
+\cleardoublepage\makeatletter\@openrightfalse\makeatother
 
 \appendix
 \addappheadtotoc
 \appendixpage
 
-\newpage\cleardoublepage
+\input{tex/AnnexA}
 
-\input{tex/AnnexA}\newpage\cleardoublepage
+\input{tex/AnnexB}
 
-\input{tex/AnnexB}\newpage\cleardoublepage
+\input{tex/AnnexC}
 
-\input{tex/AnnexC}\newpage\cleardoublepage
+\cleardoublepage\makeatletter\@openrighttrue\makeatother
 
 \input{tex/AnnexD}
 

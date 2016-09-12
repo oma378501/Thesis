@@ -1,0 +1,617 @@
+\chapter{Desarrollo del Proyecto}
+
+\section{\textquestiondown Cómo realizar pruebas unitaria de suscriptor, integración de audio y vídeo?}
+
+Uso de prueba unitaria sobre la capa modelo.
+
+Además, las pruebas de integración requiere el uso de un servidor web autónomo. 
+
+\subsection{Componente}
+
+\begin{itemize}
+
+\item \textbf{Prueba unitaria de suscripción} en la figura 
+\ref{fig:Diagrama de clase representa dependencia de suscripción}
+el diagrama de clases representa la dependencia para el proceso de prueba
+unitaria \footnote{prueba: La prueba de software es un método de evaluación
+de la funcionalidad de un programa de software. \cite{test}}.
+
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.5]{subscriptionTest}
+	}
+	\captionof{figure}{Diagrama de clase representa dependencia de suscripción}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Diagrama de clase representa dependencia de suscripción}
+\end{minipage}
+
+\end{itemize}
+
+\subsection{Reporte de prueba}
+
+\begin{itemize}
+
+\item \textbf{Prueba unitaria de suscripción} únicamente, esta sección utiliza
+el uso de reporte para especificar la ejecución.
+
+Acorde con clase suscripción subsección \ref{serviceFeed}, se realiza la
+prueba necesaria.
+
+% report test 1
+\begin{minipage}[!htb]{\hsize}\centering
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{\textbf{Caso Prueba de Unidad}} \\ \hline
+\multicolumn{1}{|l|}{Caso de prueba ID: 1} & \multicolumn{1}{l|}{Nombre de módulo: Categoría} \\ \hline
+\multicolumn{1}{|l|}{Título prueba: executeOneLevelCategory} & \multicolumn{1}{l|}{Ejecución de prueba: 20-06-2016} \\ \hline
+\multicolumn{1}{|l|}{Prioridad de prueba: Alto} & \multicolumn{1}{l|}{Fecha diseño de prueba: 11-02-2016} \\ \hline
+\multicolumn{2}{|l|}{Pre-condición: BD vacía.} \\ \hline
+\multicolumn{2}{|l|}{Dependencia: Categoría nivel zero.} \\ \hline
+\textbf{Pasos de prueba} & \textbf{Datos de prueba} \\ \hline
+\begin{tabular}[c]{@{}c@{}}Registrar categoría\\ de un nivel uno.\end{tabular} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}nombre\_categoría='Quechua Psicosocial' \\ nombre\_url\_imagen\_categoría='psicosocial.jpg' \\ url\_imagen\_categoría='123\_psicosocial.jpg' \\ descripción\_categoría='descripción psicosocial' \\ descripción\_creditos='descripción creditos' \\ descripción\_objetivo='descripción objetivo' \\ categoría\_id\_categoría=6\end{tabular}} \\ \hline
+\textbf{Resultado esperado} & \textbf{Resultado actual} \\ \hline
+verdad & verdad \\ \hline
+\textbf{Estado} & \textbf{Notas} \\ \hline
+éxito & nombre categoría debe ser único. \\ \hline
+\end{tabular}
+\captionof{table}{Reporte prueba 1}
+\source{fuente: (Elaboración propia)}
+\label{Reporte prueba 1}
+\end{minipage}
+
+%report test 2
+\begin{minipage}[!htb]{\hsize}\centering
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{\textbf{Caso Prueba de Unidad}} \\ \hline
+\multicolumn{1}{|l|}{Caso de prueba ID: 2} & \multicolumn{1}{l|}{Nombre de módulo: Ocupación} \\ \hline
+\multicolumn{1}{|l|}{Título prueba: executeOcupation} & \multicolumn{1}{l|}{Ejecución de prueba: 20-06-2016} \\ \hline
+\multicolumn{1}{|l|}{Prioridad de prueba: Alto} & \multicolumn{1}{l|}{Fecha diseño de prueba: 11-02-2016} \\ \hline
+\multicolumn{2}{|l|}{Pre-condición: BD vacía.} \\ \hline
+\multicolumn{2}{|l|}{Dependencia: Ocupación nivel zero.} \\ \hline
+\textbf{Pasos de prueba} & \textbf{Datos de prueba} \\ \hline
+\begin{tabular}[c]{@{}c@{}}Registrar ocupación \\ de un nivel uno.\end{tabular} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}nombre\_ocupación='Gerente de serivicos administrativos' \\ ocupación\_id\_ocupación=76\end{tabular}} \\ \hline
+\textbf{Resultado esperado} & \textbf{Resultado actual} \\ \hline
+verdad & verdad \\ \hline
+\textbf{Estado} & \textbf{Notas} \\ \hline
+éxito & nombre ocupación debe ser único. \\ \hline
+\end{tabular}
+\captionof{table}{Reporte prueba 2}
+\source{fuente: (Elaboración propia)}
+\label{Reporte prueba 2}
+\end{minipage}
+
+% report test 3
+\begin{minipage}[!htb]{\hsize}\centering
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{\textbf{Caso Prueba de Unidad}} \\ \hline
+\multicolumn{1}{|l|}{Caso de prueba ID: 3} & \multicolumn{1}{l|}{Nombre de módulo: Rol} \\ \hline
+\multicolumn{1}{|l|}{Título prueba: executeRol} & \multicolumn{1}{l|}{Ejecución de prueba: 20-06-2016} \\ \hline
+\multicolumn{1}{|l|}{Prioridad de prueba: Alto} & \multicolumn{1}{l|}{Fecha diseño de prueba: 12-02-2016} \\ \hline
+\multicolumn{2}{|l|}{Pre-condición: BD vacía.} \\ \hline
+\multicolumn{2}{|l|}{Dependencia:} \\ \hline
+\textbf{Pasos de prueba} & \textbf{Datos de prueba} \\ \hline
+Registrar nombre rol. & \multicolumn{1}{l|}{nombre\_rol='autorregulado'} \\ \hline
+\textbf{Resultado esperado} & \textbf{Resultado actual} \\ \hline
+verdad & verdad \\ \hline
+\textbf{Estado} & \textbf{Notas} \\ \hline
+éxito & nombre rol debe ser único. \\ \hline
+\end{tabular}
+\captionof{table}{Reporte prueba 3}
+\source{fuente: (Elaboración propia)}
+\label{Reporte prueba 3}
+\end{minipage}
+
+% report test 4
+\begin{minipage}[!htb]{\hsize}\centering
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{\textbf{Caso Prueba de Unidad}} \\ \hline
+\multicolumn{1}{|l|}{Caso de prueba ID: 4} & \multicolumn{1}{l|}{Nombre de módulo: Usuario} \\ \hline
+\multicolumn{1}{|l|}{Título prueba: executeUserOneLevelOcupation} & \multicolumn{1}{l|}{Ejecución de prueba: 20-06-2016} \\ \hline
+\multicolumn{1}{|l|}{Prioridad de prueba: Alto} & \multicolumn{1}{l|}{Fecha diseño de prueba: 18-02-2016} \\ \hline
+\multicolumn{2}{|l|}{Pre-condición: Usuario disponible.} \\ \hline
+\multicolumn{2}{|l|}{Dependencia: Ocupación.} \\ \hline
+\textbf{Pasos de prueba} & \textbf{Datos de prueba} \\ \hline
+Registrar datos de usuario. & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}correo='juan@gmail.com' \\ nombre\_usuario='omarhuanca' \\ contraseña='123' \\ estado\_usuario=1 \\ llaveActivación='1a2b3c' \\ ocupación\_id\_ocupación=84\end{tabular}} \\ \hline
+\textbf{Resultado esperado} & \textbf{Resultado actual} \\ \hline
+verdad & verdad \\ \hline
+\textbf{Estado} & \textbf{Notas} \\ \hline
+éxito & \begin{tabular}[c]{@{}c@{}}nombre\_usuario, correo \\ debe ser único.\end{tabular} \\ \hline
+\end{tabular}
+\captionof{table}{Reporte prueba 4}
+\source{fuente: (Elaboración propia)}
+\label{Reporte prueba 4}
+\end{minipage}
+
+% report test 5
+\begin{minipage}[!htb]{\hsize}\centering
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{\textbf{Caso Prueba de Unidad}} \\ \hline
+\multicolumn{1}{|l|}{Caso de prueba ID: 5} & \multicolumn{1}{l|}{Nombre de módulo: Contenido} \\ \hline
+\multicolumn{1}{|l|}{Título prueba: executeContentTypeAudio} & \multicolumn{1}{l|}{Ejecución de prueba: 20-06-2016} \\ \hline
+\multicolumn{1}{|l|}{Prioridad de prueba: Medio} & \multicolumn{1}{l|}{Fecha diseño de prueba: 18-02-2016} \\ \hline
+\multicolumn{2}{|l|}{Pre-condición: Usuario disponible, Contenido disponible.} \\ \hline
+\multicolumn{2}{|l|}{Dependencia: Ocupación, Usuario, Categoría, TipoContenido.} \\ \hline
+\textbf{Pasos de prueba} & \textbf{Datos de prueba} \\ \hline
+Registrar datos de contenido. & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}título='Contenido 1' \\ fecha\_creación='2016-06-20 12:10:00' \\ fecha\_liberación='2016-06-21' \\ descripción='descripción' \\ nombre\_url\_imagen='imagen contenido 1' \\ url\_imagen='123\_imagen\_contenido\_1' \\ nombre\_url\_reproductor='reproductor contenido 1' \\ url\_reproductor='456\_reproductor\_1' \\ nombre\_url\_respuesta='documento respuesta 1' \\ url\_respuesta=789\_documento\_respuesta\_1' \\ nombre\_url\_glosario='documento glosario 1' \\ url\_glosario='1011\_documento\_glosario\_1' \\ créditos='créditos contenido 1' \\ contenido\_estado=1 \\ tipo\_contenido\_id\_tipo\_contenido=1 \\ categoría\_id\_categoría=28\end{tabular}} \\ \hline
+\textbf{Resultado esperado} & \textbf{Resultado actual} \\ \hline
+verdad & verdad \\ \hline
+\textbf{Estado} & \textbf{Notas} \\ \hline
+éxito & \begin{tabular}[c]{@{}c@{}}fecha liberación debe \\ ser mayora fecha de creación.\end{tabular} \\ \hline
+\end{tabular}
+\captionof{table}{Reporte prueba 5}
+\source{fuente: (Elaboración propia)}
+\label{Reporte prueba 5}
+\end{minipage}
+
+% report test 6
+\begin{minipage}[!htb]{\hsize}\centering
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{\textbf{Caso Prueba de Unidad}} \\ \hline
+\multicolumn{1}{|l|}{Caso de prueba ID: 6} & \multicolumn{1}{l|}{Nombre de módulo: UsuarioRol} \\ \hline
+\multicolumn{1}{|l|}{Título prueba: executeUserRol} & \multicolumn{1}{l|}{Ejecución de prueba: 20-06-2016} \\ \hline
+\multicolumn{1}{|l|}{Prioridad de prueba: Medio} & \multicolumn{1}{l|}{Fecha diseño de prueba: 18-02-2016} \\ \hline
+\multicolumn{2}{|l|}{Pre-condición: Usuario disponible.} \\ \hline
+\multicolumn{2}{|l|}{Dependencia: Ocupación, Usuario, Rol.} \\ \hline
+\textbf{Pasos de prueba} & \textbf{Datos de prueba} \\ \hline
+Registrar datos de usuario\_rol. & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}usuario\_id\_usuario=35\\ rol\_id\_rol=7\end{tabular}} \\ \hline
+\textbf{Resultado esperado} & \textbf{Resultado actual} \\ \hline
+verdad & verdad \\ \hline
+\textbf{Estado} & \textbf{Notas} \\ \hline
+éxito &  \\ \hline
+\end{tabular}
+\captionof{table}{Reporte prueba 6}
+\source{fuente: (Elaboración propia)}
+\label{Reporte prueba 6}
+\end{minipage}
+
+% report test 7
+\begin{minipage}[!htb]{\hsize}\centering
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{\textbf{Caso Prueba de Unidad}} \\ \hline
+\multicolumn{1}{|l|}{Caso de prueba ID: 7} & \multicolumn{1}{l|}{Nombre de módulo: Suscripción} \\ \hline
+\multicolumn{1}{|l|}{Título prueba: executeSubscription} & \multicolumn{1}{l|}{Ejecución de prueba: 20-06-2016} \\ \hline
+\multicolumn{1}{|l|}{Prioridad de prueba: Medio} & \multicolumn{1}{l|}{Fecha diseño de prueba: 18-02-2016} \\ \hline
+\multicolumn{2}{|l|}{Pre-condición: Usuario disponible, Contenido disponible.} \\ \hline
+\multicolumn{2}{|l|}{Dependencia: Ocupación, Usuario, Rol, UsuarioRol, Categoría.} \\ \hline
+\textbf{Pasos de prueba} & \textbf{Datos de prueba} \\ \hline
+Registrar datos de Suscripción. & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}categoría\_id\_categoría=7\\ id\_usuario\_rol=2\\ usuario\_id\_usuario=2\\ rol\_id\_rol=2\end{tabular}} \\ \hline
+\textbf{Resultado esperado} & \textbf{Resultado actual} \\ \hline
+verdad & verdad \\ \hline
+\textbf{Estado} & \textbf{Notas} \\ \hline
+éxito &  \\ \hline
+\end{tabular}
+\captionof{table}{Reporte prueba 7}
+\source{fuente: (Elaboración propia)}
+\label{Reporte prueba 7}
+\end{minipage}
+
+En la figura \ref{fig:Ejecución de prueba para registrar suscripción} la prueba
+ejecuta la verificación dependencias para crear una suscripción. 
+
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.7]{runSubscriptionTest}
+	}
+	\captionof{figure}{Ejecución de prueba para registrar suscripción}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Ejecución de prueba para registrar suscripción}
+\end{minipage}
+
+\item \textbf{Prueba integración de audio y vídeo}
+
+% report test 8
+\begin{minipage}[!htb]{\hsize}\centering
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{\textbf{Caso Prueba de Integración}} \\ \hline
+\multicolumn{1}{|l|}{Caso de prueba ID: 8} & \multicolumn{1}{l|}{Nombre de módulo: Contenido} \\ \hline
+\multicolumn{1}{|l|}{Título prueba: playAudioLocalHost} & \multicolumn{1}{l|}{Ejecución de prueba: 23-05-2016} \\ \hline
+\multicolumn{1}{|l|}{Prioridad de prueba: Bajo} & \multicolumn{1}{l|}{Fecha diseño de prueba: 13-03-2016} \\ \hline
+\multicolumn{2}{|l|}{Pre-condición: Contenido disponible, phpunit disponible, selenium webdriver ejecutado.} \\ \hline
+\multicolumn{2}{|l|}{Dependencia: Ocupación, Usuario, Rol, UsuarioRol, Categoría, TipoContenido.} \\ \hline
+\textbf{Pasos de prueba} & \textbf{Datos de prueba} \\ \hline
+Obtener URL de podcast de tipo audio. & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}http://localhost/plataformaeducativalael/content/\\ viewContent?id\_content=1\&user\_id\_user=27\&\\ type\_content\_id\_type\_content=1\&\\ category\_id\_category=2\end{tabular}} \\ \hline
+\textbf{Resultado esperado} & \textbf{Resultado actual} \\ \hline
+verdad & verdad \\ \hline
+\textbf{Estado} & \textbf{Notas} \\ \hline
+éxito &  \\ \hline
+\end{tabular}
+\captionof{table}{Reporte prueba 8}
+\source{fuente: (Elaboración propia)}
+\label{Reporte prueba 8}
+\end{minipage}
+
+% report test 9
+\begin{minipage}[!htb]{\hsize}\centering
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{\textbf{Caso Prueba de Integración}} \\ \hline
+\multicolumn{1}{|l|}{Caso de prueba ID: 9} & \multicolumn{1}{l|}{Nombre de módulo: Contenido} \\ \hline
+\multicolumn{1}{|l|}{Título prueba: playVideoLocalHost} & \multicolumn{1}{l|}{Ejecución de prueba: 23-05-2016} \\ \hline
+\multicolumn{1}{|l|}{Prioridad de prueba: Bajo} & \multicolumn{1}{l|}{Fecha diseño de prueba: 15-03-2016} \\ \hline
+\multicolumn{2}{|l|}{Pre-condición: Contenido disponible, phpunit disponible, selenium webdriver ejecutado.} \\ \hline
+\multicolumn{2}{|l|}{Dependencia: Ocupación, Usuario, Rol, UsuarioRol, Categoría, TipoContenido.} \\ \hline
+\textbf{Pasos de prueba} & \textbf{Datos de prueba} \\ \hline
+Obtener URL de podcast de tipo vídeo. & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}http://localhost/plataformaeducativalael/content/\\ viewContent?id\_content=2\&user\_id\_user=27\&\\ type\_content\_id\_type\_content=2\&\\ category\_id\_category=3\end{tabular}} \\ \hline
+\textbf{Resultado esperado} & \textbf{Resultado actual} \\ \hline
+verdad & verdad \\ \hline
+\textbf{Estado} & \textbf{Notas} \\ \hline
+éxito &  \\ \hline
+\end{tabular}
+\captionof{table}{Reporte prueba 9}
+\source{fuente: (Elaboración propia)}
+\label{Reporte prueba 9}
+\end{minipage}
+
+En la figura \ref{fig:Ejecución de prueba para reproducir audio y vídeo} la prueba
+ejecuta la prueba de integración de audio y vídeo. 
+
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.7]{runIntegrationTest}
+	}
+	\captionof{figure}{Ejecución de prueba para reproducir audio y vídeo}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Ejecución de prueba para reproducir audio y vídeo}
+\end{minipage}
+
+
+\end{itemize}
+
+\subsection{Implementar componente}
+
+\begin{itemize}
+
+\item \textbf{Prueba unitaria} se hace uso de phpunit.
+
+\item \textbf{Prueba de integración} se hace uso de selenium server
+standalone y un módulo webdriver-bindings \footnote{webdriver-bindings:
+Permite ejecutar pruebas funcionales utilizando funciones WebDriver de
+selenium Server 2.0 WebDriver se ejecuta como plug-in de navegador remoto,
+por lo que es mucho más fiable que la prueba estándar de selenium se inyecta
+a través de JavaScript. \cite{webdriverTest}}.
+
+\end{itemize}
+
+
+\begin{itemize}
+
+\item \textbf{Prueba unitaria}
+
+\begin{enumerate}
+
+\item \textbf{Implementar en el servidor} la definición de la prueba
+\textquotedouble{executeSubscription} comprueba la ejecución de una
+suscripción, la descripción de la prueba se la aprecia en 
+cuadro \ref{Reporte prueba 7}.
+
+\begin{lstlisting}[language=PHP, caption={Prueba ejecución de suscripción.}]
+class SubscriptionTest extends CDbTestCase {
+    public function setUp() { // before each run test
+        parent::setUp();
+        //...
+    }
+    public function tearDown() { // after each run test
+        parent::tearDown();
+        //...
+    }
+    public function testCreateSubscription() {
+        $subscription = new Subscription();     // create subscription
+        $subscription->setAttributes(array(
+        'category_id_category' => $this->categoryChild->id_category,
+        'id_user_rol' => $this->userRol->id_user_rol,
+        'user_id_user' => $this->userRol->user_id_user,
+        'rol_id_rol' => $this->userRol->rol_id_rol
+        ), false);
+        $this->assertTrue($subscription->save(false));
+    }
+}
+\end{lstlisting}
+
+\item \textbf{Implementar en el servidor} la clase suscripción tiene una
+función para control de excepción, se utilizó transacción \footnote{transacción:
+Una secuencia de intercambio de información y el trabajo relacionado que se
+trata como una unidad a efectos de satisfacer una solicitud como para
+asegurar la integridad de la base de datos. \cite{transaction}} para manejo
+de consistencia.
+
+\begin{lstlisting}[language=PHP, caption={Función callback para control dependencia.}]
+public function beforeSave() {
+$res = false;
+if ($this->isNewRecord) {
+    $transaction = $this->dbConnection->beginTransaction(); // start transaction
+    // ...
+    $category = Category::model()->findByAttributes(array('id_category' => 
+        $this->category_id_category));
+    if (isset($category)) {
+        if (Yii::app()->params['idTypeContentAudio'] == 
+                $this->type_content_id_type_content) {
+            $user = User::model()->findByAttributes(array('id_user' => 
+                $this->user_id_user, 'state_user' => Yii::app()->params[
+                    'stateUserAvailable']));
+            if (isset($user)) {
+                $res = true;
+            }
+        }
+    }
+    if ($res) {
+        $transaction->commit();
+    } else {
+        $transaction->rollback();
+    }
+    // ...
+} else {
+    $res = true;
+}
+return $res;
+}
+\end{lstlisting}
+
+\end{enumerate}
+
+\item \textbf{Prueba de integración}
+
+\begin{enumerate}
+
+\item \textbf{Reproducir audio}
+
+\begin{enumerate}
+
+\item \textbf{Implementar en el servidor} la función de prueba
+\textquotedouble{playAudioLocalHost} realiza la verificación de existencia
+de un reproductor de tipo audio.
+
+\begin{lstlisting}[language=PHP, caption={Prueba reproducir reproductor de audio.}]
+protected function setUp() {
+    parent::setUp('localhost', 4444, 'firefox');
+}
+public function testPlayAudioLocalHost() {
+    $this->get('http://localhost/plataformaeducativalael/content/'
+    . 'viewContent/id_content/1/user_id_user/27/'
+    . 'type_content_id_type_content/1/category_id_category/2');
+    $this->click('audio-player');
+    sleep(5);
+    $elem = $this->findElementBy(LocatorStrategy::id,
+        'audio-player');
+    $this->assertNotNull($elem, 'Results not found!');
+} 
+\end{lstlisting}
+
+\end{enumerate}
+
+\item \textbf{Reproducir vídeo}
+
+\begin{enumerate}
+
+\item \textbf{Implementar en el servidor} la función de prueba
+\textquotedouble{playVideoLocalHost} realiza la verificación de un reproductor
+de tipo vídeo.
+
+\begin{lstlisting}
+protected function setUp() {
+    parent::setUp('localhost', 4444, 'firefox');
+}
+public function testPlayVideoLocalHost() {
+    $this->get('http://localhost/plataformaeducativalael/content/'
+    . 'viewContent?id_content=2&user_id_user=27&'
+    . 'type_content_id_type_content=2&category_id_category=4');
+    $this->click('audio-player');
+    sleep(5);
+    $elem = $this->findElementBy(LocatorStrategy::id,'audio-player');
+    $this->assertNotNull($elem, 'Results not found!');
+}
+\end{lstlisting}
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{itemize}
+
+\subsection{Problema/Solución de componente}
+
+\begin{itemize}
+
+\item \textbf{Prueba unitaria}
+
+\begin{itemize}
+
+\item Instalar PHPUnit y dependencia desde composer.
+\item Configurar archivos bootstrap y phpunit.xml sobre yii.
+\item Editar archivos CWebTestCase para reconocimiento de sentencia phpunit.
+
+\end{itemize}
+
+\begin{enumerate}
+
+\item \textbf{Uso dependencia phpunit} realizar la instalación de
+dependencia para utilizar composer \footnote{composer: Es un gestor de
+dependencias para PHP. Composer gestionará las dependencias que se requieren
+en un proyecto por ejemplo. \cite{composer}}, a continuación se define la
+ruta de instalación \textquotedouble{/project/protected/composer.json}
+
+\begin{lstlisting}[caption={Dependencia de phpunit.}]
+{
+    "name": "kevin/protected",
+    "authors": [
+        {
+            "name": "kevin",
+            "email": "kevinflorenzdaus@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*",
+        "phpunit/phpunit-selenium": ">=1.2",
+        "phpunit/dbunit": ">=1.2",
+        "phpunit/phpunit-story": "*"
+    }
+}
+\end{lstlisting}
+
+\item \textbf{Configurar archivos bootstrap y phpunit}
+
+Según \cite{testing} estos archivos son particulares, es como el guión de
+entrada y es el punto de partida cuando se ejecuta una serie de pruebas. 
+
+\begin{lstlisting}[language=PHP, caption={Estructura de configuración archivo bootstrap.php.}]
+// change the following paths if necessary
+$vendors=dirname(__FILE__).'/../vendor/autoload.php';
+$yiit=dirname(__FILE__).'/../../framework/yiit.php';
+$config=dirname(__FILE__).'/../config/test.php';
+// required file
+require_once($vendors);
+require_once($yiit);
+require_once(dirname(__FILE__).'/WebTestCase.php');
+// config app
+Yii::createWebApplication($config);
+\end{lstlisting}
+
+En el segmento de código se representa la configuracion de un archivo phpunit.xml
+para uso de un navegador en específico.
+
+\begin{lstlisting}[caption={Estructura configuración archivo phpunit.xml.}]
+<phpunit bootstrap="bootstrap.php"
+	colors="false"
+    convertErrorsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true"
+  	stopOnFailure="false">
+<selenium>
+	<browser name="Google Chrome" browser="*chrome" />
+    <browser name="Firefox" browser="*firefox" />
+</selenium>
+</phpunit>
+\end{lstlisting}
+
+\item \textbf{Editar archivo CWebTestCase} el segmento de código muestra
+el archivo CWebTestCase.php contempla tiene la configuración de inicio.
+
+\begin{lstlisting}[language=PHP, caption={Cabecera archivo CWebTestCase}, label={lst:fileCWebTestCase}]
+<?php
+/**
+ * This file contains the CWebTestCase class.
+ *
+ * @author Qiang Xue <qiang.xue@gmail.com>
+ * @link http://www.yiiframework.com/
+ * @copyright 2008-2013 Yii Software LLC
+ * @license http://www.yiiframework.com/license/
+ */
+Yii::import('system.test.CTestCase');
+require_once('PHPUnit/Extensions/SeleniumTestCase.php');
+\end{lstlisting}
+
+A continuación, el segmento de código muestra el archivo CWebTestCase.php
+contiene una modificación. 
+
+\begin{lstlisting}[language=PHP, caption={Modificación de instrucción.}, label={lst:replaceCWebTestCase}]
+require_once('../../protected/vendor/phpunit/phpunit-selenium/
+	PHPUnit/Extensions/SeleniumTestCase.php');
+\end{lstlisting}
+
+Como resultado, pruebas sobre Yii 1.X se debe realizar el cambio de sentencia
+definido en segmento de código \ref{lst:replaceCWebTestCase} por segmento de
+código \ref{lst:fileCWebTestCase}.
+
+\end{enumerate}
+
+\item \textbf{Prueba integración}
+
+\begin{itemize}
+
+\item Instalación de navegador firefox.
+\item Ejecutar sesión en selenium-server-standalone-Z.jar.
+\item Inicio sesión en navegador chrome. 
+ 
+\end{itemize}
+
+\begin{enumerate}
+
+\item \textbf{Instalación de navegador firefox} debian 8 utiliza un navegador
+iceweasel reemplazar el por mozilla firefox.
+
+\begin{lstlisting}[language=bash, caption={Instrucción de instalación para mozilla firefox.}]
+$ wget ftp://ftp.mozilla.org/pub/mozilla.org/..../firefox-Y.0.tar.bz2
+cd /home/hugh/
+$ tar -xjvf firefox-Y.0.tar.bz2
+$ sudo rm -rf /opt/firefox*
+$ sudo mv firefox /opt/firefoxY.0
+$ sudo ln -sf /opt/firefoxY.0/firefox /usr/bin/firefox
+\end{lstlisting}
+
+La instalación de firefox tiene que ser de forma manual, un servidor web
+como selenium-server-standalone-Z.jar utiliza la configuración de los
+navegadores de uso general.
+
+\item \textbf{Iniciar sesión selenium server standalone} el segmento de código
+siguiente realiza el inicio del servidor web emulado.
+
+\begin{lstlisting}[language=bash, caption={Ejecución servidor server standalone.}]
+$ java -jar  selenium-server-standalone-Z.jar
+\end{lstlisting}
+
+En la figura \ref{fig:Ejecución de selenium server standalone} selenium server
+standalone empieza a funcionar.
+
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.5]{executeSeleniumServer}
+	}
+	\captionof{figure}{Ejecución de selenium server standalone}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Ejecución de selenium server standalone}
+\end{minipage}
+
+Realizar una  prueba de integración requiere ejecutar
+\textquotedouble{dirección local} 
+\footnote{dirección local: http://127.0.0.1:4444/wd/hub}, sobre un
+navegador firefox, seleccionar la opción y crear una sesión de trabajo.
+
+\item \textbf{Inicio sesión navegador en chrome} selenium server standalone
+tiene una configuración por defecto con firefox, si se desea utilizar otro
+navegador como alternativa. En el segmento de código se realiza la
+configuración por medio de un programa de control de chrome para ejecución
+de selenium server standalone.
+
+A continuación se ejecuta los siguientes coman-dos de descarga.
+
+\begin{lstlisting}[language=bash, caption={Instalación de programa de control.}]
+$ unzip /path/chromedriver_linux_64.zip
+$ su root
+# chmod +x chromedriver
+\end{lstlisting}
+
+De manera que, se tiene que ejecutar el siguiente comando en el siguiente
+segmento de código \textquotedouble{sobre una sola línea}.
+
+\begin{lstlisting}[language=bash, caption={Configuración chromedriver selenium server.}]
+$ java -jar selenium-server-standalone-Z.jar -Dwebdriver.chrome.driver=
+"/path/chromedriver"
+\end{lstlisting}
+
+A continuación, en la figura \ref{fig:Registro de sesión en navegador chrome}
+se realiza la acción de inicio de sesión en chrome de ejecución de una prueba
+de integración.
+
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.6]{registerSessionChrome}
+	}
+	\captionof{figure}{Registro de sesión en navegador chrome}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Registro de sesión en navegador chrome}
+\end{minipage}
+
+\end{enumerate}
+
+\end{itemize}
