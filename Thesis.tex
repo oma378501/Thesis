@@ -13,8 +13,8 @@
 
 \renewcommand{\familydefault}{\sfdefault}
 
-% define spanish language
-\usepackage[spanish]{babel}
+% define spanish language and table name
+\usepackage[spanish, es-tabla]{babel}
 
 \usepackage[utf8]{inputenc}
 
@@ -63,6 +63,16 @@
 
 % style for cite
 \usepackage[autostyle]{csquotes}
+
+% generate link from tableofcontents
+\usepackage[
+	colorlinks,
+	citecolor=black,
+	linkcolor=black,
+	urlcolor=black
+]{hyperref}
+
+\usepackage[numbered]{bookmark}
 
 % style bibliography
 \usepackage{apacite}
@@ -131,11 +141,31 @@
 
 \let\OldTextGreater\textgreater
 
-% vertical white space
-%\usepackage[compact]{titlesec}
+%reformatting the chapter headings for bookmark
+\usepackage{titlesec} 
 
-% compacted space list
-%\usepackage{mdwlist}
+\makeatletter
+
+% verify in appendix
+\newcommand{\inappendix}{TT\fi\expandafter\ifx\@chapapp\appendixname}
+
+% rename chapter or appendix
+\bookmarksetup{%
+  addtohook={%
+  	\ifnum\toclevel@chapter=\bookmarkget{level}\relax
+  	    \if\inappendix
+	    	\renewcommand*{\numberline}[1]{Anexo #1 }%
+	  	\else 
+			\renewcommand*{\numberline}[1]{Capítulo #1 }
+  		\fi
+	\fi
+  },
+}
+\makeatother
+
+% Define name of caption and list of lot
+\renewcommand{\listtablename}{Índice de tablas}
+\renewcommand{\tablename}{Tabla}
 
 % autor
 \author{Juan Omar Huanca Balboa}
@@ -151,14 +181,24 @@
 
 %\input{tex/Dedication}
 
-%\input{tex/Abstract}
- 
-\tableofcontents
-\listoffigures
-\listoftables
-\lstlistoflistings
+%\input{tex/Acknowledgements}
 
-\clearpage
+%\input{tex/Summary}
+
+\addtocontents{toc}{\protect{\pdfbookmark[-1]{Índice General}{toc}}}
+\tableofcontents
+
+\cleardoublepage
+\hypertarget{lofpage}{}
+\listoffigures
+
+\cleardoublepage
+\hypertarget{lotpage}{}
+\listoftables
+
+%\lstlistoflistings
+
+%\clearpage
 
 \thispagestyle{plain}~
 
@@ -195,5 +235,11 @@
 \cleardoublepage\makeatletter\@openrighttrue\makeatother
 
 \input{tex/AnnexD}
+
+\input{tex/AnnexE}
+
+\bookmark[dest=lofpage,level=-1]{Índice De Figuras}
+
+\bookmark[dest=lotpage,level=-1]{Índice De Tablas}
 
 \end{document}

@@ -1,5 +1,1089 @@
 \chapter{Desarrollo del Proyecto}
 
+\section{\textquestiondown Cómo implementar un servicio agregado de noticia?} \label{serviceFeed}
+
+\subsection{Tarjeta de historia de usuario}
+
+El equipo de informática realizó la elaboración de las historias respecto
+a los deseos y sugerencias de un Coordinador de la Carrera de LAEL.
+
+En particular deseo enfatizar los siguientes deseos a realizar:
+
+\begin{itemize}
+
+\item \textbf{Suscripción de usuario por red social} cuadro: 
+\ref{Tarjeta historia de usuario 65}.
+\item \textbf{Baja de suscripción}, cuadro: 
+\ref{Tarjeta historia de usuario 60}.
+\item \textbf{Liberación de contenido}, cuadro: 
+\ref{Tarjeta historia de usuario 58}.
+
+\end{itemize}
+
+% add history card 65
+\begin{minipage}[!htb]{\hsize}\centering
+\begin{tabular}{|l|l|l|}
+\hline
+ & \textbf{Tarjeta Historia de Usuario} &  \\ \hline
+ID Historia: 65 & \begin{tabular}[c]{@{}l@{}}Nombre: Suscripción a una\\ categoría por red social.\end{tabular} & Fecha: 29/08/2016 \\ \hline
+\multicolumn{3}{|l|}{Rol: Aprendiz autorregulado} \\ \hline
+\begin{tabular}[c]{@{}l@{}}Modificación de historia\\ número: \end{tabular} & \begin{tabular}[c]{@{}l@{}}Iteración asignada: 9, 11\end{tabular} & Prioridad en negocio: Medio \\ \hline
+Tiempo estimado inicial: 20 & Riesgo en desarrollo: & Tipo de historia: Funcional \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción:\\ \\ Yo como usuario aprendiz autorregulado deseo suscribirme a un determinado lenguaje \\ (francés básico, ingles básico, quechua básico, quechua psicosocial, fonética quechua), \\tal que me beneficie en recibir notificación de nuevo contenido vía correo.\\ Para esto necesito pinchar sobre un botón de red social: facebook, google, twitter.\end{tabular}} \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Pre condición:	\\ \\ Contenido publicado. \\ Usuario autentificado por red social: facebook, google, twitter. \\ Realizar configuración de sistema con en servidor externo: facebook, google, twitter.\end{tabular}} \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Actividades:\\ \\ Desplegar lista de categorías para suscripción.\\ Permitir al usuario seleccionar de la lista de categoría para suscribirse. \\ Guardar suscripción de usuario y registrar fecha.\end{tabular}} \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Observaciones:\\ \\ La suscripción permite acceder a las noticias de nuevos contenidos de categoría.\end{tabular}} \\ \hline
+\begin{tabular}[c]{@{}l@{}}.....................................................\\ Msc. Lic. Vladimir Costas Juaregui\\ PROJECT MANAGER\end{tabular} & \begin{tabular}[c]{@{}l@{}}..........................................\\ Lic. Manuel Camacho Arce\\ PRODUCT OWNER\end{tabular} & \begin{tabular}[c]{@{}l@{}}.........................................\\ Juan Omar Huanca Balboa\\ SCRUM MASTER\end{tabular} \\ \hline
+\end{tabular}
+\captionof{table}{Tarjeta historia de usuario 65}
+\source{fuente: (Elaboración propia)}
+\label{Tarjeta historia de usuario 65}
+\end{minipage}
+
+% add user history card 60
+\begin{minipage}[!htb]{\hsize}\centering
+\begin{tabular}{|l|l|l|}
+\hline
+ & \textbf{Tarjeta Historia de Usuario} &  \\ \hline
+ID Historia: 60 & \begin{tabular}[c]{@{}l@{}}Nombre: Dar de baja \\ suscripción.\end{tabular} & Fecha: 19/05/2015 \\ \hline
+\multicolumn{3}{|l|}{Rol: Aprendiz autorregulado} \\ \hline
+\begin{tabular}[c]{@{}l@{}}Modificación de historia\\ número: 04\end{tabular} & Iteración asignada: 11 & Prioridad en negocio: Bajo \\ \hline
+Tiempo estimado inicial: 15 & Riesgo en desarrollo: & Tipo de historia: Funcional \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción:\\ \\ Yo como usuario aprendiz autorregulado deseo dar de baja mi suscripción a un determinada \\ categoría tal que me beneficie no recibir más notificación.\\ Para esto necesito pinchar sobre el botón lado la categoría.\end{tabular}} \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Pre condición:\\ \\ Usuario autentificado. \\ Usuario suscrito\end{tabular}} \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Post condición:\\ \\ Dejar de recibir notificación a bandeja de correo.\end{tabular}} \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Actividades:\\ \\ Desplegar la lista de categorías.\\ Verificar registro de categoría.\\ Eliminar registro de suscripción.\\Cambiar estado de suscripción y registrar fecha de baja.\end{tabular}} \\ \hline
+\begin{tabular}[c]{@{}l@{}}.....................................................\\ Msc. Lic. Vladimir Costas Juaregui\\ PROJECT MANAGER\end{tabular} & \begin{tabular}[c]{@{}l@{}}..........................................\\ Lic. Manuel Camacho Arce\\ PRODUCT OWNER\end{tabular} & \begin{tabular}[c]{@{}l@{}}.........................................\\ Juan Omar Huanca Balboa\\ SCRUM MASTER\end{tabular} \\ \hline
+\end{tabular}
+\captionof{table}{Tarjeta historia de usuario 60}
+\source{fuente: (Elaboración propia)}
+\label{Tarjeta historia de usuario 60}
+\end{minipage}
+
+% add user history card 58
+\begin{minipage}[!htb]{\hsize}\centering
+\begin{tabular}{|l|l|l|}
+\hline
+ & \textbf{Tarjeta Historia de Usuario} &  \\ \hline
+ID Historia: 58 & \begin{tabular}[c]{@{}l@{}}Nombre: Liberación \\ de contenido\end{tabular} & Fecha: 03/05/2015 \\ \hline
+\multicolumn{3}{|l|}{Rol: Tutor} \\ \hline
+\begin{tabular}[c]{@{}l@{}}Modificación de historia\\ número:\end{tabular} & Iteración asignada: 10 & Prioridad en negocio: Medio \\ \hline
+Tiempo estimado inicial: 35 & Riesgo en desarrollo: & Tipo de historia: Funcional \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción:\\ \\ Yo como usuario tutor deseo realizar la automática publicación de mi contenido tal que se \\ publiquen de acuerdo a fecha indicada en el registro.\end{tabular}} \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Pre condición:	\\ \\ Usuario autentificado. \\Contenido registrado. \\ Fecha actual de sistema debe ser mayor a fecha de liberación de contenido.\end{tabular}} \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Actividades: \\ \\ Generar un script para obtener los contenidos inhabilitados \\ Enviar un mensaje de notificación a los usuarios suscritos a categoría respectiva.\\ Cambiar estado de contenido en habilitado.\end{tabular}} \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Observaciones:\\ \\ La liberación de contenido debe estar condicionado a fecha de liberación.\end{tabular}} \\ \hline
+\begin{tabular}[c]{@{}l@{}}.....................................................\\ Msc. Lic. Vladimir Costas Juaregui\\ PROJECT MANAGER\end{tabular} & \begin{tabular}[c]{@{}l@{}}..........................................\\ Lic. Manuel Camacho Arce\\ PRODUCT OWNER\end{tabular} & \begin{tabular}[c]{@{}l@{}}.........................................\\ Juan Omar Huanca Balboa\\ SCRUM MASTER\end{tabular} \\ \hline
+\end{tabular}
+\captionof{table}{Tarjeta historia de usuario 58}
+\source{fuente: (Elaboración propia)}
+\label{Tarjeta historia de usuario 58}
+\end{minipage}
+
+\subsection{Arquitectura de componente}
+
+\begin{itemize}
+
+\item \textbf{Suscripción y baja de suscripción}
+en la figura \ref{fig:Diagrama de caso de uso para personalizar suscripción, dar baja},
+las acciones del rol autorregulado realiza el requerimiento descrito en cuadro
+\ref{Tarjeta historia de usuario 65}.
+
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.6]{useCaseSubscriptionUnsubscription}
+	}
+	\captionof{figure}{Diagrama de caso de uso para personalizar suscripción, dar baja}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Diagrama de caso de uso para personalizar suscripción, dar baja}
+\end{minipage}
+
+\item \textbf{Liberación de contenido} en la figura 
+\ref{fig:Diagrama de caso de uso para liberación de contenido}, la acción del
+rol tutor realiza la definición de fecha de liberación y el proceso cron
+ejecuta el script descrito en cuadro \ref{Tarjeta historia de usuario 58}.
+
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.7]{useCaseRelease}
+	}
+	\captionof{figure}{Diagrama de caso de uso para liberación de contenido}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Diagrama de caso de uso para liberación de contenido}
+\end{minipage}
+
+\item \textbf{Suscripción, baja de suscripción y liberación de contenido}
+en la figura \ref{fig:Diagrama de clase para suscriptor}, el diagrama
+representa la composición de datos y comunicación de las clases.
+
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.6]{classSubscription}
+	}
+	\captionof{figure}{Diagrama de clase para suscriptor}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Diagrama de clase para suscriptor}
+\end{minipage}
+
+\item \textbf{Suscripción y baja de suscripción}
+en la figura \ref{fig:Diagrama de secuencia para suscripción}, el diagrama
+de secuencia representa la comunicación del rol autorregulado con las
+diferentes clases.
+
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.7]{sequenceSubscription}
+	}
+	\captionof{figure}{Diagrama de secuencia para suscripción}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Diagrama de secuencia para suscripción}
+\end{minipage}
+
+\item \textbf{Liberación de contenido}
+en la figura \ref{fig:Diagrama de secuencia para liberación de contenido},
+el diagrama de secuencia representa la comunicación del rol tutor con las
+diferentes clases, el proceso cron verifica el registro de contenido para
+luego ejecutar un script.
+
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.7]{sequenceRelease}
+	}
+	\captionof{figure}{Diagrama de secuencia para liberación de contenido}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Diagrama de secuencia para liberación de contenido}
+\end{minipage}
+
+\end{itemize}
+
+\subsection{Modelo de componente}
+
+\begin{itemize}
+
+\item \textbf{Suscripción y baja de suscripción}
+en la figura \ref{fig:Modelo de datos para suscriptor}, el modelo de datos
+representa la persistencia de suscripción de categoría y suscripción por
+red social.
+
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.5]{modelSubscription}
+	}
+	\captionof{figure}{Modelo de datos para suscriptor}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Modelo de datos para suscriptor}
+\end{minipage}
+
+\item \textbf{Liberación de contenido}
+en la figura \ref{fig:Modelo de datos para liberación de contenido},
+el modelo de datos representa la persistencia de registro de contenido
+y fecha de liberación.
+
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.5]{modelRelease}
+	}
+	\captionof{figure}{Modelo de datos para liberación de contenido}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Modelo de datos para liberación de contenido}
+\end{minipage}
+
+\end{itemize}
+
+\subsection{Componente}
+
+\begin{itemize}
+
+\item \textbf{Suscripción de usuario}
+se propone la segunda opción para realizar una suscripción.
+
+\begin{itemize}
+
+\item \textbf{Token de red social}, permite realizar la suscripción con un
+servicio externo provisto por redes sociales de google, facebook y twitter.
+
+\end{itemize}
+
+\textbf{Token \footnote{Token: Se clasifica como una de las cinco clases de
+fichas que describen sus funciones (constantes, identificadores, operadores,
+palabras reservadas y separadores) de acuerdo con las reglas del lenguaje de
+programación. \cite{token}} de red social} en la figura \ref{fig:Formulario
+de inicio de sesión}, el formulario de inicio de sesión tiene la funcionalidad
+de ingresar a su entorno de trabajo.
+
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.6]{login}
+	}
+	\captionof{figure}{Formulario de inicio de sesión}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Formulario de inicio de sesión}
+\end{minipage}
+
+\begin{enumerate}
+
+\item \textbf{Facebook}, en la figura \ref{fig:Aplicación de sesión para facebook},
+el flujo en un servidor de facebook para realizar el acceso de una cuenta válida.
+
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.5]{oauthFacebook}
+	}
+	\captionof{figure}{Aplicación de sesión para facebook}
+	\source{fuente: \cite{oauthFacebook}}
+	\label{fig:Aplicación de sesión para facebook}
+\end{minipage}
+
+\item \textbf{Google}, en la figura \ref{fig:Aplicación de sesión para google}, el
+diagrama secuencia facilita el acceso para una cuenta válida de un usuario.
+
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.7]{oauth20Google}
+	}
+	\captionof{figure}{Aplicación de sesión para google}
+	\source{fuente: \cite{oauthGoogle}}
+	\label{fig:Aplicación de sesión para google}	
+\end{minipage}
+
+\item \textbf{Twitter}, en la figura \ref{fig:Aplicación de sesión para twitter},
+el flujo dentro un servidor de twitter permite realizar el inicio de sesión de
+una cuenta de usuario.
+
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.5]{oauth10Twitter}
+	}
+	\captionof{figure}{Aplicación de sesión para twitter}
+	\source{fuente: \cite{oauthTwitter}}
+	\label{fig:Aplicación de sesión para twitter}
+\end{minipage}
+
+\end{enumerate}
+
+\item \textbf{Baja suscripción} en la figura 
+\ref{fig:Suscripción programa aprendizaje francés básico}, un usuario de
+sistema suscrito a una categoría (francés básico) desea dar de baja su
+respectiva suscripción. Para el mismo solo se tiene que pinchar sobre el botón
+\textquotedouble{Suscrito}. 
+
+\begin{minipage}{1.0\linewidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.6]{basicFranceSubscribed}
+	}
+	\captionof{figure}{Suscripción programa aprendizaje francés básico}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Suscripción programa aprendizaje francés básico}
+\end{minipage}
+
+\item \textbf{Liberación de contenido} en la figura
+\ref{fig:Formulario registro de contenido}, el formulario de registro de
+contenido permite definir la fecha de liberación del propio contenido.
+
+\begin{minipage}{1.0\linewidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.7]{formContent}
+	}
+	\captionof{figure}{Formulario registro de contenido}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Formulario registro de contenido}
+\end{minipage}
+
+\end{itemize}
+	
+\subsection{Implementar componente}
+
+\begin{itemize}
+
+\item \textbf{Baja de suscripción - implementar en el servidor} el siguiente
+segmento de código verifica el registro de una suscripción, si la verificación
+es verdadera realiza la baja, caso contrario registra nueva suscripción.
+\begin{lstlisting}[language=PHP, caption={Verificación registro suscripción.}]
+public function actionVerifySubscribeCategory() {
+$user_id_user = Yii::app()->user->id; // get user id
+...
+foreach ($model_user_rols as $model_user_rol) { // iterate each row UserRol
+    ...
+    $model_subscription = Subscription::model()->findByAttributes(array(
+    'category_id_category' => $category_id_category, 'id_user_rol' => 
+    $id_user_rol, 'rol_id_rol' => $rol_id_rol, 'user_id_user' => $user_id_user));
+    $manager_detail_subscription = new DetailSubscriptionManager();
+    if ($model_subscription == null) { // verify array is null
+        $model_subscription = new Subscription('create'); // new model Interest
+        ...
+        if ($model_subscription->validate()) { // verify valitation
+            $this->saveModel($model_subscription); // save tuple
+            ...
+        }
+    } else {
+        $model_detail_subscription = DetailSubscription::model()->findByAttributes
+        (array('subscription_id_subscription' => $model_subscription->
+        id_subscription, 'subscription_category_id_category' => 
+        $category_id_category, 'subscription_user_id_user' => $user_id_user,
+        'status_detail_subscription' => Yii::app()->params[
+        'stateDetailSubscribeAvailable']));
+        if ($model_detail_subscription == null) { // verify change
+            ...
+        }
+    }
+}    
+}
+\end{lstlisting}
+
+\item \textbf{Liberación de contenido - implementar en el servidor} el
+proceso cron utiliza una tabla para la definición para una tarea, la
+instrucción realiza ejecución de un script para liberación de diferentes
+podcasts.
+
+Ejecutar el comando sobre una terminal. A continuación se debe iniciar sesión
+como usuario \textquotedouble{root}.
+
+\begin{lstlisting}[language=bash, caption={Acceso archivo crontab.}]
+# contrab -e
+\end{lstlisting}
+
+\textbf{sobre una sola línea} el comando a ejecutar tiene la siguiente sintaxis
+de minuto (0-59) hora (0-23) día del mes (1-31) mes del año (1-12) día de la
+semana (0-7) comando/script/tarea a ejecutar.
+
+\begin{lstlisting}[language=bash, caption={Comando para ejecución de tarea.}]
+0 0 * * * php /var/www/html/plataformaeducativalael/protected/utils/job.php job
+\end{lstlisting}
+
+A continuación la función principal del script job.php, obtiene podcast
+a ser liberado. Enviar una notificación por correo a los usuarios suscritos.
+
+\begin{lstlisting}[language=PHP, caption={Método principal de clase JobCommand.}]
+public function run($args) {
+    $jobs = $this->getJobs();
+    foreach ($jobs as $job) {
+        Yii::log("Running - Job [". $job->title ."] scheduled for ".
+        $job->date_create, 'info', 'jobprocessor');
+        $job->content_status = Yii::app()->params['stateContentAvailable'];
+        $job->save(); // save data
+        $this->sendMailSubscribed($job->category_id_category, $job->user_id_user,
+        $job->title, $job->summary);
+    }
+}
+\end{lstlisting}
+
+\end{itemize}
+
+\subsection{Problema/Solución de componente}
+
+\begin{itemize}
+
+\item \textbf{Baja de suscripción} la dificultad se obtuvo al momento de implementar.
+\begin{itemize}
+\item Estado usuario botón suscripción.
+\end{itemize}
+\begin{enumerate}
+\item \textbf{Estado usuario botón suscripción - implementar en el cliente}
+en el segmento de código se utiliza una variable local para almacenar el valor
+de una categoría suscrita y realizar el cambio según la verificación de registro
+de usuario.
+\begin{lstlisting}[language=PHP, caption={Cambio de estado botón de suscripción.}]
+$category_id_result = 0;
+foreach ($model_detail_subscriptions as $model_detail_subscription){
+    if ($model_detail_subscription->subscription_category_id_category ==
+            $category_id){
+        $category_id_result = $category_id;
+    }
+}
+$this->widget(
+'booster.widgets.TbButton', array(
+'label' => ($category_id_result == $category_id) ?'<i class="fa fa-rss"></i> '.
+    Yii::t('app', 'Subscribed') :'<i class="fa fa-rss"></i> '. Yii::t('app', 
+    'Subscribe'),
+'context' => 'warning',
+'encodeLabel'=>false,        
+'htmlOptions' => array(
+    'id' => 'button' . $category_id,
+    'data-dismiss' => 'modal',
+    'class'=>'btn-subscribe',
+    'ajax' => array(
+        'type' => 'POST',
+        'url' => $this->createUrl('subscription/verifySubscribeCategory'),
+        'success' => 'js:function(data){ $("#button' . $category_id . '").html("'
+        . Yii::t("app", "Subscribed") . '");}',
+        'data' => array(
+            'idCategory' => 'js:$("#user-formRegisterSuscribe' . $category_id 
+                . ' #User_category_id").val()',
+        ),
+    ),
+),
+'encodeLabel' => false)
+);
+\end{lstlisting}
+
+\end{enumerate}
+
+\item \textbf{Liberación de contenido}
+
+\begin{itemize}
+
+\item Envió de mensaje de notificación.
+\item Obtener contenido sujeto a condición de liberación. 
+
+\end{itemize}
+
+\begin{enumerate}
+
+\item \textbf{Envió de mensaje - implementar en el servidor}
+
+El segmento de código implementa el envió de correo, tiene la característica
+de mostrar un mensaje sin página maestra.
+
+\begin{lstlisting}[language=PHP, caption={Envió de mensaje sin  contenedor de página.}]
+private function sendMailSubscribed($idCategory, $idUser, $title, $summary) {
+$userRols = Category::model()->getRecentUserSubscribe($idCategory);
+foreach ($userRols->categoryUserRol as $userRol) {
+    if ($idUser != $userRol->user_id_user) {
+        $subject = Yii::app()->params['setSubjectContentRelease'];
+        $body = Yii::app()->params['setBodyContentRelease'] . $title . $summary
+        . Yii::app()->params['setBodyBelowContentRelease'] 
+        . Yii::app()->params['adminEmail']
+        . Yii::app()->params['setBodyBottomContentRelease'];
+        $to = $userRol->userIdUser->email;
+        $mail = new YiiMailer(); // send mail
+        $mail->setBody($body); //use cron view from views/mail
+        $mail->setData(array('message' => $subject, 'name' => get_class($this), 
+        'description' => 'Cron job', 'mailer' => $mail));
+        $mail->render(); //render HTML mail, layout is set from config file
+        $mail->From = Yii::app()->params['adminEmail'];
+        $mail->FromName = Yii::app()->params['fromNameConsole'];
+        $mail->Subject = $subject;
+        $mail->AddAddress($to);
+        if ($mail->send()) { // send
+            Yii::log(Yii::app()->params['succeedSendContentRelease']); 
+        } else {
+            Yii::log(Yii::app()->params['wrongSendContenRelease']);
+        }
+    }
+}
+}
+\end{lstlisting}
+
+\item \textbf{Obtención de contenido - implementar en el servidor}
+en el segmento de código se realiza el uso de la función \textquotedouble{scopes}
+para obtener contenido habilidad y la fecha de sistema es mayor la fecha
+de liberación.
+
+\begin{lstlisting}[language=PHP, caption={Obtención de contenido para liberar podcast.}]
+public function scopes() {
+return array(
+    'active' => array(
+        'condition' => 'content_status='.Yii::app()->params[
+            'stateContentUnavailable'],
+    ),
+    'current' => array(
+        'condition' => 'date_leave < now()',
+    ),
+);
+}
+\end{lstlisting}
+
+\end{enumerate}
+
+\end{itemize}
+
+\section{\textquestiondown Cómo implementar un glosario y subtitulado?}
+
+Relacionar un reproductor de podcast de tipo audio con su transcripción
+genera un efecto de subtitulado. 
+
+Definir un glosario de términos con significado.
+ 
+\subsection{Tarjeta de historia de usuario}
+
+El equipo de informática realizó la elaboración de las historias respecto
+a los deseos y sugerencias de un Coordinador de la Carrera de LAEL.
+
+En particular deseo enfatizar los siguientes deseos a realizar:
+
+\begin{itemize}
+
+\item \textbf{Gestionar glosario de podcast}, cuadro
+\ref{Tarjeta historia de usuario 64}.
+\item \textbf{Gestionar subtitulado de podcast audio}, cuadro 
+\ref{Tarjeta historia de usuario 66}.
+
+\end{itemize}
+
+% add user history card 64
+\begin{minipage}[!htb]{\hsize}\centering
+\begin{tabular}{|l|l|l|}
+\hline
+ & \textbf{Tarjeta Historia de Usuario} &  \\ \hline
+ID Historia: 64 & \begin{tabular}[c]{@{}l@{}}Nombre: Registrar\\ glosario audio podcast\end{tabular} & Fecha: 19/05/2015 \\ \hline
+\multicolumn{3}{|l|}{Rol: Tutor} \\ \hline
+\begin{tabular}[c]{@{}l@{}}Modificación de historia\\ número: 04\end{tabular} & Iteración asignada: 13,14 & Prioridad en negocio: Medio \\ \hline
+Tiempo estimado inicial: 30 & Riesgo en desarrollo: & Tipo de historia: Funcional \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción:\\ \\ Yo como usuario tutor deseo gestionar un glosario tal que me beneficie en la definición de \\términos.\\ Para esto necesito: frase, lenguaje destino, significado.\end{tabular}} \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Pre condición:\\ \\ Usuario autentificado. \\ Contenido registrado.\end{tabular}} \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Como probarlo: \\ \\ pinchar sobre la segunda opción definición glosario dentro de la opción.\end{tabular}} \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Actividades:\\ \\Pinchar sobre la opción Administrar mis contenidos. \\ Pinchar sobre la opción traducción.\\ Seleccionar la opción de glosario. \\Llenar los valores de formulario. \\ Guardar registro glosario.\end{tabular}} \\ \hline
+\begin{tabular}[c]{@{}l@{}}.....................................................\\ Msc. Lic. Vladimir Costas Juaregui\\ PROJECT MANAGER\end{tabular} & \begin{tabular}[c]{@{}l@{}}..........................................\\ Lic. Manuel Camacho Arce\\ PRODUCT OWNER\end{tabular} & \begin{tabular}[c]{@{}l@{}}.........................................\\ Juan Omar Huanca Balboa\\ SCRUM MASTER\end{tabular} \\ \hline
+\end{tabular}
+\captionof{table}{Tarjeta historia de usuario 64}
+\source{fuente: (Elaboración propia)}
+\label{Tarjeta historia de usuario 64}
+\end{minipage}
+
+% add user history card 66
+\begin{minipage}[!htb]{\hsize}\centering
+\begin{tabular}{|l|l|l|}
+\hline
+ & \textbf{Tarjeta Historia de Usuario} &  \\ \hline
+ID Historia: 66 & \begin{tabular}[c]{@{}l@{}}Nombre: Registrar\\ subtitulado podcast\end{tabular} & Fecha: 09/05/2015 \\ \hline
+\multicolumn{3}{|l|}{Rol: Tutor} \\ \hline
+\begin{tabular}[c]{@{}l@{}}Modificación de historia\\ número:\end{tabular} & Iteración asignada: 15,16 & Prioridad en negocio: Medio \\ \hline
+Tiempo estimado inicial: 35 & Riesgo en desarrollo: & Tipo de historia: Funcional \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción:\\ \\ Yo como usuario tutor deseo tener un subtitulado tal que me beneficie poder relacionar\\ reproductor con transcripción de un podcast.\\ \\ Para esto necesito:frase, lenguaje destino, significado, tiempo inicio y tiempo fin.\end{tabular}} \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Pre condición:	\\ \\ Usuario Autentificado.\end{tabular}} \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Como probarlo:\\ \\ Pinchar sobre el reproductor, pinchar dos veces sobre el botón mostrar/ocultar traducción para \\ poder ver la transcripción y una traducción a un lenguaje destino.\end{tabular}} \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Actividades:\\ \\Pinchar sobre la opción Administrar mis contenidos. \\ Pinchar sobre la opción traducción.\\ Seleccionar la opción de frase. \\Llenar los valores de formulario. \\ Pinchar sobre el reproductor para definir tiempos: inicio, fin. \\ Guardar registro glosario.\end{tabular}} \\ \hline\begin{tabular}[c]{@{}l@{}}.....................................................\\ Msc. Lic. Vladimir Costas Juaregui\\ PROJECT MANAGER\end{tabular} & \begin{tabular}[c]{@{}l@{}}..........................................\\ Lic. Manuel Camacho Arce\\ PRODUCT OWNER\end{tabular} & \begin{tabular}[c]{@{}l@{}}.........................................\\ Juan Omar Huanca Balboa\\ SCRUM MASTER\end{tabular} \\ \hline
+\end{tabular}
+\captionof{table}{Tarjeta historia de usuario 66}
+\source{fuente: (Elaboración propia)}
+\label{Tarjeta historia de usuario 66}
+\end{minipage}
+
+\subsection{Arquitectura de componente}
+
+En la figura \ref{fig:Diagrama de caso de uso para glosario y subtitulado},
+el diagrama de caso de uso representa la accion de un rol autorregulado
+para definición de requerimiento descrito en cuadro
+\ref{Tarjeta historia de usuario 64} y cuadro
+\ref{Tarjeta historia de usuario 66}
+
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.7]{useCaseTranslation}
+	}
+	\captionof{figure}{Diagrama de caso de uso para glosario y subtitulado}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Diagrama de caso de uso para glosario y subtitulado}
+\end{minipage}
+
+En la figura \ref{fig:Diagrama de clases para glosario y subtitulado},
+el diagrama de clases representa la abstracción de datos y comunicación
+de clases.
+
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.7]{classTranslation}
+	}
+	\captionof{figure}{Diagrama de clases para glosario y subtitulado}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Diagrama de clases para glosario y subtitulado}
+\end{minipage}
+
+En la figura \ref{fig:Diagrama de secuencia para glosario y subtitulado},
+el diagrama de secuencia representa la comunicación de un rol autorregulado
+y las clases de glosario y subtitulado.
+
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.6]{sequenceTranslation}
+	}
+	\captionof{figure}{Diagrama de secuencia para glosario y subtitulado}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Diagrama de secuencia para glosario y subtitulado}
+\end{minipage}
+
+\subsection{Modelo de componente}
+
+En la figura \ref{fig:Modelo de datos para glosario y subtitulado}, el modelo
+de datos representa la persistencia de glosario y subtitulado.
+
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.6]{modelTranslation}
+	}
+	\captionof{figure}{Modelo de datos para glosario y subtitulado}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Modelo de datos para glosario y subtitulado}
+\end{minipage}
+
+\subsection{Componente}
+
+\begin{itemize}
+
+\item \textbf{Glosario de sentencia}, permite crear una frase con respectivo
+significado.
+\item \textbf{Subtitulado de transcripción}, permite relacionar reproductor
+de tipo audio con transcripción.
+
+\end{itemize}
+
+\textbf{Glosario} en la figura \ref{fig:Formulario de registro para glosario}, el
+formulario brinda la funcionalidad de crear glosario; considerando lo
+siguientes campos de tipo, frase, lenguaje destino y significado.
+
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.6]{formGlossary}
+	}
+	\captionof{figure}{Formulario de registro para glosario}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Formulario de registro para glosario}
+\end{minipage}
+
+\textbf{Subtitulado} en la figura \ref{fig:Formulario de registro para subtitulado},
+el formulario permite la creación de un subtitulado conformado de frase, lenguaje
+destino, significado, reproductor, tiempo inicio y tiempo fin.
+
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.6]{formLyric}
+	}
+	\captionof{figure}{Formulario de registro para subtitulado}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Formulario de registro para subtitulado}
+\end{minipage}
+
+En la figura \ref{fig:Diagrama de estado para subtitulado}, el diagrama de
+esto representa los diferentes estados que tiene un reproductor para la
+definición de los tiempos de un subtitulado. 
+
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.7]{stateLyric}
+	}
+	\captionof{figure}{Diagrama de estado para subtitulado}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Diagrama de estado para subtitulado}
+\end{minipage}
+
+\subsection{Implementar componente}
+
+\begin{itemize}
+
+\item \textbf{Subtitulado - implementar en el cliente} el segmento de código
+obtiene dos listas de transcripción origen y traducción destino.
+
+\begin{lstlisting}[caption={Llenado de elemento en subtitulado.}, label={lst:fillSubtitle}]
+var myPlayer = document.getElementById("audio-player"); // get object audio player
+var flag = false; // flag for run one time
+myPlayer.addEventListener("play", function () { // add event play listener
+if (!flag) { // verify no change flag
+    $.ajax({ // get property through ajax
+        type: "POST",
+        url: "<?php echo CController::createUrl('Translation/getItemSentences');
+        ?>",
+        data: {
+            idTypeTranslation: "<?php echo Yii::app()->params[
+                'idTypeTranslationSentence']; ?>",
+            idContent: "<?php echo Yii::app()->getRequest()->getParam(
+                    'id_content'); ?>",
+            idUser: "<?php echo Yii::app()->getRequest()->getParam(
+                    'user_id_user'); ?>",
+            idLanguage: "<?php echo $model_translation->language_id_language; ?>"
+    },
+    dataType: "html",
+    success: function (data) {
+    var div = document.getElementById("idSentence");
+    div.innerHTML = data;
+    }
+    });
+    .....
+    flag = true; // change flag
+    play(myPlayer); // call function for show subtitle
+}
+}, false);
+\end{lstlisting}
+
+\item \textbf{Subtitulado - implementar en el cliente} el segmento de código
+realiza la acción necesaria para mostrar/ocultar el subtitulado de podcast,
+por lo cual el botón realizar el evento de control.
+
+\begin{lstlisting}[caption={Control de mostrar/ocultar subtitulado.}]
+function play(myPlayer) {
+    var controlDuplicate = [];
+    myPlayer.ontimeupdate = function () {
+    var currentTimePhrase = myPlayer.currentTime; // get currentTime player
+    var currentIDStart = ""; // identifier for start_translation, end_translation
+    var currentIDEnd = "";
+    var timeConvert = ""; // time converter min:seg
+    var hr = Math.floor(currentTimePhrase / 3600); //convert from seg to min
+    var min = Math.floor((currentTimePhrase - (hr * 3600)) / 60);
+    var sec = Math.floor(currentTimePhrase - (hr * 3600) - (min * 60));
+    if (min < 10) { // if min is less 10 add 0
+        min = "0" + min;
+    }
+    if (sec < 10) { // if sec is less 10 add 0
+        sec = "0" + sec;
+    }
+    timeConvert = min + ':' + sec + ':00';
+    if (controlDuplicate.length == 0) {
+        controlDuplicate.push(timeConvert);
+    $('#idSentence li').filter(':not([start_time_translation]),
+        [start_time_translation="' + timeConvert + '"]').addClass(
+        'sentence_show');
+    ...
+    } else if (controlDuplicate[controlDuplicate.length - 1] != timeConvert) {
+        controlDuplicate.push(timeConvert);
+    $('#idSentence li').filter(':not([start_time_translation]),
+        [start_time_translation="'+ timeConvert + '"]').addClass(
+        'sentence_show');
+    $('#idSentence li').filter(':not([start_time_translation]),
+        [end_time_translation="' + timeConvert + '"]').removeClass(
+        'sentence_show');
+    ...
+    }
+    };
+}
+\end{lstlisting}
+
+\end{itemize}
+
+\subsection{Problema/Solución de componente}
+
+\begin{itemize}
+
+\item \textbf{Glosario de término}
+
+\begin{itemize}
+
+\item Uso de registro de un solo formulario para la definición de glosario y
+subtitulado.
+
+\end{itemize}
+
+\begin{enumerate}
+
+\item \textbf{Validación de campos en formulario} en el segmento de código
+la validación de un escenario para glosario se definido en el modelo de clase.
+
+\begin{lstlisting}[language=PHP, caption={Validación de campos para escenario glosario.}]
+public function actionCreate($id_content, $id_user) {
+...
+if (isset($_POST['Translation'])) {
+    $model->attributes = $_POST['Translation'];
+    $model->content_id_content = $id_content; // fill property
+    $model->content_user_id_user = $id_user;
+    if ($_POST['Translation']['type_translation_id_type_translation'] == 
+            Yii::app()->params['idTypeTranslationSentence']) {
+        $model->setScenario('sentence'); //change scenary
+        $model->start_translation = $_POST['Translation']['start_translation'];
+        $model->end_translation = $_POST['Translation']['end_translation'];
+    } elseif ($_POST['Translation']['type_translation_id_type_translation'] == 
+            Yii::app()->params['idTypeTranslationDictionary']) {
+        $model->setScenario('dictionary'); //change scenary
+    }
+    if ($model->validate()) {
+        $this->saveModel($model);
+        ...
+    }
+}
+...
+}
+}
+\end{lstlisting}
+
+\end{enumerate}
+
+\item \textbf{Subtitulado de reproductor}
+
+\begin{itemize}
+
+\item Definición de formato de hora de minutos para tiempo inicio y
+minuto tiempo final.
+\item Frase de transcripción de tiempo inicio y tiempo final.
+
+\end{itemize}
+
+\begin{enumerate}
+
+\item \textbf{Formato de hora} el reproductor define el valor a través de
+la acción reproducir/detener, de manera que el tiempo debe considerar el
+siguiente formato de mm:ss
+
+Por tanto la unidad de tiempo obtenida de un reproductor es insuficiente para
+esto agregar un cero por delante.
+
+\begin{lstlisting}[caption={Generador de formato para minuto y segundo.}]
+var myPlayer = document.getElementById("playerMyTranslation");
+myPlayer.addEventListener("play", function () {
+    var status_start_translation = document.getElementById(
+        'start_translation').disabled;
+    if (!status_start_translation) {
+        var second_start_translation = Math.floor(myPlayer.
+            currentTime % 60);
+        if (second_start_translation < 10) {
+            second_start_translation = "0" + 
+            second_start_translation;
+        }
+        var minute_start_translation = Math.floor((myPlayer.currentTime / 60)
+                % 60);
+        if (minute_start_translation < 10) {
+            minute_start_translation = "0" + 
+            minute_start_translation;
+        }
+        document.getElementById('start_translation').value = 
+                minute_start_translation +':' + second_start_translation;
+        }
+}, false);
+...
+\end{lstlisting}
+
+\item \textbf{Revertir valor de inicio} el usuario con rol tutor puede
+realizar una equivocación al momento definir el evento del reproductor,
+para esto se recomienda revertir con el siguiente segmento de código.
+
+\begin{lstlisting}[caption={Revertir valor de tiempo y reproductor.}]
+function resetPlayer() {
+    var status_start_translation = document.getElementById(
+        'start_translation').disabled;
+    var status_end_translation = document.getElementById(
+        'end_translation').disabled;
+    var myPlayer = document.getElementById("playerMyTranslation");
+    if (!status_start_translation && !status_end_translation) {
+        if (myPlayer.play) {
+        myPlayer.currentTime = 0;
+        document.getElementById('start_translation').value = 0; // set start
+        document.getElementById('end_translation').value = 0; // set end
+        }
+    }
+}
+\end{lstlisting}
+
+\end{enumerate}
+
+\end{itemize}
+
+\section{\textquestiondown Cómo representar glosario y subtitulado?}
+
+Se agrega contenido semántico a: glosario y subtitulado. 
+
+\subsection{Componente}
+
+\begin{itemize}
+
+\item \textbf{Representación de glosario uso de h-entry}
+el esquema de representación de un micro-formato de tipo h-entry para la
+representación de un glosario de podcast. \cite{hEntry}
+
+\begin{itemize}
+
+\item \textbf{p-name} nombre entrada/título.
+\item \textbf{p-summary} breve resumen entrada.
+\item \textbf{e-content} contenido completo entrada.
+\item \textbf{dt-published} cuando se publicó la entrada.
+\item \textbf{dt-updated} cuando se actualiza la entrada.
+\item \textbf{p-author} que escribió la entrada, opcional mente incorporados
+h-card.
+\item \textbf{p-category} categoría entrada tags.
+\item \textbf{u-url} URL del enlace permanente entrada.
+\item \textbf{u-uid} identificador único universal, la entrada URL canónica
+normalmente.
+\item \textbf{p-location} la ubicación de la entrada fue publicada a partir,
+opcional mente embed h-card, or h-geo.
+\item \textbf{u-syndication} URL de copias sindicatos de este post, La propiedad
+equivalente de rel-syndication.
+\item \textbf{u-in-reply-to} la URL cual h-entry se considera respuesta a, 
+opcional mente una h-cite.
+
+\end{itemize}
+
+En la figura \ref{fig:Presentación glosario}, el glosario podcast tiene como
+elementos de frase y significado. 
+
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.5]{glossary}
+	}
+	\captionof{figure}{Presentación glosario}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Presentación glosario}
+\end{minipage}
+
+\item \textbf{Representación de subtitulado} microformato tiene una
+cantidad definida de tipos, se debe utilizar microformato 2 considerado
+como extension de funcionalidad. 
+
+\textbf{microformato 2}
+
+\begin{itemize}
+
+\item 'h-*' de nombres de clase raíz.
+\item 'p-*' para las características simples (texto).
+\item 'u-*' para las características URL.
+\item 'dt-*' para la características de fecha/hora.
+\item 'e-*' para las propiedades de marcado incrustado. \cite{microformats2}
+ 
+\end{itemize}
+
+Se propone la siguiente estructura para agregar contenido semántico para un
+subtitulado.
+
+\begin{enumerate}
+
+\item \textbf{h-x-lyrics} raíz de esquema.
+
+	\begin{enumerate}
+	
+		\item \textbf{p-lyric h-x-lyric} contenedora de elementos.
+		
+			\begin{enumerate}
+
+				\item \textbf{p-start-time} representa tiempo inicio.
+				\item \textbf{p-content} representa contenido.
+				\item \textbf{p-end-time} representa tiempo fin.			
+
+				\end{enumerate}					
+
+	\end{enumerate}
+
+\end{enumerate}
+
+En la figura \ref{fig:Representación de subtitulado}, el reproductor de audio
+sincroniza con subtitulado.
+
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\fbox{
+		\includegraphics[scale=0.6]{lyric}
+	}
+	\captionof{figure}{Representación de subtitulado}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Representación de subtitulado}
+\end{minipage}
+
+\end{itemize}
+
+\subsection{Implementar componente}
+
+\begin{itemize}
+
+\item \textbf{Glosario - implementar en el cliente} el segmento de código
+agrega contenido semántico para glosario tiene un microformato de tipo
+h-entry.
+
+\begin{lstlisting}[language = PHP, caption={Representación de glosario.}]
+<dl class="h-entry">
+    <dt class="p-name">
+        <?php echo $data->sentence; ?> 
+    </dt> 
+    <dd class="p-content">
+        <?php echo $data->meaning; ?> 
+    </dd>
+</dl>
+\end{lstlisting}
+
+\item \textbf{Subtitulado - implementar en el cliente} el segmento de código
+describe la agregación de la estructura propuesta para subtitulado.
+
+\begin{lstlisting}[language = PHP, caption={Estructura de sentencia.}]
+<ul class="h-sentence-lyrics ul_hide">
+    <?php foreach ($model_translations as $translation): ?>  
+    <li class="p-lyric h-sentence-lyric"> 
+        <time class="p-start-time"> <?php echo $translation->start_translation;
+        ?> </time>    
+        <span class="p-content" > <?php echo $translation->sentence; ?></span>
+        <time class="p-end-time"> <?php echo $translation->end_translation;?> 
+           </time>
+    </li>
+    <?php endforeach; ?>
+</ul>
+...
+\end{lstlisting}
+
+\end{itemize}
+
+\subsection{Problema/Solución de componente}
+
+\begin{itemize}
+
+\item \textbf{Representación de glosario}
+
+\begin{itemize}
+
+\item Uso de HTML5 \footnote{HTML5: Es una versión del lenguaje de marcado
+de hipertexto, el lenguaje de programación estándar para describir el
+contenido y la apariencia de las páginas web. \cite{html5}}  para agregar 
+contenido semántico.
+
+\begin{enumerate}
+
+\item \textbf{Uso de estándar HTML5} el uso de documento HTML5 permite el
+uso estándar para microformato.
+
+\end{enumerate}
+
+\end{itemize}
+
+\item \textbf{Representación de subtitulado}
+
+\begin{itemize}
+
+\item Agregación de microformato en el lado del servidor.
+
+\end{itemize}
+
+\begin{enumerate}
+ 
+\item \textbf{Llenado en el lado del servidor} el proceso de subtitulado
+tiene que ser en el lado del servidor, un extractor externo de microformato
+realiza comunicación por medio de una solicitud vía servidor.
+
+\begin{lstlisting}[language = PHP, caption={Acción de obtención y envió para vista podcast.}]
+public function actionViewContent($id_content, $user_id_user, 
+        $type_content_id_type_content, $category_id_category) {
+    Yii::app()->theme = 'front';
+    $model = $this->loadModel($id_content, $user_id_user, 
+            $type_content_id_type_content, $category_id_category);
+    $model_user = new User('registerSuscribe'); // new model User
+    $model_user->category_id = $category_id_category;
+    $model_translate = Translate::getTranslate($id_content);
+    $model_translation = Translation::model()->findByAttributes(array(
+        'content_id_content' => $id_content, 'content_user_id_user' => 
+        $user_id_user)); // get property model
+    $model_translations = Translation::model()->findAllByAttributes(array(
+        'type_translation_id_type_translation' => $type_content_id_type_content,
+        'content_id_content' => $id_content, 'content_user_id_user' => 
+        $user_id_user), array('order' => 'start_translation asc'));
+    if (!Yii::app()->user->isGuest){ // is Login
+        $model_detail_subscriptions = DetailSubscription::model()->
+            findAllByAttributes(array('subscription_user_id_user' => 
+                Yii::app()->user->id));
+    }else{
+        $model_detail_subscriptions = array();
+    }
+    $this->render('viewContent', array('model' => $model, 'model_user' => 
+        $model_user, 'model_detail_subscriptions' => $model_detail_subscriptions, 
+        'model_translate' => $model_translate, 'model_translation' => 
+        $model_translation, 'model_translations' => $model_translations));
+    }
+}
+\end{lstlisting}
+
+\end{enumerate}
+
+\end{itemize}
+
 \section{\textquestiondown Cómo realizar pruebas unitaria de suscriptor, integración de audio y vídeo?}
 
 Uso de prueba unitaria sobre la capa modelo.
@@ -11,7 +1095,7 @@ Además, las pruebas de integración requiere el uso de un servidor web autónom
 \begin{itemize}
 
 \item \textbf{Prueba unitaria de suscripción} en la figura 
-\ref{fig:Diagrama de clase representa dependencia de suscripción}
+\ref{fig:Diagrama de clase representa la dependencia de suscripción}
 el diagrama de clases representa la dependencia para el proceso de prueba
 unitaria \footnote{prueba: La prueba de software es un método de evaluación
 de la funcionalidad de un programa de software. \cite{test}}.
@@ -21,9 +1105,9 @@ de la funcionalidad de un programa de software. \cite{test}}.
 	\fbox{
 		\includegraphics[scale=0.5]{subscriptionTest}
 	}
-	\captionof{figure}{Diagrama de clase representa dependencia de suscripción}
+	\captionof{figure}{Diagrama de clase representa la dependencia de suscripción}
 	\source{fuente: (Elaboración propia)}
-	\label{fig:Diagrama de clase representa dependencia de suscripción}
+	\label{fig:Diagrama de clase representa la dependencia de suscripción}
 \end{minipage}
 
 \end{itemize}
@@ -192,7 +1276,7 @@ verdad & verdad \\ \hline
 \label{Reporte prueba 7}
 \end{minipage}
 
-En la figura \ref{fig:Ejecución de prueba para registrar suscripción} la prueba
+En la figura \ref{fig:Ejecución de prueba para registrar suscripción}, la prueba
 ejecuta la verificación dependencias para crear una suscripción. 
 
 \begin{minipage}{1.0\textwidth}
@@ -251,7 +1335,7 @@ verdad & verdad \\ \hline
 \label{Reporte prueba 9}
 \end{minipage}
 
-En la figura \ref{fig:Ejecución de prueba para reproducir audio y vídeo} la prueba
+En la figura \ref{fig:Ejecución de prueba para reproducir audio y vídeo}, la prueba
 ejecuta la prueba de integración de audio y vídeo. 
 
 \begin{minipage}{1.0\textwidth}
@@ -276,7 +1360,7 @@ ejecuta la prueba de integración de audio y vídeo.
 \item \textbf{Prueba de integración} se hace uso de selenium server
 standalone y un módulo webdriver-bindings \footnote{webdriver-bindings:
 Permite ejecutar pruebas funcionales utilizando funciones WebDriver de
-selenium Server 2.0 WebDriver se ejecuta como plug-in de navegador remoto,
+selenium server 2.0 se ejecuta como plug-in de navegador remoto,
 por lo que es mucho más fiable que la prueba estándar de selenium se inyecta
 a través de JavaScript. \cite{webdriverTest}}.
 
@@ -294,15 +1378,15 @@ a través de JavaScript. \cite{webdriverTest}}.
 suscripción, la descripción de la prueba se la aprecia en 
 cuadro \ref{Reporte prueba 7}.
 
-\begin{lstlisting}[language=PHP, caption={Prueba ejecución de suscripción.}]
+\begin{lstlisting}[language=PHP, caption={Prueba de ejecución para suscripción.}]
 class SubscriptionTest extends CDbTestCase {
     public function setUp() { // before each run test
         parent::setUp();
-        //...
+        ...
     }
     public function tearDown() { // after each run test
         parent::tearDown();
-        //...
+        ...
     }
     public function testCreateSubscription() {
         $subscription = new Subscription();     // create subscription
@@ -329,7 +1413,7 @@ public function beforeSave() {
 $res = false;
 if ($this->isNewRecord) {
     $transaction = $this->dbConnection->beginTransaction(); // start transaction
-    // ...
+    ...
     $category = Category::model()->findByAttributes(array('id_category' => 
         $this->category_id_category));
     if (isset($category)) {
@@ -348,7 +1432,7 @@ if ($this->isNewRecord) {
     } else {
         $transaction->rollback();
     }
-    // ...
+    ...
 } else {
     $res = true;
 }
@@ -370,7 +1454,7 @@ return $res;
 \textquotedouble{playAudioLocalHost} realiza la verificación de existencia
 de un reproductor de tipo audio.
 
-\begin{lstlisting}[language=PHP, caption={Prueba reproducir reproductor de audio.}]
+\begin{lstlisting}[language=PHP, caption={Prueba para reproducir reproductor de audio.}]
 protected function setUp() {
     parent::setUp('localhost', 4444, 'firefox');
 }
@@ -396,7 +1480,7 @@ public function testPlayAudioLocalHost() {
 \textquotedouble{playVideoLocalHost} realiza la verificación de un reproductor
 de tipo vídeo.
 
-\begin{lstlisting}
+\begin{lstlisting}[language=PHP, caption={Prueba para reproducir reproductor de vídeo.}]
 protected function setUp() {
     parent::setUp('localhost', 4444, 'firefox');
 }
@@ -460,25 +1544,22 @@ ruta de instalación \textquotedouble{/project/protected/composer.json}
 \item \textbf{Configurar archivos bootstrap y phpunit}
 
 Según \cite{testing} estos archivos son particulares, es como el guión de
-entrada y es el punto de partida cuando se ejecuta una serie de pruebas. 
+entrada y es el punto de partida cuando se ejecuta una serie de pruebas.
 
-\begin{lstlisting}[language=PHP, caption={Estructura de configuración archivo bootstrap.php.}]
-// change the following paths if necessary
+\begin{lstlisting}[language=PHP, caption={Estructura de configuración de archivo bootstrap.}]
 $vendors=dirname(__FILE__).'/../vendor/autoload.php';
 $yiit=dirname(__FILE__).'/../../framework/yiit.php';
-$config=dirname(__FILE__).'/../config/test.php';
-// required file
-require_once($vendors);
+$config=dirname(__FILE__).'/../config/test.php'; //change the paths if necessary
+require_once($vendors); // required file
 require_once($yiit);
 require_once(dirname(__FILE__).'/WebTestCase.php');
-// config app
-Yii::createWebApplication($config);
+Yii::createWebApplication($config); // config app
 \end{lstlisting}
 
-En el segmento de código se representa la configuracion de un archivo phpunit.xml
+En el segmento de código se representa la configuración de un archivo phpunit.xml
 para uso de un navegador en específico.
 
-\begin{lstlisting}[caption={Estructura configuración archivo phpunit.xml.}]
+\begin{lstlisting}[caption={Estructura de configuración archivo phpunit}]
 <phpunit bootstrap="bootstrap.php"
 	colors="false"
     convertErrorsToExceptions="true"
@@ -495,21 +1576,12 @@ para uso de un navegador en específico.
 \item \textbf{Editar archivo CWebTestCase} el segmento de código muestra
 el archivo CWebTestCase.php contempla tiene la configuración de inicio.
 
-\begin{lstlisting}[language=PHP, caption={Cabecera archivo CWebTestCase}, label={lst:fileCWebTestCase}]
-<?php
-/**
- * This file contains the CWebTestCase class.
- *
- * @author Qiang Xue <qiang.xue@gmail.com>
- * @link http://www.yiiframework.com/
- * @copyright 2008-2013 Yii Software LLC
- * @license http://www.yiiframework.com/license/
- */
+\begin{lstlisting}[language=PHP, caption={Cabecera de archivo CWebTestCase}, label={lst:fileCWebTestCase}]
 Yii::import('system.test.CTestCase');
 require_once('PHPUnit/Extensions/SeleniumTestCase.php');
 \end{lstlisting}
 
-A continuación, el segmento de código muestra el archivo CWebTestCase.php
+A continuación el segmento de código muestra el archivo CWebTestCase.php
 contiene una modificación. 
 
 \begin{lstlisting}[language=PHP, caption={Modificación de instrucción.}, label={lst:replaceCWebTestCase}]
@@ -518,7 +1590,7 @@ require_once('../../protected/vendor/phpunit/phpunit-selenium/
 \end{lstlisting}
 
 Como resultado, pruebas sobre Yii 1.X se debe realizar el cambio de sentencia
-definido en segmento de código \ref{lst:replaceCWebTestCase} por segmento de
+definido en segmento de código \ref{lst:replaceCWebTestCase}, por segmento de
 código \ref{lst:fileCWebTestCase}.
 
 \end{enumerate}
@@ -538,7 +1610,7 @@ código \ref{lst:fileCWebTestCase}.
 \item \textbf{Instalación de navegador firefox} debian 8 utiliza un navegador
 iceweasel reemplazar el por mozilla firefox.
 
-\begin{lstlisting}[language=bash, caption={Instrucción de instalación para mozilla firefox.}]
+\begin{lstlisting}[language=bash, caption={Instrucciones de instalación para mozilla firefox.}]
 $ wget ftp://ftp.mozilla.org/pub/mozilla.org/..../firefox-Y.0.tar.bz2
 cd /home/hugh/
 $ tar -xjvf firefox-Y.0.tar.bz2
@@ -554,7 +1626,7 @@ navegadores de uso general.
 \item \textbf{Iniciar sesión selenium server standalone} el segmento de código
 siguiente realiza el inicio del servidor web emulado.
 
-\begin{lstlisting}[language=bash, caption={Ejecución servidor server standalone.}]
+\begin{lstlisting}[language=bash, caption={Ejecución de servidor server standalone.}]
 $ java -jar  selenium-server-standalone-Z.jar
 \end{lstlisting}
 
@@ -584,21 +1656,21 @@ de selenium server standalone.
 
 A continuación se ejecuta los siguientes coman-dos de descarga.
 
-\begin{lstlisting}[language=bash, caption={Instalación de programa de control.}]
+\begin{lstlisting}[language=bash, caption={Instalación de programa de control para chrome.}]
 $ unzip /path/chromedriver_linux_64.zip
 $ su root
 # chmod +x chromedriver
 \end{lstlisting}
 
-De manera que, se tiene que ejecutar el siguiente comando en el siguiente
+De manera que se tiene que ejecutar el siguiente comando en el siguiente
 segmento de código \textquotedouble{sobre una sola línea}.
 
-\begin{lstlisting}[language=bash, caption={Configuración chromedriver selenium server.}]
+\begin{lstlisting}[language=bash, caption={Configuración chromedriver en selenium server.}]
 $ java -jar selenium-server-standalone-Z.jar -Dwebdriver.chrome.driver=
 "/path/chromedriver"
 \end{lstlisting}
 
-A continuación, en la figura \ref{fig:Registro de sesión en navegador chrome}
+A continuación en la figura \ref{fig:Registro de sesión en navegador chrome},
 se realiza la acción de inicio de sesión en chrome de ejecución de una prueba
 de integración.
 
@@ -612,6 +1684,86 @@ de integración.
 	\label{fig:Registro de sesión en navegador chrome}
 \end{minipage}
 
+En el segmento de código \ref{lst:configSetUpChrome}, en la línea tres se
+tiene que reemplazar la instrucción \textquotedouble{firefox} por \textquotedouble{chrome}.
+
+\begin{lstlisting}[language=PHP, caption={Configuración de ejecución de prueba para chrome.}, label={lst:configSetUpChrome}]
+class ContentTest extends CWebDriverTestCase {
+	protected function setUp() {
+        parent::setUp('localhost', 4444, 'chrome');
+    }
+    ...
+}
+\end{lstlisting}
+
 \end{enumerate}
 
 \end{itemize}
+
+\section{Duración proyecto}
+
+Definir el tiempo de un sprint en 10 días hábiles para realizar la estimación
+de esfuerzo del equipo desarrollo, en consideración se utilizo 21 sprints
+para definir el siguiente orden de prioridad de las historias en cuadro
+\ref{tab:Product backlog - primera parte} y 
+\ref{tab:Product backlog - segunda parte}.
+
+% first part product backlog
+\begin{minipage}[!htb]{\hsize}\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Historia}} & \multicolumn{1}{c|}{\textbf{Requerimiento}} & \multicolumn{1}{c|}{\textbf{Prioridad}} & \multicolumn{1}{c|}{\textbf{Programador}} & \multicolumn{1}{c|}{\textbf{Sprint}} \\ \hline
+56 & Gestión de Ocupación. & Alto & Omar & 1 \\ \hline
+06 & \begin{tabular}[c]{@{}l@{}}Registro manual deusuario aprendiz a la \\ plataforma.\end{tabular} & Alto & Omar & 1 \\ \hline
+19 & \begin{tabular}[c]{@{}l@{}}Facilitar adaptación de plataforma al entorno\\ según al dispositivo.\end{tabular} & Alto & Rudy,Omar & 0 \\ \hline
+05 & Registro por medio de red social. & Alto & Omar & 1 \\ \hline
+10 & Identificación por medio de red social. & Alto & Omar & 1,2 \\ \hline
+13 & Gestionar categoría. & Alto & Omar & 2,3,20 \\ \hline
+16 & \begin{tabular}[c]{@{}l@{}}Generar menú de tipos de contenido por \\ categoría.\end{tabular} & Alto & Omar & 2,3 \\ \hline
+57 & Gestión tipo contenido. & Alto & Omar & 2,4 \\ \hline
+21 & Gestión rol usuario tutor. & Alto & Rudy,Omar & 3,5 \\ \hline
+22 & Gestión rol usuario coordinador. & Alto & Rudy,Omar & 3,4,5 \\ \hline
+14 & \begin{tabular}[c]{@{}l@{}}Gestionar mi pregunta de selección múltiple\\ de contenido.\end{tabular} & Alto & Rudy,Omar & 3,5 \\ \hline
+50 & Reiniciar contraseña de usuario. & Alto & Omar & 5 \\ \hline
+31 & \begin{tabular}[c]{@{}l@{}}Gestionar mi preguntas de comprensión\\ en contenido.\end{tabular} & Alto & Rudy,Omar & 5 \\ \hline
+32 & Gestionar mi pregunta de tipo juego en contenido. & Alto & Rudy,Omar & 6 \\ \hline
+45 & \begin{tabular}[c]{@{}l@{}}Gestionar mi visualización gráfica de\\ contenido.\end{tabular} & Medio & Omar & 8,9 \\ \hline
+30 & \begin{tabular}[c]{@{}l@{}}Gestionar mi pregunta de grabación en\\ contenido.\end{tabular} & Alto & Rudy,Omar & 5,9,10 \\ \hline
+03 & \begin{tabular}[c]{@{}l@{}}Suscripción a una categoría.\end{tabular} & Medio & Omar & \begin{tabular}[c]{@{}l@{}}7,8\end{tabular} \\ \hline
+65 & \begin{tabular}[c]{@{}l@{}}Suscripción a una categoría por red social.\end{tabular} & Medio & Omar & \begin{tabular}[c]{@{}l@{}}9,11\end{tabular} \\ \hline
+11 & \begin{tabular}[c]{@{}l@{}}Animación transcripción en contenido de\\ tipo audio.\end{tabular} & Medio & Omar & 9 \\ \hline
+59 & Liberación de contenidos & Medio & Omar & 9,10 \\ \hline
+60 & \begin{tabular}[c]{@{}l@{}}Darse de baja suscripción podcast aprendiz\\ autorregulado.\end{tabular} & Bajo & Omar & 11 \\ \hline
+44 & \begin{tabular}[c]{@{}l@{}}Animación transcripción en contenido de \\ tipo vídeo.\end{tabular} & Medio & Omar & 11 \\ \hline
+\end{tabular}
+\captionof{table}{Product backlog - primera parte}
+\source{fuente: (Elaboración propia)}
+\label{tab:Product backlog - primera parte}
+\end{minipage}
+
+% second part product backlog
+\begin{minipage}[!htb]{\hsize}\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Historia}} & \multicolumn{1}{c|}{\textbf{Requerimiento}} & \multicolumn{1}{c|}{\textbf{Prioridad}} & \multicolumn{1}{c|}{\textbf{Programador}} & \multicolumn{1}{c|}{\textbf{Sprint}} \\ \hline
+33 & \begin{tabular}[c]{@{}l@{}}Gestionar pregunta de selección múltiple\\ en contenido.\end{tabular} & Alto & Rudy, Omar & 3,5 \\ \hline
+34 & \begin{tabular}[c]{@{}l@{}}Gestionar pregunta de ordenamiento en \\ contenido.\end{tabular} & Alto & Rudy, Omar & 3,5 \\ \hline
+35 & \begin{tabular}[c]{@{}l@{}}Gestionar pregunta de transcripción en\\ contenido.\end{tabular} & Alto & Rudy, Omar & 3,5 \\ \hline
+36 & \begin{tabular}[c]{@{}l@{}}Gestionar pregunta de grabación en\\ contenido.\end{tabular} & Alto & Rudy, Omar & \begin{tabular}[c]{@{}l@{}}3,5,\\ 9,10\end{tabular} \\ \hline
+37 & \begin{tabular}[c]{@{}l@{}}Gestionar pregunta de comprensión en\\ contenido.\end{tabular} & Alto & Rudy, Omar & 3,5 \\ \hline
+61 & Registrar glosario audio podcast. & Medio & Omar & 13,14 \\ \hline
+64 & Registrar subtitulado podcast. & Medio & Omar & 15,16 \\ \hline
+66 & Gestión traducción transcripción en podcast. & Medio & Omar & 14,15,16 \\ \hline
+62 & Implementar Prueba. & Bajo & Omar & \begin{tabular}[c]{@{}l@{}}16,17,18,\\19,21\end{tabular} \\ \hline
+63 & Elaborar diccionario microformato. & Bajo & Omar & 20 \\ \hline
+39 & \begin{tabular}[c]{@{}l@{}}Reproducción de audio de comprensión en\\ contenido.\end{tabular} & Alto & Rudy, Omar & 3 \\ \hline
+12 & \begin{tabular}[c]{@{}l@{}}Representación de palabra en glosario de\\ contenido.\end{tabular} & Medio & Omar & 2 \\ \hline
+42 & \begin{tabular}[c]{@{}l@{}}Animación de imagen de contenido vídeo\\ lado Front End.\end{tabular} & Medio & Omar & 2,11\\ \hline
+48 & Gestionar visualización gráfica de contenido. & Medio & Omar & 2,9,15 \\ \hline
+08 & \begin{tabular}[c]{@{}l@{}}Generar histograma de suscrito y visita\\ en mi contenido.\end{tabular} & Bajo & Omar &  \\ \hline
+
+\end{tabular}
+\captionof{table}{Product backlog - segunda parte}
+\source{fuente: (Elaboración propia)}
+\label{tab:Product backlog - segunda parte}
+\end{minipage}

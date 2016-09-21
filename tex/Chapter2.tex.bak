@@ -32,7 +32,7 @@ De la misma manera la elaboración de material didáctico en soporte web
 realiza la participación de al menos cuatro disciplinas. La primera es la
 tecnología, que acostumbra a tomar la forma concreta la informática. La
 segunda es el diseño gráfico. La tercera es la pedagogía, y más la
-especialización en tecnología educativa. La cuarta es, finalmente la lingüista.
+especialización en tecnología educativa. La cuarta es, finalmente la lingüística.
 \cite{duart2000aprender}
 
 \subsection{Podcast}
@@ -61,10 +61,10 @@ satisfacer una necesidad en un ámbito concreto. \cite{technology}} feed
 permite a los sitios web para compartir su contenido con otras aplicaciones en
 una forma estándar.\cite{hammersley2005developing}} de noticia
 actualiza al usuario a los últimos contenidos de un sitio web vía correo
-electrónico. Esta tiene la siguiente estructura: título, descripción y
+electrónico. Esta tiene la siguiente estructura de título, descripción y
 categoría.
 
-Además El uso de RSS \footnote{RSS: Es un método de noticias descubriendo
+Además el uso de RSS \footnote{RSS: Es un método de noticias descubriendo
 un otro contenido Web que está disponible para la alimentación.
 \cite{zeki2004rss}} y atom es proporcionar un feed de sindicación de
 contenido un archivo coherente, legible por la máquina que permite a los
@@ -74,7 +74,7 @@ Se debe agregar que RSS como formato basado en XML \footnote{XML: Es un
 metalenguaje para definir idiomas para el intercambio de información en la
 Web, los formatos de fuentes son también a menudo se llama
 \textquotedouble{dialectos XML} o \textquotedouble{XML vocabularios}.
-\cite{wittenbrink2005rss}} utiliza la estructura de un suscriptor de noticia.
+\cite{wittenbrink2005rss}} utiliza como estructura un suscriptor de noticia.
 
 Es así que RSS y atom son documentos XML; tienen la función de actualizar y
 compartir información. Este documento también es denominado newfeeds o feed.
@@ -101,12 +101,12 @@ aplicación web cuenta con un suscriptor.
 Un suscriptor tiene un channel \footnote{channel: En las telecomunicaciones
 en general un canal es un camino separado a través del cual las señales pueden
 fluir. \cite{channel}} el cual debe incluir (items) título, enlace y
-descripción. Estos elementos son obligatorios dentro un channel necesarios
-para caracterizar la recogida de información. El título del mensaje es
-individual corresponde con el subtitulo en un archivo de tipo HTML \footnote{HTML:
-Es el conjunto de símbolos de marcado o códigos insertados en un archivo
-destinado a la visualización de una página Web Mundial. \cite{html}}, que
-puede ser marcado como un elemento h2 o h3. El enlace feed utiliza el URI
+descripción. Estos elementos son obligatorios dentro un channel porque son
+necesarios para caracterizar la recogida de información. El título del mensaje
+es individual corresponde con el subtítulo en un archivo de tipo HTML 
+\footnote{HTML:Es el conjunto de símbolos de marcado o códigos insertados en
+un archivo destinado a la visualización de una página Web Mundial. \cite{html}},
+que puede ser marcado como un elemento h2 o h3. El enlace feed utiliza el URI
 \footnote{URI: Uniform Resource Identifier es la forma de identificar
 cualquiera de esos puntos de contenido, ya sea una página de texto, un vídeo
 o un clip de sonido, una imagen fija o animada, o un programa. \cite{uri}}
@@ -131,8 +131,8 @@ la estructura de un documento RSS se representa de forma gráfica.
 
 En la figura \ref{fig:Suscriptor programa aprendizaje inglés básico}, se
 muestra la acción de suscripción a una categoría (inglés básico) de un
-usuario de sistema, Con respecto al usuario tiene que realizar iniciar
-sesión. 
+usuario de sistema, con respecto al usuario tiene que iniciar sesión dentro
+el sistema. 
 
 \begin{minipage}{1.0\linewidth}
 	\centering
@@ -146,8 +146,8 @@ sesión.
 
 En la figura \ref{fig:Presentación de un canal de noticia}, se muestra la
 representación de un feed de la categoría inglés básico se utiliza un lector
-desde la web. La estructura de un feed de noticia título, fecha para
-liberación y descripción.
+desde la web. La estructura de un feed de noticia contempla título, fecha
+para liberación y descripción.
  
 \begin{minipage}{1.0\linewidth}
 	\centering
@@ -173,8 +173,8 @@ La estructura de un feed se describe a continuación.
 \item \textbf{title} contiene el título de la fuente de noticia.
 \item \textbf{author} incluye información sobre el autor.
 \item \textbf{updated} indica la última fecha de actualización.
-\item \textbf{link} hace referencia a una versión diferente del contenido y de la
-URI de atom.
+\item \textbf{link} hace referencia a una versión diferente del contenido
+y de la URI de atom.
 
 \end{itemize}
 
