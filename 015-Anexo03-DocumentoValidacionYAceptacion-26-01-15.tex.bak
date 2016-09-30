@@ -1,0 +1,267 @@
+\chapter{Documento de validación y aceptación 26-01-2015}
+
+El presente documento tiene por finalidad de constatar la conformidad tanto del
+Cliente como el equipo de desarrollo.
+
+Esta es la presentación de la versión Alpha estipulado en la propuesta 
+técnica presentada Correspondiente al Sprint segundo, tercero \textquotedouble{
+Versión Alpha listo}.
+
+Dicha presentación está sujeto al pago del 4 (por ciento) del total del
+costo del sistema, para Mayor conformidad para ambas partes se remarca los 
+siguientes aspectos.
+
+\begin{enumerate}
+
+\item \textbf{Escala de evaluación}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Puntaje} & \textbf{Valor Numérico} & \textbf{Concepto} \\ \hline
+NA & 0 & \begin{tabular}[c]{@{}c@{}}Se necesita hacer cambios\\ profundos\end{tabular} \\ \hline
+RA & 1 & \begin{tabular}[c]{@{}c@{}}Requiere modificación para\\ aceptar\end{tabular} \\ \hline
+A & 2 & Aceptado \\ \hline
+\end{tabular}
+\captionof{table}{Escala de evaluación}
+\end{table}
+
+\item \textbf{Las funcionalidades a presentar son las siguientes:}
+
+\begin{itemize}
+
+	\item Reiniciar Contraseña de Usuario (Usuario habilitado).
+		\begin{itemize}
+			\item Envió de solicitud de cambio de contraseña.
+		\end{itemize}
+	\item Gestión rol usuario Coordinador (Usuario habilitado).
+	\item Gestionar Categoría (Usuario autentificado).
+	\item Gestión rol usuario Tutor(Usuario habilitado, Sub categoría creada).
+	\item Gestionar Contenido por intereses(Tener rol Tutor, Estar asignado a 
+	sub categoría).
+	\item Generar menú de tipos de contenido por Categoría(Contenido publicado).
+		
+\end{itemize}
+
+\item \textbf{El pago del 4 (por ciento) se dar\'{a} por hecho si se está conforme 
+con la mitad más uno de los puntos}
+
+\end{enumerate}
+
+Si está conforme con una funcionalidad si se cumple los siguientes aspectos
+estipulados en el sumario de evaluación de párrafos.
+
+\section{Sumario de evaluación de parámetro}
+
+\begin{itemize}
+
+\item \textbf{Reiniciar contraseña de usuario}
+
+\textbf{Envió de solicitud de cambio de contraseña}
+
+Requisito: Ser usuario habilitado, caso contrario utilizar las credenciales del
+usuario por defecto; usuario: Juan Omar Huanca Balboa contraseña: autorregulado.
+
+Abra un navegador web con la siguiente dirección (URL): plataforma 
+\footnote{plataforma: http:// plataformaeducativalael.hum.umss.edu.bo} Pinche en
+el enlace Iniciar Sesión ubicado en la parte superior derecha, seguido de
+pinchar sobre en enlace Recuperar Contraseña.
+
+\begin{table}[!ht]\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{\textbf{N}} & \multicolumn{1}{c|}{\textbf{Parametros a evaluar}} & \multicolumn{1}{c|}{\textbf{Puntaje}} \\ \hline
+01 & \begin{tabular}[c]{@{}l@{}}Si Ud. eligió la cuenta por defecto llene, correo:\\ omar.huanca.balboa@gmail.com, contraseña:\\ omar.huanca.balboa. Captcha, pinchar sobre el bot\'{o}n Enviar\\ entonces ejecutar paso 03; caso contrario ingrese el correo\\ electrónico relacionado con la cuenta habilitada.\end{tabular} &  \\ \hline
+02 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. puede ingresar datos en los campos: Dirección de Correo,\\ Captcha pinchar sobre el botón Enviar ?\end{tabular} &  \\ \hline
+03 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. puede leer un mensaje \textquotedblleft Un correo electrónico que\\ contiene m\'{a}s instrucciones ha sido enviada bandeja de dirección\\ de correo electrónico asociada con su cuenta de proveedor\textquotedblright ?\end{tabular} &  \\ \hline
+04 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. ingrese a su bandeja de mensajes del correo electrónico\\ ingresado anteriormente, un mensaje de Administrador -\\ Recuperar Contraseña en el cuerpo un enlace?\end{tabular} &  \\ \hline
+05 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. pinche sobre el enlace le enviara a un formulario con los\\ siguientes campos: Contraseña, Repetir Contraseña?\end{tabular} &  \\ \hline
+06 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. ingrese la nueva contraseña dos veces en los campos:\\ Contraseña, Repetir Contraseña y pinchar sobre el bot\'{o}n Enviar,\\ le muestra el siguiente mensaje \textquotedblleft Su dirección de correo ha sido\\ verificado\textquotedblright ?\end{tabular} &  \\ \hline
+07 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Si Ud. eligió la cuenta de usuario por defecto (autorregulado)\\ entonces ingrese la nueva contraseña pinche sobre el bot\'{o}n\\ Iniciar Sesión con sus nuevas credenciales caso contrario\\ ingrese la cuenta de usuario de la cuenta habilitada?\end{tabular} &  \\ \hline
+\end{tabular}
+\captionof{table}{Envió de solicitud de cambio de contraseña}
+\end{table}
+
+Nota: Si está conforme con la funcionalidad \textquotedouble{Recobrar Contraseña} si la sumatoria de Puntaje tiene un valor mayor y/o igual 4.
+
+Las siguiente funcionalidad tiene que solicitar webmaster (administrador) que
+agregue el rol coordinador en una cuenta habilitada, caso contrario puede hacer
+uso de la cuenta por defecto nombre usuario: coordinador, contraseña: 
+coordinador.
+
+Ingrese la siguiente dirección URL en su navegador: plataforma 
+\footnote{plataforma: http:// plataformaeducativalael.hum.umss.edu.bo}
+
+Pinche en el enlace Iniciar Sesión ubicado en la parte superior derecha
+
+\end{itemize}
+
+\section{Gestión rol usuario coordinador}
+
+\begin{table}[!ht]\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{\textbf{N}} & \multicolumn{1}{c|}{\textbf{Parámetros a evaluar}} & \multicolumn{1}{c|}{\textbf{Puntaje}} \\ \hline
+01 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Si Ud. Eligió la cuenta habilitada tiene que dar a conocer al\\ webmaster a cual sub categor\'{i}a quiere estar asignado (Quechua \\ Básico, Quechua Psicosocial, Francés Básico, English Spread in \\ Cochabamba)? \\ \end{tabular} &  \\ \hline
+02 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. Inicie sesión con las credenciales de la cuenta habilitada,\\ 
+deber\'{i}a de aparecer nuevas opciones en el menú derecho de su \\ página principal de sesión?\end{tabular} &  \\ \hline
+03 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. Puede solicitar al webmaster verbalmente que se pueden\\ revocar los privilegios asignados a la cuenta habilitada\\ mencionada anteriormente?\end{tabular} &  \\ \hline
+\end{tabular}
+\captionof{table}{Gestión rol usuario coordinador}
+\end{table}
+
+Nota: Si está conforme con la funcionalidad \textquotedouble{Gestión 
+rol usuario Coordinador} si la sumatoria de Puntaje tiene un
+valor mayor y/o igual 2.
+
+La siguiente funcionalidad tiene ingresar con una cuenta habilitada que tenga 
+el rol de coordinador asignado correspondientemente. Caso contrario ingrese con
+las credenciales Nombre Usuario: coordinador, Contraseña: coordinador.
+
+Ingrese la siguiente dirección URL en su navegador: plataforma 
+\footnote{plataforma: http:// plataformaeducativalael.hum.umss.edu.bo}
+o pinche sobre la opción Inicio ubicado en el menú principal de la 
+página de presentación Principal.
+
+Pinche en el enlace Iniciar Sesión ubicado en la parte superior derecha.
+
+\section{Gestionar categoría}
+
+\begin{table}[H]\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{\textbf{N}} & \multicolumn{1}{c|}{\textbf{Parámetros a evaluar}} & \multicolumn{1}{c|}{\textbf{Puntaje}} \\ \hline
+01 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. Ingrese sus credenciales en los campos: Nombre Usuario,\\ Contraseña, le aparecer\'{a} una opción de su cuenta\\ administrativa?\end{tabular} &  \\ \hline
+02 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. Pinche sobre la opción Categoría en la sub opción\\ Registrar Categoría y le muestra un formulario?\end{tabular} &  \\ \hline
+03 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. Ingrese el nombre de la categoría padre con la categoría\\ 
+reflexiva opción Padre, Archivo Respuesta Correcta, Archivo\\ Respuesta Incorrecta, pinchar sobre el bot\'{o}n Registrar, a\\
+continuación deber\'{i}a mostrarle un detalle de la categoría padre\\ registrada?\end{tabular} &  \\ \hline
+04 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. Pinche sobre la opción Categoría en la sub opción\\ Registrar Categoría y le muestra un formulario?\end{tabular} &  \\ \hline
+05 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. Ingrese el nombre de la categoría hija con la categoría\\ reflexiva opción Hijo, Nivel Categoría, Imagen Categoría,\\ Descripción Categoría, Descripción Créditos, Descripción\\ Objetivos, pinchar sobre el botón Registrar, a continuación\\ debería mostrarle un detalle de la categoría hijo registrado?\end{tabular} &  \\ \hline
+06 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. Pinche sobre la opción Categoría en la sub opción\\ Administrar Categoría y le muestra una tabla de categorias\\ registradas?\end{tabular} &  \\ \hline
+07 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. elija una opción de la tabla, seguido podrá aplicar las\\ siguiente funcionalidades: Ver, Actualizar, Eliminar. Como\\ primera opción pinche sobre la opción Ver ubicado en la parte\\ derecha bajo la etiqueta Acción, podrá observar un detalle de los\\ campos con que cuenta la categoría?\end{tabular} &  \\ \hline
+08 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. Pinche sobre la opción Categoría en la sub opción\\ Administrar Categoría y le muestra una tabla de categorías\\ registradas? \end{tabular} & \\ \hline
+09 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. elija una opción de la tabla, como segunda opción pinche\\ sobre la acción Actualizar ubicado en la parte derecha bajo la\\ etiqueta Acción, podrá editar los campos previamente\\ registrados?\end{tabular} & \\ \hline
+10 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. Pinche sobre la opción Categoría en la sub opción\\ Administrar Categoría y le muestra una tabla de categorías\\ registradas?\end{tabular} & \\ \hline
+11 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud elija una opción de la tabla, como tercera opción pinche\\ sobre la opción acción Borrar ubicado en la parte derecha bajo\\ la etiqueta Acción, un mensaje de confirmación le saldrá\\ pidiéndole aceptar o denegar?\end{tabular} & \\ \hline
+12 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. Pinche sobre la opción Categoría en la sub opción\\ Administrar Categoría y le muestra una tabla de categorías\\ registradas?\end{tabular} & \\ \hline
+
+\end{tabular}
+\captionof{table}{Gestionar categoría - primera parte}
+\end{table}
+
+
+\begin{table}[!ht]\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{\textbf{N}} & \multicolumn{1}{c|}{\textbf{Parámetros a evaluar}} & \multicolumn{1}{c|}{\textbf{Puntaje}} \\ \hline
+13 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. Pinche sobre la opción Categoría en la sub opción Listar\\ Categoría y le muestra una lista de categorías registradas?\end{tabular} & \\ \hline
+14 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. Podrá ordenar las categorías según el siguiente criterio:\\ Nombre Categoría, ubicado en la parte superior, inferior de la\\ lista?\end{tabular} & \\ \hline
+\end{tabular}
+\captionof{table}{Gestionar categoría - segunda parte}
+\end{table}
+
+Nota: Si está conforme con la funcionalidad \textquotedouble{Gestionar 
+Categoría} si la sumatoria de Puntaje tiene un valor 
+mayor y/o igual 7.
+
+Las siguiente funcionalidad tiene que solicitar webmaster (administrador) que 
+agregue el rol tutor en una cuenta habilitada, caso contrario puede hacer uso
+de la cuenta por defecto nombre usuario: tutor, contraseña: tutor.
+
+Ingrese la siguiente dirección URL en su navegador: plataforma 
+\footnote{plataforma: http:// plataformaeducativalael.hum.umss.edu.bo} o pinche 
+sobre la opción Inicio ubicado en el menú principal de la página 
+de presentación Principal.
+
+Pinche en el enlace Iniciar Sesión ubicado en la parte superior derecha.
+
+\section{Gestión rol usuario tutor}
+
+\begin{table}[!ht]\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{\textbf{N}} & \multicolumn{1}{c|}{\textbf{Parámetros a evaluar}} & \multicolumn{1}{c|}{\textbf{Puntaje}} \\ \hline
+01 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Si Ud. Eligió la cuenta habilitada tiene que dar a conocer al\\ webmaster a cual sub categoría quiere estar asignado para poder\\  gestionar sus contenidos?\end{tabular} &  \\ \hline
+02 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. Inicie sesión con las credenciales de la cuenta habilitada,\\ 
+deber\'{i}a de aparecer las opciones en el menú derecho de su\\ página principal de sesión con los nombres: Mis Contenidos,\\ Actividad?\end{tabular} &  \\ \hline
+03 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. Puede solicitar al webmaster verbalmente que se pueden\\ revocar los privilegios asignados a la cuenta habilitada\\ mencionada anteriormente?\end{tabular} &  \\ \hline
+\end{tabular}
+\captionof{table}{Gestión rol usuario tutor}
+\end{table}
+
+Nota: Si está conforme con la funcionalidad \textquotedouble{Gestión
+rol usuario Tutor} si la sumatoria de Puntaje tiene un valor
+mayor y/o igual 2.
+
+Para realizar la siguiente funcionalidad, tiene que cumplir con la anterior
+funcionalidad (Gestión rol usuario Tutor).
+
+Ingrese la siguiente dirección URL en su navegador: plataforma 
+\footnote{plataforma: http:// plataformaeducativalael.hum.umss.edu.bo} o pinche
+sobre la opción Inicio ubicado en el menú principal de la página de 
+presentación Principal.
+
+Pinche en el enlace Iniciar Sesión ubicado en la parte superior derecha.
+
+\section{Gestionar contenido por intereses}
+
+\begin{table}[!ht]\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{\textbf{N}} & \multicolumn{1}{c|}{\textbf{Parámetros a evaluar}} & \multicolumn{1}{c|}{\textbf{Puntaje}} \\ \hline
+01 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. Ingrese sus credenciales en los campos: Nombre Usuario,\\ Contraseña, le aparecer\'{a} una opción de su cuenta\\ administrativa?\end{tabular} &  \\ \hline
+02 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. Pinche sobre la opción Mis Contenidos a en la sub opción\\ Registrar Mi Contenido y le muestra un formulario?\end{tabular} &  \\ \hline
+03 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. Ingrese el Título, Archivo Imagen, Seleccione el tipo de\\ contenido, Archivo Reproductor, Seleccione la sub categoría,\\ Fecha de liberación, Resumen, Archivo Resolución(*), Archivo\\ Glosario, Archivo Diccionario, Créditos pinchar sobre el botón\\ Registrar,a continuación debería mostrarle un detalle de la\\ categoría padre registrada?\end{tabular} &  \\ \hline
+04 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. Pinche sobre la opci\'{o}n Mis Contenidos en la sub opción\\ Administrar Mis Contenidos y le muestra una tabla de\\ contenidos registradas?\end{tabular} &  \\ \hline
+05 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. elija una opci\'{o}n de la tabla, como segunda opción pinche\\ sobre la acción Actualizar ubicado en la parte derecha bajo la\\ etiqueta Acción, podrá editar los campos previamente\\ registrados?\end{tabular} &  \\ \hline
+06 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. Pinche sobre la opción Mis Contenidos en la sub opción\\ Administrar Mis Contenidos y le muestra una tabla de\\ contenidos registradas?\end{tabular} &  \\ \hline
+07 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud elija una opción de la tabla, como tercera opción pinche\\ sobre la opción acción Borrar ubicado en la parte derecha bajo\\ la etiqueta Acción, un mensaje de confirmación le saldrá\\ pidiéndole aceptar o denegar?\\\end{tabular} &  \\ \hline
+08 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. Pinche sobre la opción Mis Contenidos en la sub opción\\ Listar Mis Contenidos y le muestra una lista de todos los\\ contenidos registrados? \end{tabular} & \\ \hline
+09 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. Podra ordenar las categorías según el siguiente criterio:\\ Título, Fecha creación, Fecha liberación?\end{tabular} & \\ \hline
+\end{tabular}
+\captionof{table}{Gestionar contenido por intereses}
+\end{table}
+
+(*) Si usted define como tipo de contenido audio este campo es requerido.
+
+Nota: Si está conforme con la funcionalidad \textquotedouble{Gestionar 
+Contenido por intereses} si la sumatoria de Puntaje tiene un 
+valor mayor y/o igual 5.
+
+Ingrese la siguiente dirección URL en su navegador: plataforma 
+\footnote{plataforma: http:// plataformaeducativalael.hum.umss.edu.bo} o pinche
+sobre la opción Inicio ubicado en el men\'{u} principal de la página de 
+presentación Principal o pinche sobre la opción Vista Página Principal
+situado en la parte superior de su panel administrativo de su cuenta.
+
+\section{Generar menú de tipos de contenido por categoría}
+
+\begin{table}[!ht]\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{\textbf{N}} & \multicolumn{1}{c|}{\textbf{Parámetros a evaluar}} & \multicolumn{1}{c|}{\textbf{Puntaje}} \\ \hline
+01 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. Pinche sobre el tipo de categoría Audio/Vídeo si fuera el\\ caso con anterioridad, saldrá un elemento respecto la categoría\\  padre, pinche sobre el mismo y podrá ver una lista de sub\\ categorías asignadas al correspondiente idioma?\end{tabular} &  \\ \hline
+02 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. Pinche sobre la imagen u/o nombre de la sub categoría ,\\
+para poder ver contenido(s) creados relacionados con sub\\ categoría?\end{tabular} &  \\ \hline
+03 & \begin{tabular}[c]{@{}l@{}}\textquestiondown Ud. Podrá ver una animación de desplazamiento de izquierda a\\ derecha de los contenidos comprendidos en la sub categoría, en\\ la parte inferior podrá ver los créditos y objetivos de todos los\\ episodios?\end{tabular} &  \\ \hline
+\end{tabular}
+\captionof{table}{Generar menú de tipos de contenido por categoría}
+\end{table}
+
+Nota: Si está conforme con la funcionalidad \textquotedouble{Generar 
+menú de tipos de contenido por Categoría} si la 
+sumatoria de Puntaje tiene un valor mayor y/o igual 2.
+
+Si se cumple más de los 4 puntos de 6 que fueron presentados a 
+continuación procedemos a firmar este documento los representantes para su
+aceptación.
+
+\begin{table}[!ht]\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{tabular}[c]{@{}l@{}}..........................................\\ Lic. Manuel Camacho Arce\\ PRODUCT OWNER\end{tabular} & \begin{tabular}[c]{@{}l@{}}.........................................\\ Juan Omar Huanca Balboa\\ SCRUM MASTER\end{tabular} \\ \hline
+\end{tabular}
+\captionof{table}{Comprobante de documento de aceptación}
+\end{table}

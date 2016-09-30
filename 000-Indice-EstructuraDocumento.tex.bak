@@ -6,7 +6,7 @@
 \documentclass[letterpaper,11pt,twoside,openright]{report}
 
 % define marging document
-\usepackage[letterpaper,left=3cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[letterpaper,left=3.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
 
 % define font arial
 \usepackage{helvet}
@@ -14,7 +14,7 @@
 \renewcommand{\familydefault}{\sfdefault}
 
 % define spanish language and table name
-\usepackage[spanish, es-tabla]{babel}
+\usepackage[spanish,es-tabla]{babel}
 
 \usepackage[utf8]{inputenc}
 
@@ -72,7 +72,7 @@
 	urlcolor=black
 ]{hyperref}
 
-\usepackage[numbered]{bookmark}
+\usepackage[numbered,open]{bookmark}[2011/12/02]
 
 % style bibliography
 \usepackage{apacite}
@@ -167,6 +167,35 @@
 \renewcommand{\listtablename}{Índice de tablas}
 \renewcommand{\tablename}{Tabla}
 
+% Generate bookmarks for all figures
+\makeatletter
+\pretocmd\endfigure{%
+\addtocontents{lof}{
+	\protect{%
+    \bookmark[
+    rellevel=1,
+    keeplevel,
+    dest=\@currentHref,
+    ]{Figura \thefigure: \@currentlabelname}}}%
+}{}{\errmessage{Patching \noexpand\endfigure failed}}
+% generate bookmarks for all tables
+\pretocmd\endtable{%
+\addtocontents{lot}{
+	\protect{%
+    \bookmark[
+    rellevel=1,
+    keeplevel,
+    dest=\@currentHref,
+	]{Tabla \thetable: \@currentlabelname}}}%
+}{}{\errmessage{Patching \noexpand\endtable failed}}
+\makeatother
+
+% adjust image for text on titlepage
+\usepackage{adjustbox}
+
+% force figure and table keep locate
+\usepackage{float}
+
 % autor
 \author{Juan Omar Huanca Balboa}
 
@@ -177,69 +206,68 @@
 \justifying
 \noindent
 
-\input{tex/Title}\thispagestyle{plain}
+\input{001-Caratula-Caratula}\thispagestyle{plain}
 
-%\input{tex/Dedication}
+%\input{002-Dedicatoria-Dedicatoria}
 
-%\input{tex/Acknowledgements}
+%\input{003-Agradecimientos-Agradecimientos}
 
-%\input{tex/Summary}
+%\input{004-FichaResumen-FichaResumen}
 
-\addtocontents{toc}{\protect{\pdfbookmark[-1]{Índice General}{toc}}}
-\tableofcontents
+\input{005-Indice01-IndiceGeneral}
 
-\cleardoublepage
-\hypertarget{lofpage}{}
-\listoffigures
-
-\cleardoublepage
-\hypertarget{lotpage}{}
-\listoftables
-
-%\lstlistoflistings
-
-%\clearpage
+\input{006-Indice02-IndiceParaSegmentosDeCodigo}
 
 \thispagestyle{plain}~
 
 % begin numeration for ordinal number
-\clearpage
+\cleardoublepage
 
 \pagenumbering{arabic}
 
-\input{tex/Chapter1}
+\input{007-Cap01-Introduccion}
 
-%\input{tex/Chapter2}
+\input{008-Cap02-SuscriptorDePodcast}
 
-%\input{tex/Chapter3}
+\input{009-Cap03-AprendizajeAutorreguladoPropuestoPorLaCarreraLAEL}
 
-%\input{tex/Chapter4}
+\input{010-Cap04-DesarrolloDelProyecto}
 
-%\input{tex/Chapter5}
+\input{011-Cap05-ConclusionesYRecomendaciones}
 
-\bibliography{bib/Literature}
+\bibliography{012-Bibliografia-Bibliografia}
 
-% remove empty page after appendix
-\cleardoublepage\makeatletter\@openrightfalse\makeatother
+\begin{appendices}
 
 \appendix
 \addappheadtotoc
 \appendixpage
 
-\input{tex/AnnexA}
+\makeatletter
+  \addtocontents{toc}{\let\protect\l@chapter\protect\l@section}
+  \def\toclevel@chapter{1}
+  \def\toclevel@section{2}
+  \def\toclevel@subsection{3}
+\makeatother
 
-\input{tex/AnnexB}
+\input{013-Anexo01-DiagramaEntidadRelacion}
 
-%\input{tex/AnnexC}
+\input{014-Anexo02-DocumentoValidacionYAceptacion-04-11-14}
 
-%\cleardoublepage\makeatletter\@openrighttrue\makeatother
+\input{015-Anexo03-DocumentoValidacionYAceptacion-26-01-15}
 
-%\input{tex/AnnexD}
+\input{016-Anexo04-LicenciaPublicaGeneralV1}
 
-%\input{tex/AnnexE}
+\end{appendices}
 
-\bookmark[dest=lofpage,level=-1]{Índice De Figuras}
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{part}{Índice de Figuras}
+\listoffigures
 
-\bookmark[dest=lotpage,level=-1]{Índice De Tablas}
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{part}{Índice de Tablas}
+\listoftables
 
 \end{document}

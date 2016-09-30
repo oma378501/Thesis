@@ -1,6 +1,166 @@
 \chapter{Desarrollo del Proyecto}
 
+\section{Arquitectura cliente servidor}
+
+Una arquitectura cliente servidor generalmente considerada como arquitectura
+de sistema distribuido. Una vez más, un beneficio importante es la separación
+e independencia de funcionalidad. \cite{sommerville2011software}
+
+Esencialmente, el usuario final utiliza un navegador web para solicitar una
+página esperando respuesta.
+
+En la figura \ref{Una arquitectura cliente servidor para una filmoteca}, es un
+ejemplo de un sistema en base al modelo cliente servidor. 
+\cite{sommerville2011software}
+
+\begin{figure}[!htb]
+	\centering
+	\fbox{
+		\includegraphics[scale=0.7]{architectureClientServer}
+	}
+	\caption{Una arquitectura cliente servidor para una filmoteca}
+	\source{fuente: \cite{sommerville2011software}}
+	\label{Una arquitectura cliente servidor para una filmoteca}
+\end{figure}
+
+\subsection{Patrón diseño: modelo vista controlador}
+
+La idea de un patrón es una forma de presentar, compartir y reutilizar el
+conocimiento sobre un sistema de software. Se piensa en un patrón
+arquitectónico como una estilizada descripción abstracta de buena práctica,
+que ha sido probada en diferentes sistemas y entornos. \cite{sommerville2011software}
+
+En la figura \ref{fig:Arquitectura de aplicación web utilizando el patrón MVC},
+se muestra una arquitectura de ejecución, cuando este patrón utiliza la
+gestión en un sistema basado en la web. \cite{sommerville2011software}
+
+\begin{figure}[ht]
+\centering
+	\fbox{
+		\includegraphics[scale=0.7]{mvcPattern}
+	}
+	\caption{Arquitectura de aplicación web utilizando el patrón MVC}
+	\source{fuente: \cite{sommerville2011software}}
+	\label{fig:Arquitectura de aplicación web utilizando el patrón MVC}
+\end{figure}
+
+
+\begin{itemize}
+
+\item \textbf{Diseño del proyecto}
+
+Se considera como patrón base de diseño Modelo Vista Controlador para realizar
+la extension de funcionalidad de un Controlador representado como Administrador,
+este Administrador realiza una abstracción y re uso de funcionalidad descrito
+en la figura \ref{fig:Arquitectura extendida MVCA}.
+
+\begin{figure}[ht]
+	\centering
+	\fbox{
+		\includegraphics[scale=0.5]{mvcm}
+	}
+	\caption{Arquitectura extendida MVCA}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Arquitectura extendida MVCA}
+\end{figure}
+
+
+\end{itemize}
+
+\section{Designación de rol}
+
+En la plataforma web educativa se implementan cuatro tipos de roles.
+
+\begin{itemize}
+
+\item \textbf{Autorregulado}, rol designado a realizar suscripción o dar de
+baja la misma.
+
+\item \textbf{Tutor}, rol designado a un estudiante adscrito de la Carrera de
+LAEL, quien tiene la posibilidad de crear podcast de tipo audio/vídeo, agregar
+retro alimentación y agregar una transcripción. 
+
+\item \textbf{Coordinador}, rol designado al docente de la Carrera de LAEL, quien
+realiza la función de tutor y tiene la posibilidad de crear una categoría.
+
+\item \textbf{Administrador}, rol designado a un adscrito de la Carrera de
+Informática, quien tiene la posibilidad de gestionar la seguridad del sistema.
+
+\end{itemize}
+
+\section{Estructura de un podcast} \label{structPodcast}
+
+Un podcast de tipo audio es representado como una estructura que contiene los
+siguientes datos.
+
+\begin{itemize}
+
+\item \textbf{título}, nombre representativo, utilizado como identificador.
+\item \textbf{imagen de portada}, imagen representativa.
+\item \textbf{descripción}, resumen del tema.
+\item \textbf{reproductor de audio}, grabación de diálogo.
+\item \textbf{fecha de liberación}, fecha de publicación.
+\item \textbf{historieta}, imagen de los personajes.
+\item \textbf{transcripción}, texto del dialogo.
+\item \textbf{actividad}, retro alimentación de actividad.
+\item \textbf{resolución}, respuesta de actividad.
+\item \textbf{glosario}, descripción de los términos.
+\item \textbf{diccionario}, documento de referencia. 
+
+\end{itemize}
+
+Se describe la estructura de un podcast de tipo vídeo; con la diferencia de
+tener: transcripción, actividad, resolución de actividad y glosario.
+
+\begin{itemize}
+
+\item \textbf{título}, nombre representativo, utilizado como identificador.
+\item \textbf{imagen de portada}, imagen representativa.
+\item \textbf{descripción}, resumen del tema.
+\item \textbf{reproductor de vídeo}, uso de recursos: imagen, texto y audio.
+\item \textbf{fecha liberación}, fecha de publicación.
+\item \textbf{infografía}, imágenes descriptivas de tamaño pequeño.
+\item \textbf{diccionario}, documento de referencia. 
+
+\end{itemize}
+
+\section{Definición de un componente}
+
+Se considera el siguiente aspecto para describir el proceso de desarrollo.
+
+\begin{itemize}
+
+\item Tarjeta de historia de usuario.
+\item Arquitectura de componente.
+\item Modelo de componente.
+\item Componente.
+\item Implementar componente.
+\item Problema/Solución de componente.
+
+\end{itemize}
+
 \section{\textquestiondown Cómo implementar un servicio agregado de noticia?} \label{serviceFeed}
+
+La principal tarea de un servicio agregado de noticia es realizar la
+notificación vía correo electrónico de nuevo contenido publicado en la web.
+
+En la figura \ref{fig:Arquitectura job queue}, se muestra los componentes de
+un servicio agregado de noticia y respectiva comunicación, un proceso en
+segundo plano \footnote{segundo plano: Es un programa que se ejecuta sin
+intervención del usuario. \cite{background}} se ejecuta respecto la fecha
+de liberación descrito en la estructura de un podcast. sección
+\ref{structPodcast}
+
+\begin{figure}[ht]
+	\centering
+	\fbox{
+	\includegraphics[scale=0.6]{jobQueue}
+	}
+	\caption{Arquitectura job queue}
+	\source{fuente:\cite{ossCamp2014}}
+	\label{fig:Arquitectura job queue}
+\end{figure}
+
 
 \subsection{Tarjeta de historia de usuario}
 
@@ -11,6 +171,7 @@ En particular deseo enfatizar los siguientes deseos a realizar:
 
 \begin{itemize}
 
+\item \textbf{Suscripción manual}, tabla: \ref{Tarjeta historia de usuario 03}
 \item \textbf{Suscripción de usuario por red social} tabla: 
 \ref{Tarjeta historia de usuario 65}.
 \item \textbf{Baja de suscripción}, tabla: 
@@ -20,8 +181,29 @@ En particular deseo enfatizar los siguientes deseos a realizar:
 
 \end{itemize}
 
+% add history card 03
+\begin{table}[ht]\centering
+\begin{tabular}{|l|l|l|}
+\hline
+ & \textbf{Tarjeta Historia de Usuario} &  \\ \hline
+ID Historia: 03 & \begin{tabular}[c]{@{}l@{}}Nombre: Suscripción a una\\ categoría.\end{tabular} & Fecha: 22/04/2014 \\ \hline
+\multicolumn{3}{|l|}{Rol: Aprendiz autorregulado} \\ \hline
+\begin{tabular}[c]{@{}l@{}}Modificación de historia\\ número: 05\end{tabular} & \begin{tabular}[c]{@{}l@{}}Iteración asignada: 7,8\end{tabular} & Prioridad en negocio: Medio \\ \hline
+Tiempo estimado inicial: 20 & Riesgo en desarrollo: & Tipo de historia: Funcional \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción:\\ \\ Yo como usuario aprendiz autorregulado deseo suscribirme a un determinado lenguaje \\ (francés básico, ingles básico, quechua básico, quechua psicosocial, fonética quechua), \\tal que me beneficie en recibir notificación de nuevo contenido vía correo. \\ Para esto ya no necesito ingresar mi correo electrónico.\end{tabular}} \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Pre condición:	\\ \\ Contenido publicado. \\ Servidor SMTP externo configurado.\\ Configuración de credenciales en sistema con servidor SMTP.\end{tabular}} \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Post condición:\\ \\ Recibir un mensaje en mi bandeja de entrada de mi cuenta de correo.\end{tabular}} \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Actividades:\\ \\ Desplegar lista de categorías para suscripción.\\ Permitir al usuario seleccionar de la lista de categoría para suscribirse. \\ Guardar suscripción de usuario y registrar fecha.\end{tabular}} \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Observaciones:\\ \\ La suscripción permite acceder a las noticias de nuevos contenidos de categoría.\end{tabular}} \\ \hline
+\begin{tabular}[c]{@{}l@{}}.....................................................\\ Msc. Lic. Vladimir Costas Juaregui\\ PROJECT MANAGER\end{tabular} & \begin{tabular}[c]{@{}l@{}}..........................................\\ Lic. Manuel Camacho Arce\\ PRODUCT OWNER\end{tabular} & \begin{tabular}[c]{@{}l@{}}.........................................\\ Juan Omar Huanca Balboa\\ SCRUM MASTER\end{tabular} \\ \hline
+\end{tabular}
+\captionof{table}{Tarjeta historia de usuario 03}
+\source{fuente: (Elaboración propia)}
+\label{Tarjeta historia de usuario 03}
+\end{table}
+
 % add history card 65
-\begin{minipage}[!htb]{\hsize}\centering
+\begin{table}[!ht]\centering
 \begin{tabular}{|l|l|l|}
 \hline
  & \textbf{Tarjeta Historia de Usuario} &  \\ \hline
@@ -38,10 +220,13 @@ Tiempo estimado inicial: 20 & Riesgo en desarrollo: & Tipo de historia: Funciona
 \captionof{table}{Tarjeta historia de usuario 65}
 \source{fuente: (Elaboración propia)}
 \label{Tarjeta historia de usuario 65}
-\end{minipage}
+\end{table}
+
+% this command clear is for !ht table
+\clearpage 
 
 % add user history card 60
-\begin{minipage}[!htb]{\hsize}\centering
+\begin{table}[!ht]\centering
 \begin{tabular}{|l|l|l|}
 \hline
  & \textbf{Tarjeta Historia de Usuario} &  \\ \hline
@@ -58,10 +243,10 @@ Tiempo estimado inicial: 15 & Riesgo en desarrollo: & Tipo de historia: Funciona
 \captionof{table}{Tarjeta historia de usuario 60}
 \source{fuente: (Elaboración propia)}
 \label{Tarjeta historia de usuario 60}
-\end{minipage}
+\end{table}
 
 % add user history card 58
-\begin{minipage}[!htb]{\hsize}\centering
+\begin{table}[H]\centering
 \begin{tabular}{|l|l|l|}
 \hline
  & \textbf{Tarjeta Historia de Usuario} &  \\ \hline
@@ -78,18 +263,33 @@ Tiempo estimado inicial: 35 & Riesgo en desarrollo: & Tipo de historia: Funciona
 \captionof{table}{Tarjeta historia de usuario 58}
 \source{fuente: (Elaboración propia)}
 \label{Tarjeta historia de usuario 58}
-\end{minipage}
+\end{table}
 
 \subsection{Arquitectura de componente}
 
 \begin{itemize}
 
+\item \textbf{Suscripción manual}
+en la figura \ref{fig:Diagrama de caso de uso registrar suscripción de usuario},
+las acciones del rol autorregulado realiza el requerimiento descrito en tabla
+\ref{Tarjeta historia de usuario 03}.
+
+\begin{figure}[!ht]
+	\centering
+	\fbox{
+		\includegraphics[scale=0.6]{useCaseRegisterSubscription}
+	}
+	\captionof{figure}{Diagrama de caso de uso registrar suscripción de usuario}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Diagrama de caso de uso registrar suscripción de usuario}
+\end{figure}
+
 \item \textbf{Suscripción y baja de suscripción}
 en la figura \ref{fig:Diagrama de caso de uso para personalizar suscripción, dar baja},
-las acciones del rol autorregulado realiza el requerimiento descrito en tabla
-\ref{Tarjeta historia de usuario 65}.
+las acciones del rol autorregulado realiza el requerimiento descrito en tablas
+\ref{Tarjeta historia de usuario 65} y \ref{Tarjeta historia de usuario 60}.
 
-\begin{minipage}{1.0\textwidth}
+\begin{figure}[!ht]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.6]{useCaseSubscriptionUnsubscription}
@@ -97,14 +297,14 @@ las acciones del rol autorregulado realiza el requerimiento descrito en tabla
 	\captionof{figure}{Diagrama de caso de uso para personalizar suscripción, dar baja}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Diagrama de caso de uso para personalizar suscripción, dar baja}
-\end{minipage}
+\end{figure}
 
 \item \textbf{Liberación de contenido} en la figura 
 \ref{fig:Diagrama de caso de uso para liberación de contenido}, la acción del
 rol tutor realiza la definición de fecha de liberación y el proceso cron
 ejecuta el script descrito en tabla \ref{Tarjeta historia de usuario 58}.
 
-\begin{minipage}{1.0\textwidth}
+\begin{figure}[!ht]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.7]{useCaseRelease}
@@ -112,13 +312,27 @@ ejecuta el script descrito en tabla \ref{Tarjeta historia de usuario 58}.
 	\captionof{figure}{Diagrama de caso de uso para liberación de contenido}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Diagrama de caso de uso para liberación de contenido}
-\end{minipage}
+\end{figure}
+
+\item \textbf{Suscripción manual}
+en la figura \ref{fig:Diagrama de clase para suscripción de usuario}, el diagrama
+representa la composición de datos y comunicación de las clases.
+
+\begin{figure}[H]
+	\centering
+	\fbox{
+		\includegraphics[scale=0.6]{classRegisterSubscription}
+	}
+	\captionof{figure}{Diagrama de clase para suscripción de usuario}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Diagrama de clase para suscripción de usuario}
+\end{figure}
 
 \item \textbf{Suscripción, baja de suscripción y liberación de contenido}
 en la figura \ref{fig:Diagrama de clase para suscriptor}, el diagrama
 representa la composición de datos y comunicación de las clases.
 
-\begin{minipage}{1.0\textwidth}
+\begin{figure}[!ht]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.6]{classSubscription}
@@ -126,14 +340,29 @@ representa la composición de datos y comunicación de las clases.
 	\captionof{figure}{Diagrama de clase para suscriptor}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Diagrama de clase para suscriptor}
-\end{minipage}
+\end{figure}
+
+\item \textbf{Suscripción manual}
+en la figura \ref{fig:Diagrama de secuencia para suscripción}, el diagrama
+de secuencia representa la comunicación del rol autorregulado con las
+diferentes clases.
+
+\begin{figure}[H]
+	\centering
+	\fbox{
+		\includegraphics[scale=0.7]{sequenceRegisterSubscription}
+	}
+	\captionof{figure}{Diagrama de secuencia para suscripción}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Diagrama de secuencia para suscripción}
+\end{figure}
 
 \item \textbf{Suscripción y baja de suscripción}
 en la figura \ref{fig:Diagrama de secuencia para suscripción}, el diagrama
 de secuencia representa la comunicación del rol autorregulado con las
 diferentes clases.
 
-\begin{minipage}{1.0\textwidth}
+\begin{figure}[!ht]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.7]{sequenceSubscription}
@@ -141,7 +370,8 @@ diferentes clases.
 	\captionof{figure}{Diagrama de secuencia para suscripción}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Diagrama de secuencia para suscripción}
-\end{minipage}
+\end{figure}
+
 
 \item \textbf{Liberación de contenido}
 en la figura \ref{fig:Diagrama de secuencia para liberación de contenido},
@@ -149,7 +379,7 @@ el diagrama de secuencia representa la comunicación del rol tutor con las
 diferentes clases, el proceso cron verifica el registro de contenido para
 luego ejecutar un script.
 
-\begin{minipage}{1.0\textwidth}
+\begin{figure}[!ht]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.7]{sequenceRelease}
@@ -157,7 +387,7 @@ luego ejecutar un script.
 	\captionof{figure}{Diagrama de secuencia para liberación de contenido}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Diagrama de secuencia para liberación de contenido}
-\end{minipage}
+\end{figure}
 
 \end{itemize}
 
@@ -165,12 +395,31 @@ luego ejecutar un script.
 
 \begin{itemize}
 
+\item \textbf{Suscripción manual} 
+en la figura \ref{fig:Modelo de datos para suscripción de usuario}, el modelo de datos
+representa la persistencia de suscripción de categoría y suscripción por
+red social.
+
+\begin{figure}[!ht]
+	\centering
+	\fbox{
+		\includegraphics[scale=0.5]{modelRegisterSubscription}
+	}
+	\captionof{figure}{Modelo de datos para suscripción de usuario}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Modelo de datos para suscripción de usuario}
+\end{figure}
+
+La suscripción conformado por categoría genera una bitácora \footnote{bitácora:
+Mecanismo persistencia de actividades en el tiempo. (Elaboración propia)}
+y detalle\textunderscore suscripción.
+
 \item \textbf{Suscripción y baja de suscripción}
 en la figura \ref{fig:Modelo de datos para suscriptor}, el modelo de datos
 representa la persistencia de suscripción de categoría y suscripción por
 red social.
 
-\begin{minipage}{1.0\textwidth}
+\begin{figure}[!ht]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.5]{modelSubscription}
@@ -178,14 +427,14 @@ red social.
 	\captionof{figure}{Modelo de datos para suscriptor}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Modelo de datos para suscriptor}
-\end{minipage}
+\end{figure}
 
 \item \textbf{Liberación de contenido}
 en la figura \ref{fig:Modelo de datos para liberación de contenido},
 el modelo de datos representa la persistencia de registro de contenido
 y fecha de liberación.
 
-\begin{minipage}{1.0\textwidth}
+\begin{figure}[!ht]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.5]{modelRelease}
@@ -193,13 +442,38 @@ y fecha de liberación.
 	\captionof{figure}{Modelo de datos para liberación de contenido}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Modelo de datos para liberación de contenido}
-\end{minipage}
+\end{figure}
+
 
 \end{itemize}
 
 \subsection{Componente}
 
 \begin{itemize}
+
+\item \textbf{Suscripción}
+se propone la primera opción para realizar una suscripción.
+
+\begin{itemize}
+
+\item \textbf{Manual}, permite realizar la suscripción con una dirección de
+correo sujeto a verificación de sistema.
+
+\end{itemize}
+
+\textbf{Manual} en la figura \ref{fig:Ventana emergente de suscripción}, se
+representa un formulario de registro de dirección de correo electrónico para
+realizar una suscripción. 
+
+\begin{figure}[!ht]
+	\centering
+	\fbox{
+		\includegraphics[scale=0.7]{modalSubscribe}
+	}
+	\captionof{figure}{Ventana emergente de suscripción}
+	\source{fuente: (Elaboración propia)}
+	\label{fig:Ventana emergente de suscripción}
+\end{figure}
 
 \item \textbf{Suscripción de usuario}
 se propone la segunda opción para realizar una suscripción.
@@ -218,7 +492,7 @@ programación. \cite{token}} de red social} en la figura \ref{fig:Formulario
 de inicio de sesión}, el formulario de inicio de sesión tiene la funcionalidad
 de ingresar a su entorno de trabajo.
 
-\begin{minipage}{1.0\textwidth}
+\begin{figure}[H]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.6]{login}
@@ -226,14 +500,14 @@ de ingresar a su entorno de trabajo.
 	\captionof{figure}{Formulario de inicio de sesión}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Formulario de inicio de sesión}
-\end{minipage}
+\end{figure}
 
 \begin{enumerate}
 
 \item \textbf{Facebook}, en la figura \ref{fig:Aplicación de sesión para facebook},
 el flujo en un servidor de facebook para realizar el acceso de una cuenta válida.
 
-\begin{minipage}{1.0\textwidth}
+\begin{figure}[!ht]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.5]{oauthFacebook}
@@ -241,12 +515,12 @@ el flujo en un servidor de facebook para realizar el acceso de una cuenta válid
 	\captionof{figure}{Aplicación de sesión para facebook}
 	\source{fuente: \cite{oauthFacebook}}
 	\label{fig:Aplicación de sesión para facebook}
-\end{minipage}
+\end{figure}
 
 \item \textbf{Google}, en la figura \ref{fig:Aplicación de sesión para google}, el
 diagrama secuencia facilita el acceso para una cuenta válida de un usuario.
 
-\begin{minipage}{1.0\textwidth}
+\begin{figure}[!ht]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.7]{oauth20Google}
@@ -254,13 +528,13 @@ diagrama secuencia facilita el acceso para una cuenta válida de un usuario.
 	\captionof{figure}{Aplicación de sesión para google}
 	\source{fuente: \cite{oauthGoogle}}
 	\label{fig:Aplicación de sesión para google}	
-\end{minipage}
+\end{figure}
 
 \item \textbf{Twitter}, en la figura \ref{fig:Aplicación de sesión para twitter},
 el flujo dentro un servidor de twitter permite realizar el inicio de sesión de
 una cuenta de usuario.
 
-\begin{minipage}{1.0\textwidth}
+\begin{figure}[!ht]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.5]{oauth10Twitter}
@@ -268,7 +542,7 @@ una cuenta de usuario.
 	\captionof{figure}{Aplicación de sesión para twitter}
 	\source{fuente: \cite{oauthTwitter}}
 	\label{fig:Aplicación de sesión para twitter}
-\end{minipage}
+\end{figure}
 
 \end{enumerate}
 
@@ -278,7 +552,7 @@ sistema suscrito a una categoría (francés básico) desea dar de baja su
 respectiva suscripción. Para el mismo solo se tiene que pinchar sobre el botón
 \textquotedouble{Suscrito}. 
 
-\begin{minipage}{1.0\linewidth}
+\begin{figure}[!ht]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.6]{basicFranceSubscribed}
@@ -286,13 +560,14 @@ respectiva suscripción. Para el mismo solo se tiene que pinchar sobre el botón
 	\captionof{figure}{Suscripción programa aprendizaje francés básico}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Suscripción programa aprendizaje francés básico}
-\end{minipage}
+\end{figure}
+
 
 \item \textbf{Liberación de contenido} en la figura
 \ref{fig:Formulario registro de contenido}, el formulario de registro de
 contenido permite definir la fecha de liberación del propio contenido.
 
-\begin{minipage}{1.0\linewidth}
+\begin{figure}[H]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.7]{formContent}
@@ -300,13 +575,45 @@ contenido permite definir la fecha de liberación del propio contenido.
 	\captionof{figure}{Formulario registro de contenido}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Formulario registro de contenido}
-\end{minipage}
+\end{figure}
 
 \end{itemize}
 	
 \subsection{Implementar componente}
 
 \begin{itemize}
+
+\item \textbf{Suscripción - implementar en el servidor} el
+siguiente segmento de código permite personalizar la suscripción por
+categoría, el suscriptor obtiene las categorías habilitadas. 
+
+\begin{lstlisting}[language=PHP, caption={Personalización de suscriptor.}]
+public function actionCustomRss($idCategory) {
+    ob_end_clean();
+    header('Content-type: text/xml; charset=utf-8');
+    $this->layout = false;    // turn off layout
+    $criteria = new CDbCriteria;     // add custom criteria
+    $criteria->addCondition('t.category_id_category=:Column1');
+    $criteria->addCondition('t.category_id_category in (select i.category_id_category
+    from interest as i) and t.content_status=' . Yii::app()->params[
+    'stateContentAvailable']);
+    $criteria->select = 't.title,t.summary,t.date_leave';
+    $criteria->params = array(':Column1' => $idCategory);
+    $data = Content::model()->findAll($criteria);
+    $this->renderPartial('_viewItemChannel', array(
+        'data' => $data,
+    ));     // redirect view
+}
+\end{lstlisting}
+
+En la linea dos tiene la funcionalidad limpiar buffer de salida y
+des habilitar su uso.
+
+En la linea tres agrega la cabecera de un documento XML y codificación con
+el formato UTF-8 \footnote{UTF-8: El estándar Unicode cubre todos
+los caracteres, signos de puntuación y símbolos en el mundo. Unicode 
+procesamiento, almacenamiento y transporte de texto, independiente de la 
+plataforma y lenguaje \cite{utf8}}.
 
 \item \textbf{Baja de suscripción - implementar en el servidor} el siguiente
 segmento de código verifica el registro de una suscripción, si la verificación
@@ -385,6 +692,48 @@ public function run($args) {
 \subsection{Problema/Solución de componente}
 
 \begin{itemize}
+
+\item \textbf{Suscripción manual} la dificultad surgió para implementar.
+
+\begin{itemize}
+
+\item Generación única de modal \footnote{modal: Una ventana modal es,
+por tanto, normalmente una ventana secundaria. El usuario tiene interarticular
+con el antes de que el control se pueda devolver a la solicitud principal.
+\cite{modal}} para cada categoría.
+
+\end{itemize}
+
+La ventana modal utiliza el identificador de la categoría hija, para una lista
+de categorías hijas pinchar sobre el botón de la ultima categoría realiza la
+replica de identificador sobre los demás elementos.
+
+\begin{enumerate}
+
+\item \textbf{Generar único identificador por modal - implementar en el cliente}
+como mecanismo de solución se generara un identificador conformado por
+categoría padre y categoría hija.
+
+\begin{lstlisting}[language=HTML, caption={Generador ventana modal.}]
+<?php $this->beginWidget(
+        'booster.widgets.TbModal', array(
+    'id' => 'myModal' . $category_id,
+));?>
+<div class="modal-body">
+    <div class="panel-body">
+        <?php $this->renderPartial('//site/createRegisterSuscribe', 
+        array('model_user' => $model_user)); ?>
+    </div>
+</div>
+<?php $this->endWidget(); ?>
+\end{lstlisting}
+
+El problema de notificación vía correo electrónico se genera por las etiquetas
+propias de HTML \footnote{HTML: Es el conjunto de símbolos de marcado o
+códigos insertados en un archivo destinado a la visualización de una página
+web mundial. \cite{html}}.
+
+\end{enumerate}
 
 \item \textbf{Baja de suscripción} la dificultad se obtuvo al momento de implementar.
 \begin{itemize}
@@ -524,7 +873,7 @@ En particular deseo enfatizar los siguientes deseos a realizar:
 \end{itemize}
 
 % add user history card 64
-\begin{minipage}[!htb]{\hsize}\centering
+\begin{table}[!ht]\centering
 \begin{tabular}{|l|l|l|}
 \hline
  & \textbf{Tarjeta Historia de Usuario} &  \\ \hline
@@ -541,10 +890,13 @@ Tiempo estimado inicial: 30 & Riesgo en desarrollo: & Tipo de historia: Funciona
 \captionof{table}{Tarjeta historia de usuario 64}
 \source{fuente: (Elaboración propia)}
 \label{Tarjeta historia de usuario 64}
-\end{minipage}
+\end{table}
+
+% use command for table !ht
+\clearpage
 
 % add user history card 66
-\begin{minipage}[!htb]{\hsize}\centering
+\begin{table}[H]\centering
 \begin{tabular}{|l|l|l|}
 \hline
  & \textbf{Tarjeta Historia de Usuario} &  \\ \hline
@@ -560,7 +912,7 @@ Tiempo estimado inicial: 35 & Riesgo en desarrollo: & Tipo de historia: Funciona
 \captionof{table}{Tarjeta historia de usuario 66}
 \source{fuente: (Elaboración propia)}
 \label{Tarjeta historia de usuario 66}
-\end{minipage}
+\end{table}
 
 \subsection{Arquitectura de componente}
 
@@ -570,7 +922,7 @@ para definición de requerimiento descrito en tabla
 \ref{Tarjeta historia de usuario 64} y tabla
 \ref{Tarjeta historia de usuario 66}
 
-\begin{minipage}{1.0\textwidth}
+\begin{figure}[H]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.7]{useCaseTranslation}
@@ -578,13 +930,14 @@ para definición de requerimiento descrito en tabla
 	\captionof{figure}{Diagrama de caso de uso para glosario y subtitulado}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Diagrama de caso de uso para glosario y subtitulado}
-\end{minipage}
+\end{figure}
 
 En la figura \ref{fig:Diagrama de clases para glosario y subtitulado},
 el diagrama de clases representa la abstracción de datos y comunicación
 de clases.
 
-\begin{minipage}{1.0\textwidth}
+%\begin{figure}[H]
+\begin{figure}[!ht]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.7]{classTranslation}
@@ -592,13 +945,13 @@ de clases.
 	\captionof{figure}{Diagrama de clases para glosario y subtitulado}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Diagrama de clases para glosario y subtitulado}
-\end{minipage}
+\end{figure}
 
 En la figura \ref{fig:Diagrama de secuencia para glosario y subtitulado},
 el diagrama de secuencia representa la comunicación de un rol autorregulado
 y las clases de glosario y subtitulado.
 
-\begin{minipage}{1.0\textwidth}
+\begin{figure}[H]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.6]{sequenceTranslation}
@@ -606,14 +959,14 @@ y las clases de glosario y subtitulado.
 	\captionof{figure}{Diagrama de secuencia para glosario y subtitulado}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Diagrama de secuencia para glosario y subtitulado}
-\end{minipage}
+\end{figure}
 
 \subsection{Modelo de componente}
 
 En la figura \ref{fig:Modelo de datos para glosario y subtitulado}, el modelo
 de datos representa la persistencia de glosario y subtitulado.
 
-\begin{minipage}{1.0\textwidth}
+\begin{figure}[!ht]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.6]{modelTranslation}
@@ -621,7 +974,7 @@ de datos representa la persistencia de glosario y subtitulado.
 	\captionof{figure}{Modelo de datos para glosario y subtitulado}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Modelo de datos para glosario y subtitulado}
-\end{minipage}
+\end{figure}
 
 \subsection{Componente}
 
@@ -638,7 +991,7 @@ de tipo audio con transcripción.
 formulario brinda la funcionalidad de crear glosario; considerando lo
 siguientes campos de tipo, frase, lenguaje destino y significado.
 
-\begin{minipage}{1.0\textwidth}
+\begin{figure}[!ht]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.6]{formGlossary}
@@ -646,13 +999,13 @@ siguientes campos de tipo, frase, lenguaje destino y significado.
 	\captionof{figure}{Formulario de registro para glosario}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Formulario de registro para glosario}
-\end{minipage}
+\end{figure}
 
 \textbf{Subtitulado} en la figura \ref{fig:Formulario de registro para subtitulado},
 el formulario permite la creación de un subtitulado conformado de frase, lenguaje
 destino, significado, reproductor, tiempo inicio y tiempo fin.
 
-\begin{minipage}{1.0\textwidth}
+\begin{figure}[H]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.6]{formLyric}
@@ -660,13 +1013,13 @@ destino, significado, reproductor, tiempo inicio y tiempo fin.
 	\captionof{figure}{Formulario de registro para subtitulado}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Formulario de registro para subtitulado}
-\end{minipage}
+\end{figure}
 
 En la figura \ref{fig:Diagrama de estado para subtitulado}, el diagrama de
 esto representa los diferentes estados que tiene un reproductor para la
 definición de los tiempos de un subtitulado. 
 
-\begin{minipage}{1.0\textwidth}
+\begin{figure}[!ht]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.7]{stateLyric}
@@ -674,7 +1027,7 @@ definición de los tiempos de un subtitulado.
 	\captionof{figure}{Diagrama de estado para subtitulado}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Diagrama de estado para subtitulado}
-\end{minipage}
+\end{figure}
 
 \subsection{Implementar componente}
 
@@ -910,7 +1263,7 @@ opcional mente una h-cite.
 En la figura \ref{fig:Presentación glosario}, el glosario podcast tiene como
 elementos de frase y significado. 
 
-\begin{minipage}{1.0\textwidth}
+\begin{figure}[!ht]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.5]{glossary}
@@ -918,7 +1271,7 @@ elementos de frase y significado.
 	\captionof{figure}{Presentación glosario}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Presentación glosario}
-\end{minipage}
+\end{figure}
 
 \item \textbf{Representación de subtitulado} microformato tiene una
 cantidad definida de tipos, se debe utilizar microformato 2 considerado
@@ -962,7 +1315,7 @@ subtitulado.
 En la figura \ref{fig:Representación de subtitulado}, el reproductor de audio
 sincroniza con subtitulado.
 
-\begin{minipage}{1.0\textwidth}
+\begin{figure}[!ht]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.6]{lyric}
@@ -970,7 +1323,7 @@ sincroniza con subtitulado.
 	\captionof{figure}{Representación de subtitulado}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Representación de subtitulado}
-\end{minipage}
+\end{figure}
 
 \end{itemize}
 
@@ -1100,7 +1453,8 @@ el diagrama de clases representa la dependencia para el proceso de prueba
 unitaria \footnote{prueba: La prueba de software es un método de evaluación
 de la funcionalidad de un programa de software. \cite{test}}.
 
-\begin{minipage}{1.0\textwidth}
+%\begin{figure}[H]
+\begin{figure}[!ht]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.5]{subscriptionTest}
@@ -1108,7 +1462,7 @@ de la funcionalidad de un programa de software. \cite{test}}.
 	\captionof{figure}{Diagrama de clase representa la dependencia de suscripción}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Diagrama de clase representa la dependencia de suscripción}
-\end{minipage}
+\end{figure}
 
 \end{itemize}
 
@@ -1123,7 +1477,7 @@ Acorde con clase suscripción subsección \ref{serviceFeed}, se realiza la
 prueba necesaria.
 
 % report test 1
-\begin{minipage}[!htb]{\hsize}\centering
+\begin{table}[!ht]\centering
 \begin{tabular}{|c|c|}
 \hline
 \multicolumn{2}{|c|}{\textbf{Caso Prueba de Unidad}} \\ \hline
@@ -1142,18 +1496,17 @@ verdad & verdad \\ \hline
 \captionof{table}{Reporte prueba 1}
 \source{fuente: (Elaboración propia)}
 \label{Reporte prueba 1}
-\end{minipage}
+\end{table}
 
 %report test 2
-\begin{minipage}[!htb]{\hsize}\centering
+\begin{table}[H]\centering
 \begin{tabular}{|c|c|}
 \hline
 \multicolumn{2}{|c|}{\textbf{Caso Prueba de Unidad}} \\ \hline
 \multicolumn{1}{|l|}{Caso de prueba ID: 2} & \multicolumn{1}{l|}{Nombre de módulo: Ocupación} \\ \hline
 \multicolumn{1}{|l|}{Título prueba: executeOcupation} & \multicolumn{1}{l|}{Ejecución de prueba: 20-06-2016} \\ \hline
 \multicolumn{1}{|l|}{Prioridad de prueba: Alto} & \multicolumn{1}{l|}{Fecha diseño de prueba: 11-02-2016} \\ \hline
-\multicolumn{2}{|l|}{Pre-condición: BD vacía.} \\ \hline
-\multicolumn{2}{|l|}{Dependencia: Ocupación nivel zero.} \\ \hline
+\multicolumn{1}{|l|}{Pre-condición: BD vacía.} & \multicolumn{1}{l|}{Dependencia: Ocupación nivel zero.} \\ \hline
 \textbf{Pasos de prueba} & \textbf{Datos de prueba} \\ \hline
 \begin{tabular}[c]{@{}c@{}}Registrar ocupación \\ de un nivel uno.\end{tabular} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}nombre\_ocupación='Gerente de serivicos administrativos' \\ ocupación\_id\_ocupación=76\end{tabular}} \\ \hline
 \textbf{Resultado esperado} & \textbf{Resultado actual} \\ \hline
@@ -1164,18 +1517,17 @@ verdad & verdad \\ \hline
 \captionof{table}{Reporte prueba 2}
 \source{fuente: (Elaboración propia)}
 \label{Reporte prueba 2}
-\end{minipage}
+\end{table}
 
 % report test 3
-\begin{minipage}[!htb]{\hsize}\centering
+\begin{table}[!ht]\centering
 \begin{tabular}{|c|c|}
 \hline
 \multicolumn{2}{|c|}{\textbf{Caso Prueba de Unidad}} \\ \hline
 \multicolumn{1}{|l|}{Caso de prueba ID: 3} & \multicolumn{1}{l|}{Nombre de módulo: Rol} \\ \hline
 \multicolumn{1}{|l|}{Título prueba: executeRol} & \multicolumn{1}{l|}{Ejecución de prueba: 20-06-2016} \\ \hline
 \multicolumn{1}{|l|}{Prioridad de prueba: Alto} & \multicolumn{1}{l|}{Fecha diseño de prueba: 12-02-2016} \\ \hline
-\multicolumn{2}{|l|}{Pre-condición: BD vacía.} \\ \hline
-\multicolumn{2}{|l|}{Dependencia:} \\ \hline
+\multicolumn{1}{|l|}{Pre-condición: BD vacía.} & \multicolumn{1}{l|}{Dependencia:} \\ \hline
 \textbf{Pasos de prueba} & \textbf{Datos de prueba} \\ \hline
 Registrar nombre rol. & \multicolumn{1}{l|}{nombre\_rol='autorregulado'} \\ \hline
 \textbf{Resultado esperado} & \textbf{Resultado actual} \\ \hline
@@ -1186,18 +1538,19 @@ verdad & verdad \\ \hline
 \captionof{table}{Reporte prueba 3}
 \source{fuente: (Elaboración propia)}
 \label{Reporte prueba 3}
-\end{minipage}
+\end{table}
 
 % report test 4
-\begin{minipage}[!htb]{\hsize}\centering
+\begin{table}[H]\centering
 \begin{tabular}{|c|c|}
 \hline
 \multicolumn{2}{|c|}{\textbf{Caso Prueba de Unidad}} \\ \hline
 \multicolumn{1}{|l|}{Caso de prueba ID: 4} & \multicolumn{1}{l|}{Nombre de módulo: Usuario} \\ \hline
 \multicolumn{1}{|l|}{Título prueba: executeUserOneLevelOcupation} & \multicolumn{1}{l|}{Ejecución de prueba: 20-06-2016} \\ \hline
 \multicolumn{1}{|l|}{Prioridad de prueba: Alto} & \multicolumn{1}{l|}{Fecha diseño de prueba: 18-02-2016} \\ \hline
-\multicolumn{2}{|l|}{Pre-condición: Usuario disponible.} \\ \hline
-\multicolumn{2}{|l|}{Dependencia: Ocupación.} \\ \hline
+\multicolumn{1}{|l|}{Pre-condición: Usuario disponible.} & \multicolumn{1}{l|}{Dependencia: Ocupación.} \\ \hline
+%\multicolumn{2}{|l|}{} \\ \hline
+%\multicolumn{2}{|l|}{} \\ \hline
 \textbf{Pasos de prueba} & \textbf{Datos de prueba} \\ \hline
 Registrar datos de usuario. & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}correo='juan@gmail.com' \\ nombre\_usuario='omarhuanca' \\ contraseña='123' \\ estado\_usuario=1 \\ llaveActivación='1a2b3c' \\ ocupación\_id\_ocupación=84\end{tabular}} \\ \hline
 \textbf{Resultado esperado} & \textbf{Resultado actual} \\ \hline
@@ -1208,10 +1561,10 @@ verdad & verdad \\ \hline
 \captionof{table}{Reporte prueba 4}
 \source{fuente: (Elaboración propia)}
 \label{Reporte prueba 4}
-\end{minipage}
+\end{table}
 
 % report test 5
-\begin{minipage}[!htb]{\hsize}\centering
+\begin{table}[!ht]\centering
 \begin{tabular}{|c|c|}
 \hline
 \multicolumn{2}{|c|}{\textbf{Caso Prueba de Unidad}} \\ \hline
@@ -1230,10 +1583,10 @@ verdad & verdad \\ \hline
 \captionof{table}{Reporte prueba 5}
 \source{fuente: (Elaboración propia)}
 \label{Reporte prueba 5}
-\end{minipage}
+\end{table}
 
 % report test 6
-\begin{minipage}[!htb]{\hsize}\centering
+\begin{table}[H]\centering
 \begin{tabular}{|c|c|}
 \hline
 \multicolumn{2}{|c|}{\textbf{Caso Prueba de Unidad}} \\ \hline
@@ -1252,10 +1605,10 @@ verdad & verdad \\ \hline
 \captionof{table}{Reporte prueba 6}
 \source{fuente: (Elaboración propia)}
 \label{Reporte prueba 6}
-\end{minipage}
+\end{table}
 
 % report test 7
-\begin{minipage}[!htb]{\hsize}\centering
+\begin{table}[!ht]\centering
 \begin{tabular}{|c|c|}
 \hline
 \multicolumn{2}{|c|}{\textbf{Caso Prueba de Unidad}} \\ \hline
@@ -1274,12 +1627,12 @@ verdad & verdad \\ \hline
 \captionof{table}{Reporte prueba 7}
 \source{fuente: (Elaboración propia)}
 \label{Reporte prueba 7}
-\end{minipage}
+\end{table}
 
 En la figura \ref{fig:Ejecución de prueba para registrar suscripción}, la prueba
 ejecuta la verificación dependencias para crear una suscripción. 
 
-\begin{minipage}{1.0\textwidth}
+\begin{figure}[!ht]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.7]{runSubscriptionTest}
@@ -1287,12 +1640,13 @@ ejecuta la verificación dependencias para crear una suscripción.
 	\captionof{figure}{Ejecución de prueba para registrar suscripción}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Ejecución de prueba para registrar suscripción}
-\end{minipage}
+\end{figure}
+
 
 \item \textbf{Prueba integración de audio y vídeo}
 
 % report test 8
-\begin{minipage}[!htb]{\hsize}\centering
+\begin{table}[H]\centering
 \begin{tabular}{|c|c|}
 \hline
 \multicolumn{2}{|c|}{\textbf{Caso Prueba de Integración}} \\ \hline
@@ -1311,10 +1665,10 @@ verdad & verdad \\ \hline
 \captionof{table}{Reporte prueba 8}
 \source{fuente: (Elaboración propia)}
 \label{Reporte prueba 8}
-\end{minipage}
+\end{table}
 
 % report test 9
-\begin{minipage}[!htb]{\hsize}\centering
+\begin{table}[!ht]\centering
 \begin{tabular}{|c|c|}
 \hline
 \multicolumn{2}{|c|}{\textbf{Caso Prueba de Integración}} \\ \hline
@@ -1333,12 +1687,13 @@ verdad & verdad \\ \hline
 \captionof{table}{Reporte prueba 9}
 \source{fuente: (Elaboración propia)}
 \label{Reporte prueba 9}
-\end{minipage}
+\end{table}
 
 En la figura \ref{fig:Ejecución de prueba para reproducir audio y vídeo}, la prueba
 ejecuta la prueba de integración de audio y vídeo. 
 
-\begin{minipage}{1.0\textwidth}
+%\begin{figure}[H]
+\begin{figure}[H]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.7]{runIntegrationTest}
@@ -1346,8 +1701,7 @@ ejecuta la prueba de integración de audio y vídeo.
 	\captionof{figure}{Ejecución de prueba para reproducir audio y vídeo}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Ejecución de prueba para reproducir audio y vídeo}
-\end{minipage}
-
+\end{figure}
 
 \end{itemize}
 
@@ -1365,7 +1719,6 @@ por lo que es mucho más fiable que la prueba estándar de selenium se inyecta
 a través de JavaScript. \cite{webdriverTest}}.
 
 \end{itemize}
-
 
 \begin{itemize}
 
@@ -1633,7 +1986,8 @@ $ java -jar  selenium-server-standalone-Z.jar
 En la figura \ref{fig:Ejecución de selenium server standalone} selenium server
 standalone empieza a funcionar.
 
-\begin{minipage}{1.0\textwidth}
+%\begin{figure}[H]
+\begin{figure}[!ht]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.5]{executeSeleniumServer}
@@ -1641,7 +1995,7 @@ standalone empieza a funcionar.
 	\captionof{figure}{Ejecución de selenium server standalone}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Ejecución de selenium server standalone}
-\end{minipage}
+\end{figure}
 
 Realizar una  prueba de integración requiere ejecutar
 \textquotedouble{dirección local} 
@@ -1674,7 +2028,8 @@ A continuación en la figura \ref{fig:Registro de sesión en navegador chrome},
 se realiza la acción de inicio de sesión en chrome de ejecución de una prueba
 de integración.
 
-\begin{minipage}{1.0\textwidth}
+%\begin{figure}[H]
+\begin{figure}[!ht]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.6]{registerSessionChrome}
@@ -1682,7 +2037,7 @@ de integración.
 	\captionof{figure}{Registro de sesión en navegador chrome}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Registro de sesión en navegador chrome}
-\end{minipage}
+\end{figure}
 
 En el segmento de código \ref{lst:configSetUpChrome}, en la línea tres se
 tiene que reemplazar la instrucción \textquotedouble{firefox} por \textquotedouble{chrome}.
@@ -1709,7 +2064,7 @@ para definir el siguiente orden de prioridad de las historias en tabla
 \ref{tab:Product backlog - segunda parte}.
 
 % first part product backlog
-\begin{minipage}[!htb]{\hsize}\centering
+\begin{table}[!ht]\centering
 \begin{tabular}{|l|l|l|l|l|}
 \hline
 \multicolumn{1}{|c|}{\textbf{Historia}} & \multicolumn{1}{c|}{\textbf{Requerimiento}} & \multicolumn{1}{c|}{\textbf{Prioridad}} & \multicolumn{1}{c|}{\textbf{Programador}} & \multicolumn{1}{c|}{\textbf{Sprint}} \\ \hline
@@ -1724,6 +2079,17 @@ para definir el siguiente orden de prioridad de las historias en tabla
 21 & Gestión rol usuario tutor. & Alto & Rudy,Omar & 3,5 \\ \hline
 22 & Gestión rol usuario coordinador. & Alto & Rudy,Omar & 3,4,5 \\ \hline
 14 & \begin{tabular}[c]{@{}l@{}}Gestionar mi pregunta de selección múltiple\\ de contenido.\end{tabular} & Alto & Rudy,Omar & 3,5 \\ \hline
+\end{tabular}
+\captionof{table}{Product backlog - primera parte}
+\source{fuente: (Elaboración propia)}
+\label{tab:Product backlog - primera parte}
+\end{table}
+
+% second part product backlog
+\begin{table}[!ht]\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Historia}} & \multicolumn{1}{c|}{\textbf{Requerimiento}} & \multicolumn{1}{c|}{\textbf{Prioridad}} & \multicolumn{1}{c|}{\textbf{Programador}} & \multicolumn{1}{c|}{\textbf{Sprint}} \\ \hline
 50 & Reiniciar contraseña de usuario. & Alto & Omar & 5 \\ \hline
 31 & \begin{tabular}[c]{@{}l@{}}Gestionar mi preguntas de comprensión\\ en contenido.\end{tabular} & Alto & Rudy,Omar & 5 \\ \hline
 32 & Gestionar mi pregunta de tipo juego en contenido. & Alto & Rudy,Omar & 6 \\ \hline
@@ -1735,17 +2101,6 @@ para definir el siguiente orden de prioridad de las historias en tabla
 59 & Liberación de contenidos & Medio & Omar & 9,10 \\ \hline
 60 & \begin{tabular}[c]{@{}l@{}}Darse de baja suscripción podcast aprendiz\\ autorregulado.\end{tabular} & Bajo & Omar & 11 \\ \hline
 44 & \begin{tabular}[c]{@{}l@{}}Animación transcripción en contenido de \\ tipo vídeo.\end{tabular} & Medio & Omar & 11 \\ \hline
-\end{tabular}
-\captionof{table}{Product backlog - primera parte}
-\source{fuente: (Elaboración propia)}
-\label{tab:Product backlog - primera parte}
-\end{minipage}
-
-% second part product backlog
-\begin{minipage}[!htb]{\hsize}\centering
-\begin{tabular}{|l|l|l|l|l|}
-\hline
-\multicolumn{1}{|c|}{\textbf{Historia}} & \multicolumn{1}{c|}{\textbf{Requerimiento}} & \multicolumn{1}{c|}{\textbf{Prioridad}} & \multicolumn{1}{c|}{\textbf{Programador}} & \multicolumn{1}{c|}{\textbf{Sprint}} \\ \hline
 33 & \begin{tabular}[c]{@{}l@{}}Gestionar pregunta de selección múltiple\\ en contenido.\end{tabular} & Alto & Rudy, Omar & 3,5 \\ \hline
 34 & \begin{tabular}[c]{@{}l@{}}Gestionar pregunta de ordenamiento en \\ contenido.\end{tabular} & Alto & Rudy, Omar & 3,5 \\ \hline
 35 & \begin{tabular}[c]{@{}l@{}}Gestionar pregunta de transcripción en\\ contenido.\end{tabular} & Alto & Rudy, Omar & 3,5 \\ \hline
@@ -1761,9 +2116,8 @@ para definir el siguiente orden de prioridad de las historias en tabla
 42 & \begin{tabular}[c]{@{}l@{}}Animación de imagen de contenido vídeo\\ lado Front End.\end{tabular} & Medio & Omar & 2,11\\ \hline
 48 & Gestionar visualización gráfica de contenido. & Medio & Omar & 2,9,15 \\ \hline
 08 & \begin{tabular}[c]{@{}l@{}}Generar histograma de suscrito y visita\\ en mi contenido.\end{tabular} & Bajo & Omar &  \\ \hline
-
 \end{tabular}
 \captionof{table}{Product backlog - segunda parte}
 \source{fuente: (Elaboración propia)}
 \label{tab:Product backlog - segunda parte}
-\end{minipage}
+\end{table}
