@@ -151,7 +151,7 @@ intervención del usuario. \cite{background}} se ejecuta respecto la fecha
 de liberación descrito en la estructura de un podcast. sección
 \ref{structPodcast}
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
 	\centering
 	\fbox{
 	\includegraphics[scale=0.6]{jobQueue}
@@ -182,7 +182,7 @@ En particular deseo enfatizar los siguientes deseos a realizar:
 \end{itemize}
 
 % add history card 03
-\begin{table}[ht]\centering
+\begin{table}[!ht]\centering
 \begin{tabular}{|l|l|l|}
 \hline
  & \textbf{Tarjeta Historia de Usuario} &  \\ \hline
@@ -279,7 +279,7 @@ las acciones del rol autorregulado realiza el requerimiento descrito en tabla
 	\fbox{
 		\includegraphics[scale=0.6]{useCaseRegisterSubscription}
 	}
-	\captionof{figure}{Diagrama de caso de uso registrar suscripción de usuario}
+	\captionof{figure}{Diagrama de caso de uso registrar suscripción manual}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Diagrama de caso de uso registrar suscripción de usuario}
 \end{figure}
@@ -323,7 +323,7 @@ representa la composición de datos y comunicación de las clases.
 	\fbox{
 		\includegraphics[scale=0.6]{classRegisterSubscription}
 	}
-	\captionof{figure}{Diagrama de clase para suscripción de usuario}
+	\captionof{figure}{Diagrama de clase para suscripción manual}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Diagrama de clase para suscripción de usuario}
 \end{figure}
@@ -337,7 +337,7 @@ representa la composición de datos y comunicación de las clases.
 	\fbox{
 		\includegraphics[scale=0.6]{classSubscription}
 	}
-	\captionof{figure}{Diagrama de clase para suscriptor}
+	\captionof{figure}{Diagrama de clase para suscripción}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Diagrama de clase para suscriptor}
 \end{figure}
@@ -352,7 +352,7 @@ diferentes clases.
 	\fbox{
 		\includegraphics[scale=0.7]{sequenceRegisterSubscription}
 	}
-	\captionof{figure}{Diagrama de secuencia para suscripción}
+	\captionof{figure}{Diagrama de secuencia para suscripción manual}
 	\source{fuente: (Elaboración propia)}
 	\label{fig:Diagrama de secuencia para suscripción}
 \end{figure}
@@ -2076,9 +2076,6 @@ para definir el siguiente orden de prioridad de las historias en tabla
 13 & Gestionar categoría. & Alto & Omar & 2,3,20 \\ \hline
 16 & \begin{tabular}[c]{@{}l@{}}Generar menú de tipos de contenido por \\ categoría.\end{tabular} & Alto & Omar & 2,3 \\ \hline
 57 & Gestión tipo contenido. & Alto & Omar & 2,4 \\ \hline
-21 & Gestión rol usuario tutor. & Alto & Rudy,Omar & 3,5 \\ \hline
-22 & Gestión rol usuario coordinador. & Alto & Rudy,Omar & 3,4,5 \\ \hline
-14 & \begin{tabular}[c]{@{}l@{}}Gestionar mi pregunta de selección múltiple\\ de contenido.\end{tabular} & Alto & Rudy,Omar & 3,5 \\ \hline
 \end{tabular}
 \captionof{table}{Product backlog - primera parte}
 \source{fuente: (Elaboración propia)}
@@ -2090,6 +2087,11 @@ para definir el siguiente orden de prioridad de las historias en tabla
 \begin{tabular}{|l|l|l|l|l|}
 \hline
 \multicolumn{1}{|c|}{\textbf{Historia}} & \multicolumn{1}{c|}{\textbf{Requerimiento}} & \multicolumn{1}{c|}{\textbf{Prioridad}} & \multicolumn{1}{c|}{\textbf{Programador}} & \multicolumn{1}{c|}{\textbf{Sprint}} \\ \hline
+
+21 & Gestión rol usuario tutor. & Alto & Rudy,Omar & 3,5 \\ \hline
+22 & Gestión rol usuario coordinador. & Alto & Rudy,Omar & 3,4,5 \\ \hline
+14 & \begin{tabular}[c]{@{}l@{}}Gestionar mi pregunta de selección múltiple\\ de contenido.\end{tabular} & Alto & Rudy,Omar & 3,5 \\ \hline
+
 50 & Reiniciar contraseña de usuario. & Alto & Omar & 5 \\ \hline
 31 & \begin{tabular}[c]{@{}l@{}}Gestionar mi preguntas de comprensión\\ en contenido.\end{tabular} & Alto & Rudy,Omar & 5 \\ \hline
 32 & Gestionar mi pregunta de tipo juego en contenido. & Alto & Rudy,Omar & 6 \\ \hline

@@ -134,7 +134,7 @@ muestra la acción de suscripción a una categoría (inglés básico) de un
 usuario de sistema, con respecto al usuario tiene que iniciar sesión dentro 
 del sistema. 
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.6]{basicEnglishSubscribe}
@@ -144,13 +144,12 @@ del sistema.
 	\label{fig:Suscriptor programa aprendizaje inglés básico}
 \end{figure}
 
-
 En la figura \ref{fig:Presentación de un canal de noticia}, se muestra la
 representación de un feed de la categoría inglés básico se utiliza un lector
 desde la web. La estructura de un feed de noticia contempla título, fecha
 para liberación y descripción.
  
-\begin{figure}[h!]
+\begin{figure}[!ht]
 	\centering
 	\fbox{
 		\includegraphics[scale=0.5]{basicEnglishRssFirefox}
@@ -197,7 +196,7 @@ válido. \cite{wittenbrink2005rss}
 En la figura \ref{fig:Estructura de un documento Atom}, se presenta la
 estructura de un documento atom representado de forma gráfica.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 	\fbox{
 		\includegraphics[scale=0.6]{structureAtom}

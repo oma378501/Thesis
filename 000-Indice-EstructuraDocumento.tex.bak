@@ -208,11 +208,11 @@
 
 \input{001-Caratula-Caratula}\thispagestyle{plain}
 
-%\input{002-Dedicatoria-Dedicatoria}
+\input{002-Dedicatoria-Dedicatoria}
 
-%\input{003-Agradecimientos-Agradecimientos}
+\input{003-Agradecimientos-Agradecimientos}
 
-%\input{004-FichaResumen-FichaResumen}
+\input{004-FichaResumen-FichaResumen}
 
 \input{005-Indice01-IndiceGeneral}
 

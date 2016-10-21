@@ -151,7 +151,7 @@ intervención del usuario. \cite{background}} se ejecuta respecto la fecha
 de liberación descrito en la estructura de un podcast. sección
 \ref{structPodcast}
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\centering
 	\fbox{
 	\includegraphics[scale=0.6]{jobQueue}
@@ -182,7 +182,7 @@ En particular deseo enfatizar los siguientes deseos a realizar:
 \end{itemize}
 
 % add history card 03
-\begin{table}[ht]\centering
+\begin{table}[!ht]\centering
 \begin{tabular}{|l|l|l|}
 \hline
  & \textbf{Tarjeta Historia de Usuario} &  \\ \hline
